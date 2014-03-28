@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/css?family=Ceviche+One);
+@import url(http://fonts.googleapis.com/css?family=Gafata);
+
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family:'Gafata', 'Helvetica Neue', 'sans serif';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+.container {
+    width: 480px;
+    margin: 0 auto;
+}
+
+
+#logo {
+    width:480px;
+    height:480px;
+    background-image: url(/img/Rocket480.png);
+}
+#title, #nav{
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+#nav {
+    color: #eee;
+}
+
+#nav a:hover{
+    text-decoration: underline;
+}
+
+#title h1 {
+    font-family: 'Ceviche One', cursive;
+    font-size: 120px;
+    margin:0;
+}
+
+#title small {
+    font-size: 24px;
+    color: #666;
+}
+
+#footer {
+    text-align: center;
+    padding:10px 0;
+    background: #F7F7F7;
+    border-top: #eee 1px solid;
+    color: #333;
+}
+
+#join {
+    font-size: 60px;
+    color: #4CD964;
+    display: block;
+    margin: 10px 0 20px;
+}
+
+#nav li {
+    display: inline-block;
