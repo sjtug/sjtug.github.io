@@ -25,6 +25,30 @@ a {
     height:480px;
     background-image: url(/img/Rocket480.png);
 }
+
+#logo .backcircle {
+    display:none;
+    background: rgb(243,165,51);
+    width:440px;
+    height:440px;
+    margin:20px;
+    position: absolute;
+    z-index:-99;
+    -webkit-border-radius: 220px;
+    -moz-border-radius: 220px;
+    -ms-border-radius: 220px;
+    -o-border-radius: 220px;
+    border-radius: 220px;
+}
+
+#logo.ani {
+    background-image: none;
+}
+
+#logo.ani .backcircle{
+    display:block;
+}
+
 #title, #nav{
     text-align: center;
     margin: 20px 0 40px;
@@ -64,5 +88,13 @@ a {
     margin: 10px 0 20px;
 }
 
-#nav li {
-    display: inline-block;
+@media only screen (-moz-min-device-pixel-ratio: 2), 
+only screen and (-o-min-device-pixel-ratio: 2/1), 
+only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+    #logo {
+        background-image: url(/img/Rocket960.png);
+    }
+}
+
+

@@ -75,7 +75,7 @@
 
 	"FireOrange" : {
 		"type": "MeshBasicMaterial",
-		"parameters": { "color": 13397760 }
+		"parameters": { "color": 16302899 }
 	}
 },
 
@@ -90,7 +90,7 @@
 	},
 
 	{
-		"colorDiffuse" : [0.800000011920929, 0.3050608441987759, 0.0],
+		"colorDiffuse" : [0.952941, 0.647059, 0.2],
 		"shading" : "Basic"
 	}],
 
@@ -118,7 +118,7 @@
 "emb_fire": {	"scale" : 1.000000,
 
 	"materials" : [	{
-		"colorDiffuse" : [0.800000011920929, 0.43657961542277945, 0.0],
+		"colorDiffuse" : [0.972549, 0.764705, 0.2],
 		"shading" : "Basic"
 	}],
 
