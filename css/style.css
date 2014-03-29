@@ -24,6 +24,9 @@ a {
     width:480px;
     height:480px;
     background-image: url(/img/Rocket480.png);
+    background-position: center center; 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 #logo .backcircle {
@@ -88,10 +91,10 @@ a {
     margin: 10px 0 20px;
 }
 
-@media only screen (-moz-min-device-pixel-ratio: 2), 
-only screen and (-o-min-device-pixel-ratio: 2/1), 
-only screen and (-webkit-min-device-pixel-ratio: 2), 
-only screen and (min-device-pixel-ratio: 2) {
+@media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
+only screen and (-o-min-device-pixel-ratio: 13/10),
+only screen and (min-resolution: 120dpi)
+{
     #logo {
         background-image: url(/img/Rocket960.png);
     }
