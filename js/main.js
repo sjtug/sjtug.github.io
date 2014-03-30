@@ -7,8 +7,9 @@ var trans_axis = new THREE.Vector3(-0.5, 0, 0.8);
 var rot_lean = new THREE.Vector3(0, 1, 0);
 
 var axis_c = new THREE.Vector3(0,0,0);
-var axis_h = (new THREE.Vector3(0,1,0)).applyAxisAngle(rot_axis, -6.3);
-var axis_w = (new THREE.Vector3(1,0,0)).applyAxisAngle(rot_axis, -6.3);
+var axis_s = new THREE.Vector3(0,0,0);
+var axis_h = (new THREE.Vector3(0,1,0)).applyAxisAngle(rot_axis, -0.02);
+var axis_w = (new THREE.Vector3(1,0,0)).applyAxisAngle(rot_axis, -0.02);
 var camera_pos = new THREE.Vector3(0, 0, 30);
 var current_pos = new THREE.Vector3(0,0,0);
 var delta = new THREE.Vector3(0,0,0);
@@ -17,6 +18,10 @@ var speedY = 0;
 var firel = 0.4;
 var firer = 0.2;
 
+
+var mx = 0;
+var my = 0;
+var xs = 0;
 
 init();
 
@@ -56,22 +61,31 @@ function init(){
       document.body.onmousemove = function(e){
         var w = document.body.clientWidth/2;
         mx = w-e.pageX;
-        my = 300-e.pageY;
+        if(firel<0.7) my = 300-e.pageY;
+        else {
+          mx=mx*0.2+xs;
+          my=300;
+        }
       }
 
-      mx = 0
-      my = 0
 
       var logo = document.getElementById('logo');
       logo.classList.add('ani');
       logo.appendChild(renderer.domElement);
+
+      var joinLink = document.getElementById('join');
       
-      logo.onmousedown = function(e){
+      joinLink.onmouseover = function(e){
         firel = 0.8;
         firer = 0.1;
+        var w = document.body.clientWidth/2;
+        xs = w - e.pageX;
+        if (xs>80) xs=160;
+        else if (xs<-80) xs=-160;
+        else xs = 0;
       }
       
-      logo.onmouseup = function(e){
+      joinLink.onmouseout = function(e){
         firel = 0.4;
         firer = 0.2;
       }
@@ -87,22 +101,21 @@ function step(camera) {
   if (my > 1000) my = 1000
   else if (my < -1000) my = -1000;
 
-  delta.set(-mx, my, 0).applyAxisAngle(rot_axis, -6.3).sub(current_pos);
+  delta.set(-mx, my, 0).applyAxisAngle(rot_axis, -0.02).sub(current_pos);
 
   if (delta.x>20) delta.x=20;
   else if (delta.x<-20) delta.x=-20;
-  if (delta.y>20) delta.y=20;
-  else if (delta.y<-20) delta.y=-20;
+  if (delta.y>50) delta.y=50;
+  else if (delta.y<-50) delta.y=-50;
 
   speedX += delta.x/2000;
-  speedY += delta.y/10000;
+  speedY += delta.y/8000;
 
   speedX *= 0.95;
-  speedY *= 0.85;
+  speedY *= 0.80;
 
   rocket.rotateOnAxis(rot_axis, speedX);
   camera.position.applyAxisAngle(axis_w, speedY);
-  camera.lookAt(axis_c);
   
   delta.x *= 0.5;
 
@@ -111,6 +124,13 @@ function step(camera) {
   if(firescale>=1) firescale = firel - firer*Math.random();
   else firescale = firel + firer*Math.random();
   fire.scale.z = firescale;
+  
+  if (firel>0.7) {
+    axis_s.set(-Math.random(), -Math.random(), 0);
+    axis_s.multiplyScalar(0.4);
+    camera.lookAt(axis_s);
+  }
+  else camera.lookAt(axis_c);
 }
 
 function animate() {
