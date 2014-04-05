@@ -38,9 +38,6 @@ function init(){
     camera.position = camera_pos;
     camera.lookAt(axis_c);
 
-    var mainLight = new THREE.DirectionalLight(0xffffff, 1);
-    mainLight.position.set(5,50,50);
-
     var loader = new THREE.SceneLoader();
     loader.load("/js/rocket.json", function(s){
       scene = s.scene;
@@ -56,7 +53,6 @@ function init(){
       fire.rotateOnAxis(rot_lean, -0.63);
 
       scene.add(camera);
-      scene.add(mainLight);
 
       document.body.onmousemove = function(e){
         var w = document.body.clientWidth/2;
@@ -138,5 +134,3 @@ function animate() {
   step(camera);
   renderer.render(scene, camera);
 }
-
-
