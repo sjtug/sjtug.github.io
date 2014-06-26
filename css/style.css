@@ -1,5 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Ceviche+One);
-@import url(http://fonts.googleapis.com/css?family=Gafata);
+@font-face {
+  font-family: 'Gafata';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/Gafata-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Ceviche One';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/CevicheOne-Regular.ttf) format('truetype');
+}
 
 body, * {
     margin: 0;
