@@ -58,8 +58,23 @@ function init(){
         window.ondevicemotion = function(e) {
           var ax = event.accelerationIncludingGravity.x;
           var ay = event.accelerationIncludingGravity.y;
-          mx = -ax * 80;
-          my = -ay * 80;
+          var orient = window.orientation;
+          if (orient==0) {
+            mx = -ax * 80;
+            my = -ay * 80;
+          }
+          else if (orient==90) {
+            mx = ay * 80;
+            my = -ax * 80;
+          }
+          else if (orient==-90) {
+            mx = -ay * 80;
+            my = -ax * 80;
+          }
+          else if (orient==180) {
+            mx = -ax * 80;
+            my = ay * 80;
+          }
         }
       }
       else {
