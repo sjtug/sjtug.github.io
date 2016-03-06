@@ -54,8 +54,19 @@ function init(){
 
       scene.add(camera);
 
+      document.body.onmousemove = function(e){
+        var w = document.body.clientWidth/2;
+        mx = w-e.pageX;
+        if(firel<0.7) my = 300-e.pageY;
+        else {
+          mx=mx*0.2+xs;
+          my=300;
+        }
+      }
+
       if (window.DeviceMotionEvent) {
-        window.ondevicemotion = function(e) {
+        deviceMotionHandler = function(e) {
+          document.body.onmousemove = null;
           var ax = event.accelerationIncludingGravity.x;
           var ay = event.accelerationIncludingGravity.y;
           var orient = window.orientation;
@@ -76,15 +87,13 @@ function init(){
             my = ay * 80;
           }
         }
-      }
-      else {
-        document.body.onmousemove = function(e){
-          var w = document.body.clientWidth/2;
-          mx = w-e.pageX;
-          if(firel<0.7) my = 300-e.pageY;
-          else {
-            mx=mx*0.2+xs;
-            my=300;
+        window.ondevicemotion = function(e) {
+          var acc = e.acceleration;
+          if (acc.x != null || acc.y != null || acc.z != null) {
+            document.body.onmousemove = null;
+            window.ondevicemotion = deviceMotionHandler;
+          } else {
+            window.ondevicemotion = null;
           }
         }
       }
