@@ -20,9 +20,23 @@ body, * {
     font-size: 16px;
 }
 
+body {
+    min-height: 100vh;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-direction: column; /* Safari 6.1+ */
+    display: flex;
+    flex-direction: column; 
+}
+
 a {
     text-decoration: none;
     color: #999;
+}
+
+#main {
+    -webkit-flex: 1;
+    flex: 1;
+    padding: 10px 0;
 }
 
 .container {
