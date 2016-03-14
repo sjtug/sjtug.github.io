@@ -102,6 +102,34 @@ a {
     margin: 10px 0 20px;
 }
 
+#coc {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 10px;
+}
+
+#coc h1 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#coc .content {
+    font-size: 20px;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+#coc .content>.small {
+    font-size: 16px;
+    color: #666;
+}
+
+#coc .notice {
+    color: #666;
+    font-size: 16px;
+}
+
 @media	only screen and (-webkit-min-device-pixel-ratio: 1.3),
 only screen and (-o-min-device-pixel-ratio: 13/10),
 only screen and (min-resolution: 120dpi)
