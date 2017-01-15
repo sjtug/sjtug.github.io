@@ -1,0 +1,19 @@
+env:
+  global:
+    - secure: "OYCxQIBeCXoDDFEZWJtT2Q0zdGT9C3Z4q7zEKksQOoI28bGrjuvq5hlkHEK44OoRxw5z7olSFPuvsRbGMTeLJOu7stkd9PvhSMAxfTMs3EtSIgRmdEIvBotpJF2di2inyFQC5voc99m/93kT5sJfzRPj6ltPsujhNbc7ybvBncKb/kEiogwUpH5MO2OTJ2BMCBI7ZgWGKhSiCiCkPGeD5YDDEVM9TUnOZFfcDPDe+R/xZNWvj378KvbwOC/SHGKQ3LckacnwH6cf2ok2dA6GlYiAuDKb+BAKO5lc+Cb0uA78LqpSX03tbSkqTt8LAiv8YWA2iKaS7wymelfDFidkBCDFt3ZE3zViUAfgL9YJBeIXXbntoK+elc3p7SSoNTe4SkgRLLczhIh8M1uWRn3AJRZBdW0lO8dY2heo9KqDua5LGQIko0KD6+2JfaiIsbr4eAOHN9hfaBNXF0DhhEjMXlYKWAzaUvILNSl6xEyTQQCV9UmmsZlt3mwlKeD/psrVLk9V55hkXCnr67KwNYyeIYIHIwHH8PVvFFahLnkjUmhuV01hMKu4BPDC9uPB8todSFkicN15AXKw5GKpDZlo49IO+/fMP0CzV1/gKPppq8eAVto4dWI+itNU8i5+lsulfKp8GHfDOnABQqVpqhbZIxa6+X8x9SmYoTN9UtWu5dU="
+    - GIT_DEPLOY_DIR=public
+    - GIT_DEPLOY_BRANCH=master
+    - GIT_DEPLOY_USERNAME="Travis CI"
+    - GIT_DEPLOY_EMAIL=vicluo96@gmail.com
+branches:
+  only:
+    - master
+
+install:
+  - rm -rf public || exit 0
+  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz && tar xzf hugo_0.18.1_Linux-64bit.tar.gz
+script:
+  - ./hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 -v
+after_success:
+  - cp .travis.yml public
+  - bash deploy.sh
