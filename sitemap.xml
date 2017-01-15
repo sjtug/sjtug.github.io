@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://sjtug.org/post/2017-01-14-announcing-new-portal/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/2017-01-08-halvm/</loc>
+    <lastmod>2017-01-08T20:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/contacts/</loc>
+    <lastmod>2016-11-27T15:26:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/about/</loc>
+    <lastmod>2016-11-27T15:12:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/tags/announcement/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/tags/news/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/tags/sharing/</loc>
+    <lastmod>2017-01-08T20:55:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
