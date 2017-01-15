@@ -23,7 +23,7 @@
 
 &lt;p&gt;安装&lt;code&gt;hugo&lt;/code&gt;然后&lt;code&gt;hugo new post/YYYY-MM-DD-article-title.md&lt;/code&gt;；或直接新建&lt;code&gt;content/post/YYYY-MM-DD-article-title.md&lt;/code&gt;，手动指定&lt;code&gt;date&lt;/code&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;front-matterns&#34;&gt;Front matterns&lt;/h2&gt;
+&lt;h2 id=&#34;front-matters&#34;&gt;Front matters&lt;/h2&gt;
 
 &lt;p&gt;头部&lt;code&gt;+++&lt;/code&gt;的front matters部分，可以指定的部分有：&lt;/p&gt;
 
