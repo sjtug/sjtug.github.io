@@ -7,7 +7,7 @@
 		<meta name="author" content="SJTUG">
 		<meta name="description" content="SJTU *NIX User Group">
 		<meta name="generator" content="Hugo 0.18.1" />
-		<title>SJTUG例行分享：HaLVM &middot; SJTUG - A Joyful Techie User Group</title>
+		<title>sjtug.org写作指南 &middot; SJTUG - A Joyful Techie User Group</title>
 		<link rel="shortcut icon" href="http://sjtug.org/images/favicon.ico">
 		<link rel="stylesheet" href="http://sjtug.org/css/style.css">
 		<link rel="stylesheet" href="http://sjtug.org/css/highlight.css">
@@ -52,43 +52,48 @@
         <section id="wrapper">
             <article class="post">
                 <header>
-                    <h1>SJTUG例行分享：HaLVM</h1>
+                    <h1>sjtug.org写作指南</h1>
                     <h2 class="headline">
-                    January 8, 2017 
-                    
-                    <br>
-                     <i class="fa fa-map-marker" aria-hidden="true"></i> Main Library E210 
-                     <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-08T15:00:00&#43;08:00 
+                    January 15, 2017 
                     
                     <br>
                     
                     
                         
-                            <a href="http://sjtug.org/tags/news">news</a>
-                        
-                            <a href="http://sjtug.org/tags/sharing">sharing</a>
+                            <a href="http://sjtug.org/tags/guide">guide</a>
                         
                     
                     
                     </h2>
                 </header>
-                
-                    <section id = "post-image">
-                        <img src="http://sjtug.org/images/halvm.jpg"></img>
-                    </section>
                  
                 <section id="post-body">
-                    <p>本周日（1月8日）下午15:00 - 17:30，@张震巨巨在新图E210给大家介绍HaLVM项目，欢迎大家来参加分享</p>
+                    
 
-<p>项目地址：<a href="https://github.com/GaloisInc/HaLVM">Github/HaLVM</a></p>
+<p>这里介绍了一下发布新文章的步骤</p>
 
-<p>巨巨主页：<a href="https://github.com/izgzhen">Github/izgzhen</a></p>
+<h2 id="安装hugo-或直接新建文章">安装Hugo, 或直接新建文章</h2>
 
-<blockquote>
-<p>HaLVM(Haskell Lightweight Virtual Machine)是一个让Glasgow Haskell Compiler套件直接在Xen虚拟环境下运行的项目。</p>
-</blockquote>
+<p>安装<code>hugo</code>然后<code>hugo new post/YYYY-MM-DD-article-title.md</code>；或直接新建<code>content/post/YYYY-MM-DD-article-title.md</code>，手动指定<code>date</code></p>
 
-<p><strong>分享资料</strong> : <a href="https://github.com/sjtug/sharing/tree/master/2017-01-08">sjtug/sharing/HaLVM</a></p>
+<h2 id="front-matterns">Front matterns</h2>
+
+<p>头部<code>+++</code>的front matters部分，可以指定的部分有：</p>
+
+<ul>
+<li><code>title = &quot;article title&quot;</code> 必填</li>
+<li><code>tags = [&quot;tag1&quot;, &quot;tag2&quot;]</code> 建议填写，只有包含<code>news</code> tag的文章才会在首页显示，其它常用tag包括<code>announcement</code>, <code>guide</code>, <code>sharing</code>等</li>
+<li><code>activity_time = &quot;2017-01-08T15:00:00+08:00&quot;</code>，格式同date，当有<code>sharing</code>标签时建议填写，代表活动开始时间</li>
+<li><code>activity_place = &quot;Main Library&quot;</code>，同上，代表活动地点</li>
+<li><code>draft = true</code>，当不想立即发布时才填写，默认情况<code>false</code>不用填写</li>
+</ul>
+
+<h2 id="测试并提交">测试并提交</h2>
+
+<ul>
+<li>使用<code>hugo server</code>看看最终效果是否理想</li>
+<li>提交到 <a href="https://github.com/sjtug/portal">https://github.com/sjtug/portal</a> ，主页会自动生成到sjtug.org</li>
+</ul>
 
                 </section>
             </article>
@@ -101,7 +106,7 @@
                         </div>
                     </a>
                 <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fsjtug.org%2fpost%2f2017-01-08-halvm%2f - SJTUG%e4%be%8b%e8%a1%8c%e5%88%86%e4%ba%ab%ef%bc%9aHaLVM by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fsjtug.org%2fpost%2f2017-01-15-writing-guide%2f - sjtug.org%e5%86%99%e4%bd%9c%e6%8c%87%e5%8d%97 by @sjtug"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(
@@ -117,9 +122,9 @@
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'sjtug-portal';
-    var disqus_identifier = 'http:\/\/sjtug.org\/post\/2017-01-08-halvm\/';
-    var disqus_title = 'SJTUG例行分享：HaLVM';
-    var disqus_url = 'http:\/\/sjtug.org\/post\/2017-01-08-halvm\/';
+    var disqus_identifier = 'http:\/\/sjtug.org\/post\/2017-01-15-writing-guide\/';
+    var disqus_title = 'sjtug.org写作指南';
+    var disqus_url = 'http:\/\/sjtug.org\/post\/2017-01-15-writing-guide\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
