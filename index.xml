@@ -29,6 +29,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;title = &amp;quot;article title&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author = &amp;quot;htfy96&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;]&lt;/code&gt; 建议填写，只有包含&lt;code&gt;news&lt;/code&gt; tag的文章才会在首页显示，其它常用tag包括&lt;code&gt;announcement&lt;/code&gt;, &lt;code&gt;guide&lt;/code&gt;, &lt;code&gt;sharing&lt;/code&gt;等&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;activity_time = &amp;quot;2017-01-08T15:00:00+08:00&amp;quot;&lt;/code&gt;，格式同date，当有&lt;code&gt;sharing&lt;/code&gt;标签时建议填写，代表活动开始时间&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;activity_place = &amp;quot;Main Library&amp;quot;&lt;/code&gt;，同上，代表活动地点&lt;/li&gt;
