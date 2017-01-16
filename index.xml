@@ -76,5 +76,60 @@
 </description>
     </item>
     
+    <item>
+      <title>SJTUG例行分享：Life of a packet</title>
+      <link>http://sjtug.org/post/2016-11-12-life-of-a-packet/</link>
+      <pubDate>Sat, 12 Nov 2016 23:40:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2016-11-12-life-of-a-packet/</guid>
+      <description>&lt;p&gt;11月12日晚18:00将在光彪楼二楼进行例行分享，由@贾枭 学长给大家带来分享 Life of a packet，欢迎大家来参与活动&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-11-12&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：简单的物理引擎</title>
+      <link>http://sjtug.org/post/2016-10-29-physical-engine/</link>
+      <pubDate>Sat, 29 Oct 2016 23:45:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2016-10-29-physical-engine/</guid>
+      <description>&lt;p&gt;10月29日晚18:00将在新图E316进行例行分享，由大一巨巨 @时光机 给大家带来「简单的物理引擎」分享，欢迎大家来参与活动&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：C11 Memory Model</title>
+      <link>http://sjtug.org/post/2016-10-16-c11-memory-model/</link>
+      <pubDate>Sun, 16 Oct 2016 22:45:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2016-10-16-c11-memory-model/</guid>
+      <description>&lt;p&gt;10月16日晚18:00，@贾枭 学长在新图B416向大家介绍 C11 Memory Model 的有关知识。&lt;/p&gt;
+
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：Dependent Type</title>
+      <link>http://sjtug.org/post/2016-10-04-dependent-type/</link>
+      <pubDate>Tue, 04 Oct 2016 22:55:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2016-10-04-dependent-type/</guid>
+      <description>&lt;p&gt;10月4日晚18:00 - 21:00，@邵成 @钱泽森 两位同学在新图E316向大家介绍 Dependent Type。&lt;/p&gt;
+
+&lt;p&gt;邵成：Fun with Dependent Types in Haskell&lt;br /&gt;
+钱泽森：How to Write a Safe Printf in Agda&lt;/p&gt;
+
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-04&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

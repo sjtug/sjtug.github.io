@@ -27,6 +27,26 @@
   </url>
   
   <url>
+    <loc>http://sjtug.org/post/2016-11-12-life-of-a-packet/</loc>
+    <lastmod>2016-11-12T23:40:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/2016-10-29-physical-engine/</loc>
+    <lastmod>2016-10-29T23:45:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/2016-10-16-c11-memory-model/</loc>
+    <lastmod>2016-10-16T22:45:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/2016-10-04-dependent-type/</loc>
+    <lastmod>2016-10-04T22:55:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sjtug.org/tags/announcement/</loc>
     <lastmod>2017-01-14T20:55:00+08:00</lastmod>
     <priority>0</priority>
