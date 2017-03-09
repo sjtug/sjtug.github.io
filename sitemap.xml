@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sjtug.org/post/2017-03-09-gpg-sign-party/</loc>
+    <lastmod>2017-03-09T22:11:40+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sjtug.org/post/2017-02-21-hotpot/</loc>
     <lastmod>2017-02-21T19:41:47+08:00</lastmod>
   </url>
@@ -71,25 +76,25 @@
   
   <url>
     <loc>http://sjtug.org/tags/news/</loc>
-    <lastmod>2017-02-21T19:41:47+08:00</lastmod>
+    <lastmod>2017-03-09T22:11:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/post/</loc>
-    <lastmod>2017-02-21T19:41:47+08:00</lastmod>
+    <lastmod>2017-03-09T22:11:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/</loc>
-    <lastmod>2017-02-21T19:41:47+08:00</lastmod>
+    <lastmod>2017-03-09T22:11:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/tags/sharing/</loc>
-    <lastmod>2017-01-08T20:55:00+08:00</lastmod>
+    <lastmod>2017-03-09T22:11:40+08:00</lastmod>
     <priority>0</priority>
   </url>
   

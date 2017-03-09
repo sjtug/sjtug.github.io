@@ -9,6 +9,19 @@
     <atom:link href="http://sjtug.org/tags/sharing/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>GPG Sign Party &amp; Yubikey安利</title>
+      <link>http://sjtug.org/post/2017-03-09-gpg-sign-party/</link>
+      <pubDate>Thu, 09 Mar 2017 22:11:40 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2017-03-09-gpg-sign-party/</guid>
+      <description>&lt;p&gt;本周日(12日)下午3点到5点，在新图E216将举行GPG Sign Party&amp;amp;Yubikey安利活动。将手把手教大家签发/交换密钥与加密、签名信息，欢迎参加！&lt;/p&gt;
+
+&lt;p&gt;校内同学点击&lt;a href=&#34;http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp&#34;&gt;这里加入学习室&lt;/a&gt;。
+申请单号94388，密码165165&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>SJTUG例行分享：HaLVM</title>
       <link>http://sjtug.org/post/2017-01-08-halvm/</link>
       <pubDate>Sun, 08 Jan 2017 20:55:00 +0800</pubDate>
