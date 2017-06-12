@@ -6,8 +6,67 @@
     <description>Recent content in Posts on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Mar 2017 22:11:40 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Jun 2017 15:58:00 +0800</lastBuildDate>
     <atom:link href="http://sjtug.org/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SJTUG暑期课堂报名中！</title>
+      <link>http://sjtug.org/post/2017-06-12-summer-class/</link>
+      <pubDate>Mon, 12 Jun 2017 15:58:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2017-06-12-summer-class/</guid>
+      <description>&lt;p&gt;SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同学的进行3～4次分享，主要内容见下：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;地点&lt;/th&gt;
+&lt;th&gt;主讲人&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;6月29日（19周周四）&lt;/td&gt;
+&lt;td&gt;东上309&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://intmainreturn0.com&#34;&gt;@htfy96&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;开源与自由软件历史&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月6日（20周周四）&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://io-meter.com&#34;&gt;@茄子(ant_sz)&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月13日（21周周四）&lt;/td&gt;
+&lt;td&gt;东上309&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://codeworm96.github.io&#34;&gt;@codeworm96&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Haskell School of Music&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月20日（22周周四）&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;课堂将保证小规模，确保来的同学都有当面指导的机会。欢迎对技术感兴趣的同学来参加！我们尤其欢迎在Linux、自由软件、函数式编程等领域有兴趣的同学。&lt;/p&gt;
+
+&lt;p&gt;不管你是否已经毕业，还是只能来几节课，都欢迎填写这张表格报名：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wj.qq.com/s/1401085/f0a5&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; style=&#34;color:#fff;font-size:20px; background:#5badf0;padding: 10px 20px 10px 20px;&#34;&gt;立即报名&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;之后，所有的Slides都会在我们的&lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;Github仓库&lt;/a&gt;公开，欢迎Star～&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GPG Sign Party &amp; Yubikey安利</title>
