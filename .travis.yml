@@ -5,6 +5,8 @@ env:
     - GIT_DEPLOY_BRANCH=master
     - GIT_DEPLOY_USERNAME="Travis CI"
     - GIT_DEPLOY_EMAIL=vicluo96@gmail.com
+    - secure: "KWDHzR5Ni6C2kr0KjqWak75WqCSBD7OidVfghGeIf3dfSscmO1Hmryfz18CF1tijX3o2mOVWRdyXNq9eILon34ZeP0qt0mYIAm0yBp8sAR72WR4MhYdBlffFCIDyEDyRIbUGdtm1fA/2ChqhbUtPiJO83SKMwJ9uXXLwayuf3o/vLnYhqhwt+qjd38VDj17FBVqhNcIXJY3BzCVVxTjr8aiVoOvljAc8D9kAv/AsLiRpuI6YtPm7aGr+vhaT5MTN18W+TLet2jIOB+9kcwRCbHSoC/uVKy46PmuIw0hxij8LnBzeQpVz8tdt/tkYG6mxSV/yxmGuaLZldMK3eTuVXimOBcHCRbofXyFJuIEe6Z10eRPvhJLsZHboGxrG0WMTd1F9iSlr9WxCmk26SyDEu83M/75FRq4KVxZCASX5mK+B1zJ9/lHkEZz63U79Ll9h7x1szDQWLPMUzw03+jfy4UYclIR9mfnkafaRyMIFzPtj6dkW/5dWqWmRUu5tP0+QAqzJBf7DuVkZ4ydwljkVgb0P72TLacP5W0NwnN810Z0BR0aT6eQB1BiOdYbg5hKfe/mXajqjgQ23WNbXiLrOpOX864mT0jDCWECeyK4x570A+GwwCxIYZ+zXwVxoKlyUL5LXTOzGM1vbvr55pv1ovZsl4lsPGwWU78QWAfwKZ6Y="
+    - secure: "CgfrvyASnzYAhv+Ujx9/b3O6cLNUUnWZ5ZcjvVodzBtYbBg0plPVq+Yc98B/EFOVrYZz2JbZJKA3yfof0mRNZ7FCYbGaBQpylymdmH0eHRPxG63AiRrEtLlzLECQBv+7FQcsRMymGunjTq9Ln5Bm5omy0S/XL4ds01HoPUiC/+7SJWS9zmlTcXoQPVLy2zNBfMcnacDasNd7HiQN8WqFnM9lwpdwX2zvCF+hd61aPniisEISim0a/0pTGiYZKUBb6PnLaje6wgNMbrB7B6gqkQ5HCgquNJNMq6RDhrXcBC4Y/AbMmc2vTY0uSs+2gpeAAaYTvAVoVVqaDDBacMqNWme3tJtsj9p7Hb/sryBQF2RnroFtssB9RR2hOH4gloU9v4Dxjh66/6KmpzLmiDv7ANHGe7LzDbsqf6szyFnMZhzh2ZxnYMLeUXhGQYbrLzixm88E2zwpgjodqXSY6899Cn+zuFYfP1ekXv0w7GTWcv9upy7+n1pUBXBDV/zGoYexdoI0mgUjK3ynEe8Gbjmr1C5RW2HFXNVqlqpMDqeojPGuYP/aRMozVdpkdiLIqEQrujUsOCy2tg8NKzxOSs5e593P8vHt/WJPGhpN5pUGqSancFJLMpE5vlvab6I+AWiCJIopIuUHMS016BLXBVT20G2aDxKLoh2I/ax8KZkbIuY="
 branches:
   only:
     - master
@@ -15,6 +17,8 @@ install:
 script:
   - ./hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 -v
 after_success:
+  - sudo pip install -yy python-pip python-dev build-essential && sudo pip install coscmd
+  - coscmd config -a "$TCLOUD_API_ID" -s "$TCLOUD_API_KEY" -b sjtug-portal-1251836446 -r ap-chengdu && coscmd upload -r public /
   - cp .travis.yml public
   - echo 'sjtug.org' > public/CNAME
   - bash deploy.sh
