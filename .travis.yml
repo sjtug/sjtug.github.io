@@ -17,7 +17,7 @@ install:
 script:
   - ./hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 -v
 after_success:
-  - sudo pip install -yy python-pip python-dev build-essential && sudo pip install coscmd
+  - sudo apt-get install -yy python-pip python-dev build-essential && sudo pip install coscmd
   - coscmd config -a "$TCLOUD_API_ID" -s "$TCLOUD_API_KEY" -b sjtug-portal-1251836446 -r ap-chengdu && coscmd upload -r public /
   - cp .travis.yml public
   - echo 'sjtug.org' > public/CNAME
