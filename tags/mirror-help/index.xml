@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mirror Help on SJTUG - A Joyful Techie User Group</title>
+    <link>http://sjtug.org/tags/mirror-help/index.xml</link>
+    <description>Recent content in Mirror Help on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>putty</title>
+      <link>http://sjtug.org/post/mirror-help/putty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-help/putty/</guid>
+      <description>&lt;p&gt;PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。&lt;/p&gt;
+
+&lt;p&gt;使用方法：直接打开点击Download&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://sjtug.org/post/mirror-help/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-help/ubuntu/</guid>
+      <description>&lt;p&gt;Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+
+&lt;p&gt;SJTUG镜像源可以加速软件包的安装。&lt;/p&gt;
+
+&lt;p&gt;使用方式：&lt;/p&gt;
+
+&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirrors.sjtug.org/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

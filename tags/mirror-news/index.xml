@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mirror News on SJTUG - A Joyful Techie User Group</title>
+    <link>http://sjtug.org/tags/mirror-news/index.xml</link>
+    <description>Recent content in Mirror News on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <atom:link href="http://sjtug.org/tags/mirror-news/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>镜像源v2 Beta版上线！</title>
+      <link>http://sjtug.org/post/mirror-news/2018-03-04-v2-beta/</link>
+      <pubDate>Sun, 04 Mar 2018 22:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2018-03-04-v2-beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>喜迎校庆 SJTUG Mirrors加入Arch Linux镜像源</title>
+      <link>http://sjtug.org/post/mirror-news/2016-04-07-arch-repo/</link>
+      <pubDate>Thu, 07 Apr 2016 22:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2016-04-07-arch-repo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SJTUG Demo镜像源成立</title>
+      <link>http://sjtug.org/post/mirror-news/2016-03-17-established/</link>
+      <pubDate>Thu, 17 Mar 2016 22:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2016-03-17-established/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
