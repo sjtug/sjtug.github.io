@@ -161,6 +161,30 @@
   </url>
   
   <url>
+    <loc>http://sjtug.org/post/mirror-help/archlinux/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/archlinux-cn/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/debian/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/docker-registry/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/fedora/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/npm-registry/</loc>
+  </url>
+  
+  <url>
     <loc>http://sjtug.org/post/mirror-help/putty/</loc>
   </url>
   
