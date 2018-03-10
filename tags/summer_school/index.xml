@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Summer_school on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/summer_school/index.xml</link>
+    <link>http://sjtug.org/tags/summer_school/</link>
     <description>Recent content in Summer_school on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://sjtug.org/tags/summer_school/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jun 2017 21:57:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://sjtug.org/tags/summer_school/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>暑期课堂学生分流</title>
@@ -14,108 +17,10 @@
       <pubDate>Sun, 25 Jun 2017 21:57:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-25-summer-class-schedule/</guid>
-      <description>
-
-&lt;p&gt;由于暑期课堂报名人数接近90人，教室无法容纳这么多的人数，因此我们不得不采取分流措施。选择这门课的老师与同学建议按照以下表格前来上课。&lt;/p&gt;
-
-&lt;p&gt;当然，如果您有特别感兴趣的话题可以随时来听，但可能会发生没有座位的情况。&lt;/p&gt;
-
-&lt;h2 id=&#34;建议在第1-4周-6月29日-7月20日-前来的老师与同学的手机后4位&#34;&gt;建议在第1、4周（6月29日/7月20日）前来的老师与同学的手机后4位&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;0076
-0158
-0203
-1025
-1991
-2073
-2180
-2529
-2537
-2701
-3081
-3136
-3253
-3739
-4746
-5042
-5301
-5397
-5425
-5532
-6265
-6527
-6708
-6723
-6985
-7035
-7051
-7076
-7586
-7683
-8038
-8189
-8851
-9108
-9481
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以及学号是B045090027，没有填写手机号的同学&lt;/p&gt;
-
-&lt;h2 id=&#34;建议在第2-3周-7月7日-7月13日-前来的老师与同学的手机后4位&#34;&gt;建议在第2、3周（7月7日/7月13日）前来的老师与同学的手机后4位&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code&gt;0039
-0069
-0153
-0159
-0200
-0320
-0709
-0874
-1160
-1172
-1362
-1691
-1716
-2127
-2530
-2596
-2913
-3215
-3580
-3680
-4486
-4648
-4782
-5028
-5163
-5209
-5336
-5585
-5732
-5831
-5996
-6090
-6217
-6241
-6321
-7065
-7076
-7317
-7450
-7597
-7598
-7931
-7959
-8127
-8360
-8525
-8676
-8972
-9150
-9371
-9731
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+      <description> 由于暑期课堂报名人数接近90人，教室无法容纳这么多的人数，因此我们不得不采取分流措施。选择这门课的老师与同学建议按照以下表格前来上课。
+当然，如果您有特别感兴趣的话题可以随时来听，但可能会发生没有座位的情况。
+建议在第1、4周（6月29日/7月20日）前来的老师与同学的手机后4位 0076 0158 0203 1025 1991 2073 2180 2529 2537 2701 3081 3136 3253 3739 4746 5042 5301 5397 5425 5532 6265 6527 6708 6723 6985 7035 7051 7076 7586 7683 8038 8189 8851 9108 9481  以及学号是B045090027，没有填写手机号的同学
+建议在第2、3周（7月7日/7月13日）前来的老师与同学的手机后4位 0039 0069 0153 0159 0200 0320 0709 0874 1160 1172 1362 1691 1716 2127 2530 2596 2913 3215 3580 3680 4486 4648 4782 5028 5163 5209 5336 5585 5732 5831 5996 6090 6217 6241 6321 7065 7076 7317 7450 7597 7598 7931 7959 8127 8360 8525 8676 8972 9150 9371 9731  </description>
     </item>
     
     <item>
@@ -124,62 +29,25 @@
       <pubDate>Sat, 24 Jun 2017 20:29:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-24-summer-class-portal/</guid>
-      <description>
-
-&lt;p&gt;这里是SJTUG 2017暑期课堂的课程主页，之后所有的课程时间、地点以本页为准，相关的资料也会在本页发放。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;UPDATE(06-25): &lt;a href=&#34;http://sjtug.org/post/2017-06-25-summer-class-schedule&#34;&gt;人员分流名单&lt;/a&gt;已经公布，请尽快查看自己的时间
-UPDATE(06-29)：更新第一周课件及第二周时间地点
-UPDATE(07-01)：更新第二周主题&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;6月29日-开源与自由软件历史&#34;&gt;6月29日/开源与自由软件历史&lt;/h2&gt;
-
-&lt;p&gt;时间：6月29日（19周周四）18:00&lt;/p&gt;
-
-&lt;p&gt;地点：东上309&lt;/p&gt;
-
-&lt;p&gt;主讲人：&lt;a href=&#34;https://intmainreturn0.com&#34;&gt;@htfy96&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;课件：&lt;a href=&#34;http://sjtug.org/sharing/2017-06-29/&#34;&gt;在线查看&lt;/a&gt; &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-06-29&#34;&gt;下载&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;7月7日-git使用&#34;&gt;7月7日/Git使用&lt;/h2&gt;
-
-&lt;p&gt;时间：&lt;strong&gt;7月7日（20周周五）20:30&lt;/strong&gt;（有更改）&lt;/p&gt;
-
-&lt;p&gt;地点：东中4-302&lt;/p&gt;
-
-&lt;p&gt;主讲人：&lt;a href=&#34;https://io-meter.com&#34;&gt;@茄子(ant_sz)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;课件：N/A&lt;/p&gt;
-
-&lt;h2 id=&#34;7月13日-game-theory-and-mechanism&#34;&gt;7月13日/Game Theory and Mechanism&lt;/h2&gt;
-
-&lt;p&gt;时间：7月13日（21周周四）18:00&lt;/p&gt;
-
-&lt;p&gt;地点：东上309&lt;/p&gt;
-
-&lt;p&gt;主讲人：&lt;a href=&#34;javascript:;&#34;&gt;@Phijack&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;课件：N/A&lt;/p&gt;
-
-&lt;h2 id=&#34;7月20日-haskell-school-of-music&#34;&gt;7月20日/Haskell School of Music&lt;/h2&gt;
-
-&lt;p&gt;时间：7月20日（22周周四）18:00&lt;/p&gt;
-
-&lt;p&gt;地点：东上309&lt;/p&gt;
-
-&lt;p&gt;主讲人：&lt;a href=&#34;http://codeworm96.github.io&#34;&gt;@codeworm96&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;课件：N/A&lt;/p&gt;
-
-&lt;h2 id=&#34;获取最新资讯&#34;&gt;获取最新资讯&lt;/h2&gt;
-
-&lt;p&gt;可以通过&lt;a href=&#34;http://sjtug.org/tags/summer_school/index.xml&#34;&gt;RSS订阅&lt;/a&gt;或关注我们的微信号@sjtunix获取最新资讯：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://sjtug.org/images/wechat_qrcode.jpg&#34; alt=&#34;wechat_qrcode&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>这里是SJTUG 2017暑期课堂的课程主页，之后所有的课程时间、地点以本页为准，相关的资料也会在本页发放。
+ UPDATE(06-25): 人员分流名单已经公布，请尽快查看自己的时间 UPDATE(06-29)：更新第一周课件及第二周时间地点 UPDATE(07-01)：更新第二周主题
+ 6月29日/开源与自由软件历史 时间：6月29日（19周周四）18:00
+地点：东上309
+主讲人：@htfy96
+课件：在线查看 下载
+7月7日/Git使用 时间：7月7日（20周周五）20:30（有更改）
+地点：东中4-302
+主讲人：@茄子(ant_sz)
+课件：N/A
+7月13日/Game Theory and Mechanism 时间：7月13日（21周周四）18:00
+地点：东上309
+主讲人：@Phijack
+课件：N/A
+7月20日/Haskell School of Music 时间：7月20日（22周周四）18:00
+地点：东上309
+主讲人：@codeworm96
+课件：N/A
+获取最新资讯 可以通过RSS订阅或关注我们的微信号@sjtunix获取最新资讯：</description>
     </item>
     
     <item>
@@ -188,64 +56,14 @@ UPDATE(07-01)：更新第二周主题&lt;/p&gt;
       <pubDate>Mon, 12 Jun 2017 15:58:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-12-summer-class/</guid>
-      <description>&lt;p&gt;UPDATE: &lt;a href=&#34;http://sjtug.org/post/2017-06-24-summer-class-portal/&#34;&gt;课程主页&lt;/a&gt;已经开通！&lt;/p&gt;
-
-&lt;p&gt;SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同学的进行3～4次分享，主要内容见下：&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;日期&lt;/th&gt;
-&lt;th&gt;地点&lt;/th&gt;
-&lt;th&gt;主讲人&lt;/th&gt;
-&lt;th&gt;内容&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;6月29日（19周周四）&lt;/td&gt;
-&lt;td&gt;东上309&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://intmainreturn0.com&#34;&gt;@htfy96&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;开源与自由软件历史。以几个人物作为主线科普自由软件及其相关运动的起伏与发展，不需要代码水平的科普性质讲座。&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;7月6日（20周周四）&lt;/td&gt;
-&lt;td&gt;待定&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://io-meter.com&#34;&gt;@茄子(ant_sz)&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;待定&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;7月13日（21周周四）&lt;/td&gt;
-&lt;td&gt;东上309&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;javascript:;&#34;&gt;@Phijack&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Game Theory and Mechanism&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;7月20日（22周周四）&lt;/td&gt;
-&lt;td&gt;东上309&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;http://codeworm96.github.io&#34;&gt;@codeworm96&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Haskell School of Music，探索用程序语言的方式对音乐进行抽象，不要求编程或音乐理论基础。&lt;a href=&#34;http://codeworm96.github.io/posts/2017-06-15-HSoM.html&#34;&gt;详细介绍点此&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;课堂将保证小规模，确保来的同学都有当面指导的机会。欢迎对技术感兴趣的同学来参加！我们尤其欢迎在Linux、自由软件、函数式编程等领域有兴趣的同学。&lt;/p&gt;
-
-&lt;p&gt;强烈建议加最后的微信群以获取资料与课前信息。&lt;/p&gt;
-
-&lt;p&gt;不管你是否已经毕业，还是只能来几节课，都欢迎填写这张表格报名：&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://wj.qq.com/s/1401085/f0a5&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; style=&#34;color:#fff;font-size:20px; background:#5badf0;padding: 10px 20px 10px 20px;&#34;&gt;立即报名&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;之后，所有的Slides都会在我们的&lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;Github仓库&lt;/a&gt;公开，欢迎Star～&lt;/p&gt;
-
-&lt;p&gt;欢迎想来的同学长按识别二维码加群或加微信69oulciV@：
-&lt;img src=&#34;https://user-images.githubusercontent.com/8121231/27035049-82b2b8c2-4fb2-11e7-84f9-ccf2c05be98c.jpg&#34; alt=&#34;SJTUG Summer Class2017&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>UPDATE: 课程主页已经开通！
+SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同学的进行3～4次分享，主要内容见下：
+   日期 地点 主讲人 内容     6月29日（19周周四） 东上309 @htfy96 开源与自由软件历史。以几个人物作为主线科普自由软件及其相关运动的起伏与发展，不需要代码水平的科普性质讲座。   7月6日（20周周四） 待定 @茄子(ant_sz) 待定   7月13日（21周周四） 东上309 @Phijack Game Theory and Mechanism   7月20日（22周周四） 东上309 @codeworm96 Haskell School of Music，探索用程序语言的方式对音乐进行抽象，不要求编程或音乐理论基础。详细介绍点此    课堂将保证小规模，确保来的同学都有当面指导的机会。欢迎对技术感兴趣的同学来参加！我们尤其欢迎在Linux、自由软件、函数式编程等领域有兴趣的同学。
+强烈建议加最后的微信群以获取资料与课前信息。
+不管你是否已经毕业，还是只能来几节课，都欢迎填写这张表格报名：
+立即报名
+之后，所有的Slides都会在我们的Github仓库公开，欢迎Star～
+欢迎想来的同学长按识别二维码加群或加微信69oulciV@： </description>
     </item>
     
   </channel>

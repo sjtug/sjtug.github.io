@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mirror News on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/mirror-news/index.xml</link>
+    <link>http://sjtug.org/tags/mirror-news/</link>
     <description>Recent content in Mirror News on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://sjtug.org/tags/mirror-news/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Mar 2018 22:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://sjtug.org/tags/mirror-news/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>镜像源v2 Beta版上线！</title>

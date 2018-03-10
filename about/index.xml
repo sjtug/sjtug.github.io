@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/about/index.xml</link>
+    <link>http://sjtug.org/about/</link>
     <description>Recent content in About on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 27 Nov 2016 15:12:37 +0800</lastBuildDate>
-    <atom:link href="http://sjtug.org/about/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://sjtug.org/about/index.xml" rel="self" type="application/rss+xml" />
+    
     
   </channel>
 </rss>

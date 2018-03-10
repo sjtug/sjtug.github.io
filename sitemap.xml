@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://sjtug.org/post/2018-03-10-intro/</loc>
+    <lastmod>2018-03-10T21:00:00+08:00</lastmod>
+  </url>
   
   <url>
     <loc>http://sjtug.org/post/mirror-news/2018-03-04-v2-beta/</loc>
@@ -127,25 +133,25 @@
   
   <url>
     <loc>http://sjtug.org/tags/news/</loc>
-    <lastmod>2017-11-02T22:00:00+08:00</lastmod>
+    <lastmod>2018-03-10T21:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/post/</loc>
-    <lastmod>2018-03-04T22:00:00+08:00</lastmod>
+    <lastmod>2018-03-10T21:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/</loc>
-    <lastmod>2018-03-04T22:00:00+08:00</lastmod>
+    <lastmod>2018-03-10T21:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/tags/sharing/</loc>
-    <lastmod>2017-11-02T22:00:00+08:00</lastmod>
+    <lastmod>2018-03-10T21:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,6 +163,7 @@
   
   <url>
     <loc>http://sjtug.org/tags/</loc>
+    <lastmod>2017-01-14T20:55:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -186,6 +193,10 @@
   
   <url>
     <loc>http://sjtug.org/post/mirror-help/putty/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sjtug.org/post/mirror-help/rust-static/</loc>
   </url>
   
   <url>

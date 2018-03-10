@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guide on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/guide/index.xml</link>
+    <link>http://sjtug.org/tags/guide/</link>
     <description>Recent content in Guide on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <atom:link href="http://sjtug.org/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2017 23:12:56 +0800</lastBuildDate>
+    
+	<atom:link href="http://sjtug.org/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>sjtug.org写作指南</title>
@@ -14,38 +17,12 @@
       <pubDate>Sun, 15 Jan 2017 23:12:56 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-01-15-writing-guide/</guid>
-      <description>
-
-&lt;p&gt;这里介绍了一下发布新文章的步骤&lt;/p&gt;
-
-&lt;h2 id=&#34;安装hugo-或直接新建文章&#34;&gt;安装Hugo, 或直接新建文章&lt;/h2&gt;
-
-&lt;p&gt;安装&lt;code&gt;hugo&lt;/code&gt;然后&lt;code&gt;hugo new post/YYYY-MM-DD-article-title.md&lt;/code&gt;；或直接新建&lt;code&gt;content/post/YYYY-MM-DD-article-title.md&lt;/code&gt;，手动指定&lt;code&gt;date&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;软件源新闻放在&lt;code&gt;content/post/mirror-news&lt;/code&gt;下面，带上&lt;code&gt;mirror-news&lt;/code&gt;的tag。&lt;/p&gt;
-
-&lt;p&gt;软件源帮助放在&lt;code&gt;content/post/mirror-help&lt;/code&gt;下面，带上&lt;code&gt;mirror-help&lt;/code&gt;的tag，title设定成和name相同（注意大小写）。&lt;/p&gt;
-
-&lt;h2 id=&#34;front-matters&#34;&gt;Front matters&lt;/h2&gt;
-
-&lt;p&gt;头部&lt;code&gt;+++&lt;/code&gt;的front matters部分，可以指定的部分有：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;title = &amp;quot;article title&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;author = &amp;quot;htfy96&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;]&lt;/code&gt; 建议填写，只有包含&lt;code&gt;news&lt;/code&gt; tag的文章才会在首页显示，其它常用tag包括&lt;code&gt;announcement&lt;/code&gt;, &lt;code&gt;guide&lt;/code&gt;, &lt;code&gt;sharing&lt;/code&gt;等&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;activity_time = &amp;quot;2017-01-08T15:00:00+08:00&amp;quot;&lt;/code&gt;，格式同date，当有&lt;code&gt;sharing&lt;/code&gt;标签时建议填写，代表活动开始时间&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;activity_place = &amp;quot;Main Library&amp;quot;&lt;/code&gt;，同上，代表活动地点&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;draft = true&lt;/code&gt;，当不想立即发布时才填写，默认情况&lt;code&gt;false&lt;/code&gt;不用填写&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;测试并提交&#34;&gt;测试并提交&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;使用&lt;code&gt;hugo server&lt;/code&gt;看看最终效果是否理想&lt;/li&gt;
-&lt;li&gt;提交到 &lt;a href=&#34;https://github.com/sjtug/portal&#34;&gt;https://github.com/sjtug/portal&lt;/a&gt; ，主页会自动生成到sjtug.org&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description> 这里介绍了一下发布新文章的步骤
+安装Hugo, 或直接新建文章 安装hugo然后hugo new post/YYYY-MM-DD-article-title.md；或直接新建content/post/YYYY-MM-DD-article-title.md，手动指定date
+软件源新闻放在content/post/mirror-news下面，带上mirror-news的tag。
+软件源帮助放在content/post/mirror-help下面，带上mirror-help的tag，title设定成和name相同（注意大小写）。
+Front matters 头部+++的front matters部分，可以指定的部分有：
+ title = &amp;quot;article title&amp;quot; 必填 author = &amp;quot;htfy96&amp;quot; 必填 tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;] 建议填写，只有包含news tag的文章才会在首页显示，其它常用tag包括announcement, guide, sharing等 activity_time = &amp;quot;2017-01-08T15:00:00+08:00&amp;quot;，格式同date，当有sharing标签时建议填写，代表活动开始时间 activity_place = &amp;quot;Main Library&amp;quot;，同上，代表活动地点 draft = true，当不想立即发布时才填写，默认情况false不用填写  测试并提交  使用hugo server看看最终效果是否理想 提交到 https://github.com/sjtug/portal ，主页会自动生成到sjtug.org  </description>
     </item>
     
   </channel>

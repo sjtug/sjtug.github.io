@@ -7,7 +7,7 @@
 		<meta name="author" content="SJTUG">
 		<meta name="description" content="SJTU *NIX User Group">
 		<meta name="generator" content="Hugo 0.37.1" />
-		<title>ubuntu &middot; SJTUG - A Joyful Techie User Group</title>
+		<title>rust-static &middot; SJTUG - A Joyful Techie User Group</title>
 		<link rel="shortcut icon" href="http://sjtug.org/images/favicon.ico">
 		<link rel="stylesheet" href="http://sjtug.org/css/style.css">
 		<link rel="stylesheet" href="http://sjtug.org/css/highlight.css">
@@ -52,7 +52,7 @@
         <section id="wrapper">
             <article class="post">
                 <header>
-                    <h1>ubuntu</h1>
+                    <h1>rust-static</h1>
                     <h2 class="headline">
                     January 1, 0001 
                     
@@ -72,13 +72,13 @@
                 </header>
                  
                 <section id="post-body">
-                    <p>Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。</p>
+                    <p>rust-static储存了rust的工具链及<code>rustup</code>本身的镜像。</p>
 
-<p>SJTUG镜像源可以加速软件包的安装。</p>
+<p>使用方法：安装<code>rustup</code>，将以下环境变量加入<code>~/.bashrc</code>或类似文件中：</p>
 
-<p>使用方式：</p>
-
-<p>使用<code>sudo nano /etc/apt/sources.list</code>打开镜像源列表文件。将类似于<code>http://cn.archive.ubuntu.com/ubuntu</code>的地址改成<code>https://mirrors.sjtug.org/ubuntu</code>，之后按<code>Ctrl-O 回车</code>保存，按<code>Ctrl-X</code>退出。最后执行<code>sudo apt update</code>即可。</p>
+<pre><code class="language-sh">export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup
+</code></pre>
 
                 </section>
             </article>
@@ -91,7 +91,7 @@
                         </div>
                     </a>
                 <section id="sharing">
-                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fubuntu%2f - ubuntu by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2frust-static%2f - rust-static by @sjtug"><span class="icon-twitter"> Tweet</span></a>
 
 <a class="facebook" href="#" onclick="
     window.open(

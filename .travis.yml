@@ -13,9 +13,9 @@ branches:
 
 install:
   - rm -rf public || exit 0
-  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz && tar xzf hugo_0.18.1_Linux-64bit.tar.gz
+  - wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.37.1/hugo_0.37.1_Linux-64bit.tar.gz && tar xzf hugo.tar.gz
 script:
-  - ./hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 -v
+  - ./hugo -v
 after_success:
   - sudo apt-get install -yy python-pip python-dev build-essential && sudo pip install coscmd
   - coscmd config -a "$TCLOUD_API_ID" -s "$TCLOUD_API_KEY" -b sjtug-portal-1251836446 -r ap-chengdu && coscmd upload -r public /
