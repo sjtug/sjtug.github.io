@@ -8,7 +8,7 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 14 Jan 2017 20:55:00 +0800</lastBuildDate>
     
-	<atom:link href="http://sjtug.org/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://sjtug.org/tags/announcement/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,10 @@
       <pubDate>Sat, 14 Jan 2017 20:55:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-01-14-announcing-new-portal/</guid>
-      <description>我们的首页已经更新到基于Hugo的版本，希望能给大家带来更好的阅读体验。
-接下来这里将会加入例行分享的报道及一些技术文章，欢迎大家订阅。</description>
+      <description>&lt;p&gt;我们的首页已经更新到基于Hugo的版本，希望能给大家带来更好的阅读体验。&lt;/p&gt;
+
+&lt;p&gt;接下来这里将会加入例行分享的报道及一些技术文章，欢迎大家订阅。&lt;/p&gt;
+</description>
     </item>
     
   </channel>

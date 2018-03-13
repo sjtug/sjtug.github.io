@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="http://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -16,8 +16,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/archlinux/</guid>
-      <description>Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。
-使用方法： 编辑/etc/pacman.d/mirrorlist文件，添加Server = https://mirrors.sjtug.org/archlinux/$repo/os/$arch这一行，同时注释掉其它所有镜像。</description>
+      <description>&lt;p&gt;Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。&lt;/p&gt;
+
+&lt;p&gt;使用方法： 编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;文件，添加&lt;code&gt;Server = https://mirrors.sjtug.org/archlinux/$repo/os/$arch&lt;/code&gt;这一行，同时注释掉其它所有镜像。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -26,11 +28,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/archlinux-cn/</guid>
-      <description>Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。
-完整的包信息列表（包名称/架构/维护者/状态）请 点击这里 查看。
-仓库主地址：http://repo.archlinuxcn.org/
-使用方法：在 /etc/pacman.conf 文件末尾添加以下两行：
-[archlinuxcn] Server = https://mirrors.sjtug.org/archlinux-cn/$arch  </description>
+      <description>&lt;p&gt;Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。&lt;/p&gt;
+
+&lt;p&gt;完整的包信息列表（包名称/架构/维护者/状态）请 &lt;a href=&#34;https://github.com/archlinuxcn/repo&#34;&gt;点击这里&lt;/a&gt; 查看。&lt;/p&gt;
+
+&lt;p&gt;仓库主地址：&lt;a href=&#34;http://repo.archlinuxcn.org/&#34;&gt;http://repo.archlinuxcn.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;使用方法：在 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 文件末尾添加以下两行：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[archlinuxcn]
+Server = https://mirrors.sjtug.org/archlinux-cn/$arch
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -39,9 +48,12 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/debian/</guid>
-      <description>Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。
-使用方法：
-打开/etc/apt/sources.list，将类似于http://deb.debian.org/debian/的地址均替换为https://mirrors.sjtug.org/debian即可。</description>
+      <description>&lt;p&gt;Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;打开&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，将类似于&lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt;的地址均替换为&lt;code&gt;https://mirrors.sjtug.org/debian&lt;/code&gt;即可。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,8 +62,10 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/docker-registry/</guid>
-      <description>docker-registry 源是 Docker Hub 的反向代理，可以加速docker pull等需要下载镜像的命令。
-目前本镜像尚未配置完成，暂时无法使用。</description>
+      <description>&lt;p&gt;docker-registry 源是 Docker Hub 的反向代理，可以加速&lt;code&gt;docker pull&lt;/code&gt;等需要下载镜像的命令。&lt;/p&gt;
+
+&lt;p&gt;目前本镜像尚未配置完成，暂时无法使用。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -60,9 +74,86 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/fedora/</guid>
-      <description>Fedora项目是一个由红帽公司所赞助，以统筹Fedora Linux操作系统开发的社区。Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;rdquo;Fedora&amp;rdquo;的 GNU/Linux 发行版。
-使用方法： 1. 备份旧的repoList：
-mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.backup   把/etc/yum.repos.d/fedora.repo换成以下内容：  [fedora] name=Fedora $releasever - $basearch - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch [fedora-source] name=Fedora $releasever - Source - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   把/etc/yum.repos.d/fedora-updates.repo换成以下内容：  [updates] name=Fedora $releasever - $basearch - Updates - SJTUG failovermethod=priority baseurl=https://mirrors.</description>
+      <description>&lt;p&gt;Fedora项目是一个由红帽公司所赞助，以统筹Fedora Linux操作系统开发的社区。Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;rdquo;Fedora&amp;rdquo;的 GNU/Linux 发行版。&lt;/p&gt;
+
+&lt;p&gt;使用方法：
+1. 备份旧的repoList：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup 
+mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.backup 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把&lt;code&gt;/etc/yum.repos.d/fedora.repo&lt;/code&gt;换成以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;[fedora] 
+name=Fedora $releasever - $basearch - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;amp;arch=$basearch 
+enabled=1 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[fedora-debuginfo] 
+name=Fedora $releasever - $basearch - Debug - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;amp;arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[fedora-source] 
+name=Fedora $releasever - Source - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;amp;arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把&lt;code&gt;/etc/yum.repos.d/fedora-updates.repo&lt;/code&gt;换成以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;[updates]
+name=Fedora $releasever - $basearch - Updates - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;amp;arch=$basearch 
+enabled=1 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-debuginfo] 
+name=Fedora $releasever - $basearch - Updates - Debug - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;amp;arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-source] 
+name=Fedora $releasever - Updates Source - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;amp;arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;运行&lt;code&gt;dnf makecache&lt;/code&gt;生成缓存&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -71,9 +162,24 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/npm-registry/</guid>
-      <description>npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速npm install等需要下载的命令。
-使用方法：
- 短期使用: 在npm命令后加上--registry=https://mirrors.sjtug.org/npm-registry的参数，即可使用SJTUG源。 长期使用：  Xnix: 打开$HOME/.npmrc，添加以下内容：  registry=https://mirrors.sjtug.org/npm-registry  即可大幅提升下载速度。 Windows: 编辑%USERPROFILE%\.npmrc，同样加入以上内容即可使用SJTUG镜像源。   </description>
+      <description>&lt;p&gt;npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速&lt;code&gt;npm install&lt;/code&gt;等需要下载的命令。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期使用&lt;/strong&gt;: 在&lt;code&gt;npm&lt;/code&gt;命令后加上&lt;code&gt;--registry=https://mirrors.sjtug.org/npm-registry&lt;/code&gt;的参数，即可使用SJTUG源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期使用&lt;/strong&gt;：
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Xnix&lt;/strong&gt;: 打开&lt;code&gt;$HOME/.npmrc&lt;/code&gt;，添加以下内容：
+&lt;code&gt;
+registry=https://mirrors.sjtug.org/npm-registry
+&lt;/code&gt;
+即可大幅提升下载速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: 编辑&lt;code&gt;%USERPROFILE%\.npmrc&lt;/code&gt;，同样加入以上内容即可使用SJTUG镜像源。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -82,8 +188,10 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/putty/</guid>
-      <description>PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。
-使用方法：直接打开点击Download</description>
+      <description>&lt;p&gt;PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。&lt;/p&gt;
+
+&lt;p&gt;使用方法：直接打开点击Download&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -92,9 +200,14 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/rust-static/</guid>
-      <description>rust-static储存了rust的工具链及rustup本身的镜像。
-使用方法：安装rustup，将以下环境变量加入~/.bashrc或类似文件中：
-export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup  </description>
+      <description>&lt;p&gt;rust-static储存了rust的工具链及&lt;code&gt;rustup&lt;/code&gt;本身的镜像。&lt;/p&gt;
+
+&lt;p&gt;使用方法：安装&lt;code&gt;rustup&lt;/code&gt;，将以下环境变量加入&lt;code&gt;~/.bashrc&lt;/code&gt;或类似文件中：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -103,10 +216,14 @@ export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static export RUSTUP_UP
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/ubuntu/</guid>
-      <description>Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。
-SJTUG镜像源可以加速软件包的安装。
-使用方式：
-使用sudo nano /etc/apt/sources.list打开镜像源列表文件。将类似于http://cn.archive.ubuntu.com/ubuntu的地址改成https://mirrors.sjtug.org/ubuntu，之后按Ctrl-O 回车保存，按Ctrl-X退出。最后执行sudo apt update即可。</description>
+      <description>&lt;p&gt;Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+
+&lt;p&gt;SJTUG镜像源可以加速软件包的安装。&lt;/p&gt;
+
+&lt;p&gt;使用方式：&lt;/p&gt;
+
+&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirrors.sjtug.org/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
+</description>
     </item>
     
   </channel>

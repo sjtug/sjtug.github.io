@@ -8,7 +8,7 @@
     <language>zh-cn</language>
     <lastBuildDate>Tue, 21 Feb 2017 19:41:47 +0800</lastBuildDate>
     
-	<atom:link href="http://sjtug.org/tags/dining/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://sjtug.org/tags/dining/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,10 @@
       <pubDate>Tue, 21 Feb 2017 19:41:47 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-02-21-hotpot/</guid>
-      <description>又到了开学聚餐的时间啦！这次聚餐还是定在欧尚部落情，在本周六（25日）晚5:30GMT+8于拖鞋门前旗杆下集合。欢迎各位过来吃锅！
-如果时间安排不合适，可以填写这个表单。如果时间冲突的同学多的话可能会进行调整</description>
+      <description>&lt;p&gt;又到了开学聚餐的时间啦！这次聚餐还是定在欧尚部落情，在本周六（25日）晚5:30GMT+8于拖鞋门前旗杆下集合。欢迎各位过来吃锅！&lt;/p&gt;
+
+&lt;p&gt;如果时间安排不合适，可以填写&lt;a href=&#34;https://goo.gl/forms/tXNbYezH0pOeAHe83&#34;&gt;这个表单&lt;/a&gt;。如果时间冲突的同学多的话可能会进行调整&lt;/p&gt;
+</description>
     </item>
     
   </channel>

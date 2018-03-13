@@ -8,7 +8,7 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 10 Mar 2018 21:00:00 +0800</lastBuildDate>
     
-	<atom:link href="http://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,8 +17,15 @@
       <pubDate>Sat, 10 Mar 2018 21:00:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2018-03-10-intro/</guid>
-      <description>本周六（10日）晚7点将在 图书馆主馆 E210 进行本学期第一次分享，欢迎大家带电脑前来参加。内容有：
- Linux 入门与开源社区 @ 骆铮 Python Web Application 开发入门 @ 范舟  届时会通过teamviewer等进行现场直播，slides 会上传到 https://github.com/sjtug/sharing</description>
+      <description>&lt;p&gt;本周六（10日）晚7点将在 图书馆主馆 E210 进行本学期第一次分享，欢迎大家带电脑前来参加。内容有：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Linux 入门与开源社区 @ 骆铮&lt;/li&gt;
+&lt;li&gt;Python Web Application 开发入门 @ 范舟&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;届时会通过teamviewer等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -36,8 +43,10 @@
       <pubDate>Thu, 02 Nov 2017 22:00:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-11-02-haskell-talk-01/</guid>
-      <description>Haskell 是一门默认惰性求值的纯函数式语言，在 stackoverflow 的统计中它是程序员在夜晚和双休日使用最多的语言。本周六的 Haskell 小课堂将带大家简单了解一下 Haskell 的语法和特性，以及代数数据类型、模式匹配、typeclass 等基础知识，为后续课程作铺垫。本次小课堂旨在从入门到入门，不需要前置知识。
-本周六下午3:00将由王竹阳同学在新图B118给大家带来Haskell小课堂的第一节课程，欢迎同学们前来探讨。</description>
+      <description>&lt;p&gt;Haskell 是一门默认惰性求值的纯函数式语言，在 stackoverflow 的统计中它是程序员在夜晚和双休日使用最多的语言。本周六的 Haskell 小课堂将带大家简单了解一下 Haskell 的语法和特性，以及代数数据类型、模式匹配、typeclass 等基础知识，为后续课程作铺垫。本次小课堂旨在从入门到入门，不需要前置知识。&lt;/p&gt;
+
+&lt;p&gt;本周六下午3:00将由王竹阳同学在新图B118给大家带来Haskell小课堂的第一节课程，欢迎同学们前来探讨。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -46,8 +55,10 @@
       <pubDate>Sat, 28 Oct 2017 19:00:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-10-28-performance-measurement/</guid>
-      <description>本周六将由贾枭学长给大家分享系统性能的测量与分析的常用思路与技巧，欢迎大家前来。
-Slides下载</description>
+      <description>&lt;p&gt;本周六将由贾枭学长给大家分享系统性能的测量与分析的常用思路与技巧，欢迎大家前来。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-10-28&#34;&gt;Slides下载&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -56,10 +67,108 @@ Slides下载</description>
       <pubDate>Sun, 25 Jun 2017 21:57:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-25-summer-class-schedule/</guid>
-      <description> 由于暑期课堂报名人数接近90人，教室无法容纳这么多的人数，因此我们不得不采取分流措施。选择这门课的老师与同学建议按照以下表格前来上课。
-当然，如果您有特别感兴趣的话题可以随时来听，但可能会发生没有座位的情况。
-建议在第1、4周（6月29日/7月20日）前来的老师与同学的手机后4位 0076 0158 0203 1025 1991 2073 2180 2529 2537 2701 3081 3136 3253 3739 4746 5042 5301 5397 5425 5532 6265 6527 6708 6723 6985 7035 7051 7076 7586 7683 8038 8189 8851 9108 9481  以及学号是B045090027，没有填写手机号的同学
-建议在第2、3周（7月7日/7月13日）前来的老师与同学的手机后4位 0039 0069 0153 0159 0200 0320 0709 0874 1160 1172 1362 1691 1716 2127 2530 2596 2913 3215 3580 3680 4486 4648 4782 5028 5163 5209 5336 5585 5732 5831 5996 6090 6217 6241 6321 7065 7076 7317 7450 7597 7598 7931 7959 8127 8360 8525 8676 8972 9150 9371 9731  </description>
+      <description>
+
+&lt;p&gt;由于暑期课堂报名人数接近90人，教室无法容纳这么多的人数，因此我们不得不采取分流措施。选择这门课的老师与同学建议按照以下表格前来上课。&lt;/p&gt;
+
+&lt;p&gt;当然，如果您有特别感兴趣的话题可以随时来听，但可能会发生没有座位的情况。&lt;/p&gt;
+
+&lt;h2 id=&#34;建议在第1-4周-6月29日-7月20日-前来的老师与同学的手机后4位&#34;&gt;建议在第1、4周（6月29日/7月20日）前来的老师与同学的手机后4位&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;0076
+0158
+0203
+1025
+1991
+2073
+2180
+2529
+2537
+2701
+3081
+3136
+3253
+3739
+4746
+5042
+5301
+5397
+5425
+5532
+6265
+6527
+6708
+6723
+6985
+7035
+7051
+7076
+7586
+7683
+8038
+8189
+8851
+9108
+9481
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以及学号是B045090027，没有填写手机号的同学&lt;/p&gt;
+
+&lt;h2 id=&#34;建议在第2-3周-7月7日-7月13日-前来的老师与同学的手机后4位&#34;&gt;建议在第2、3周（7月7日/7月13日）前来的老师与同学的手机后4位&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;0039
+0069
+0153
+0159
+0200
+0320
+0709
+0874
+1160
+1172
+1362
+1691
+1716
+2127
+2530
+2596
+2913
+3215
+3580
+3680
+4486
+4648
+4782
+5028
+5163
+5209
+5336
+5585
+5732
+5831
+5996
+6090
+6217
+6241
+6321
+7065
+7076
+7317
+7450
+7597
+7598
+7931
+7959
+8127
+8360
+8525
+8676
+8972
+9150
+9371
+9731
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -68,25 +177,62 @@ Slides下载</description>
       <pubDate>Sat, 24 Jun 2017 20:29:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-24-summer-class-portal/</guid>
-      <description>这里是SJTUG 2017暑期课堂的课程主页，之后所有的课程时间、地点以本页为准，相关的资料也会在本页发放。
- UPDATE(06-25): 人员分流名单已经公布，请尽快查看自己的时间 UPDATE(06-29)：更新第一周课件及第二周时间地点 UPDATE(07-01)：更新第二周主题
- 6月29日/开源与自由软件历史 时间：6月29日（19周周四）18:00
-地点：东上309
-主讲人：@htfy96
-课件：在线查看 下载
-7月7日/Git使用 时间：7月7日（20周周五）20:30（有更改）
-地点：东中4-302
-主讲人：@茄子(ant_sz)
-课件：N/A
-7月13日/Game Theory and Mechanism 时间：7月13日（21周周四）18:00
-地点：东上309
-主讲人：@Phijack
-课件：N/A
-7月20日/Haskell School of Music 时间：7月20日（22周周四）18:00
-地点：东上309
-主讲人：@codeworm96
-课件：N/A
-获取最新资讯 可以通过RSS订阅或关注我们的微信号@sjtunix获取最新资讯：</description>
+      <description>
+
+&lt;p&gt;这里是SJTUG 2017暑期课堂的课程主页，之后所有的课程时间、地点以本页为准，相关的资料也会在本页发放。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;UPDATE(06-25): &lt;a href=&#34;http://sjtug.org/post/2017-06-25-summer-class-schedule&#34;&gt;人员分流名单&lt;/a&gt;已经公布，请尽快查看自己的时间
+UPDATE(06-29)：更新第一周课件及第二周时间地点
+UPDATE(07-01)：更新第二周主题&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;6月29日-开源与自由软件历史&#34;&gt;6月29日/开源与自由软件历史&lt;/h2&gt;
+
+&lt;p&gt;时间：6月29日（19周周四）18:00&lt;/p&gt;
+
+&lt;p&gt;地点：东上309&lt;/p&gt;
+
+&lt;p&gt;主讲人：&lt;a href=&#34;https://intmainreturn0.com&#34;&gt;@htfy96&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;课件：&lt;a href=&#34;http://sjtug.org/sharing/2017-06-29/&#34;&gt;在线查看&lt;/a&gt; &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-06-29&#34;&gt;下载&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;7月7日-git使用&#34;&gt;7月7日/Git使用&lt;/h2&gt;
+
+&lt;p&gt;时间：&lt;strong&gt;7月7日（20周周五）20:30&lt;/strong&gt;（有更改）&lt;/p&gt;
+
+&lt;p&gt;地点：东中4-302&lt;/p&gt;
+
+&lt;p&gt;主讲人：&lt;a href=&#34;https://io-meter.com&#34;&gt;@茄子(ant_sz)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;课件：N/A&lt;/p&gt;
+
+&lt;h2 id=&#34;7月13日-game-theory-and-mechanism&#34;&gt;7月13日/Game Theory and Mechanism&lt;/h2&gt;
+
+&lt;p&gt;时间：7月13日（21周周四）18:00&lt;/p&gt;
+
+&lt;p&gt;地点：东上309&lt;/p&gt;
+
+&lt;p&gt;主讲人：&lt;a href=&#34;javascript:;&#34;&gt;@Phijack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;课件：N/A&lt;/p&gt;
+
+&lt;h2 id=&#34;7月20日-haskell-school-of-music&#34;&gt;7月20日/Haskell School of Music&lt;/h2&gt;
+
+&lt;p&gt;时间：7月20日（22周周四）18:00&lt;/p&gt;
+
+&lt;p&gt;地点：东上309&lt;/p&gt;
+
+&lt;p&gt;主讲人：&lt;a href=&#34;http://codeworm96.github.io&#34;&gt;@codeworm96&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;课件：N/A&lt;/p&gt;
+
+&lt;h2 id=&#34;获取最新资讯&#34;&gt;获取最新资讯&lt;/h2&gt;
+
+&lt;p&gt;可以通过&lt;a href=&#34;http://sjtug.org/tags/summer_school/index.xml&#34;&gt;RSS订阅&lt;/a&gt;或关注我们的微信号@sjtunix获取最新资讯：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://sjtug.org/images/wechat_qrcode.jpg&#34; alt=&#34;wechat_qrcode&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -95,14 +241,64 @@ Slides下载</description>
       <pubDate>Mon, 12 Jun 2017 15:58:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-06-12-summer-class/</guid>
-      <description>UPDATE: 课程主页已经开通！
-SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同学的进行3～4次分享，主要内容见下：
-   日期 地点 主讲人 内容     6月29日（19周周四） 东上309 @htfy96 开源与自由软件历史。以几个人物作为主线科普自由软件及其相关运动的起伏与发展，不需要代码水平的科普性质讲座。   7月6日（20周周四） 待定 @茄子(ant_sz) 待定   7月13日（21周周四） 东上309 @Phijack Game Theory and Mechanism   7月20日（22周周四） 东上309 @codeworm96 Haskell School of Music，探索用程序语言的方式对音乐进行抽象，不要求编程或音乐理论基础。详细介绍点此    课堂将保证小规模，确保来的同学都有当面指导的机会。欢迎对技术感兴趣的同学来参加！我们尤其欢迎在Linux、自由软件、函数式编程等领域有兴趣的同学。
-强烈建议加最后的微信群以获取资料与课前信息。
-不管你是否已经毕业，还是只能来几节课，都欢迎填写这张表格报名：
-立即报名
-之后，所有的Slides都会在我们的Github仓库公开，欢迎Star～
-欢迎想来的同学长按识别二维码加群或加微信69oulciV@： </description>
+      <description>&lt;p&gt;UPDATE: &lt;a href=&#34;http://sjtug.org/post/2017-06-24-summer-class-portal/&#34;&gt;课程主页&lt;/a&gt;已经开通！&lt;/p&gt;
+
+&lt;p&gt;SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同学的进行3～4次分享，主要内容见下：&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;地点&lt;/th&gt;
+&lt;th&gt;主讲人&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;6月29日（19周周四）&lt;/td&gt;
+&lt;td&gt;东上309&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://intmainreturn0.com&#34;&gt;@htfy96&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;开源与自由软件历史。以几个人物作为主线科普自由软件及其相关运动的起伏与发展，不需要代码水平的科普性质讲座。&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月6日（20周周四）&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://io-meter.com&#34;&gt;@茄子(ant_sz)&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;待定&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月13日（21周周四）&lt;/td&gt;
+&lt;td&gt;东上309&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;javascript:;&#34;&gt;@Phijack&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Game Theory and Mechanism&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;7月20日（22周周四）&lt;/td&gt;
+&lt;td&gt;东上309&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://codeworm96.github.io&#34;&gt;@codeworm96&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Haskell School of Music，探索用程序语言的方式对音乐进行抽象，不要求编程或音乐理论基础。&lt;a href=&#34;http://codeworm96.github.io/posts/2017-06-15-HSoM.html&#34;&gt;详细介绍点此&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;课堂将保证小规模，确保来的同学都有当面指导的机会。欢迎对技术感兴趣的同学来参加！我们尤其欢迎在Linux、自由软件、函数式编程等领域有兴趣的同学。&lt;/p&gt;
+
+&lt;p&gt;强烈建议加最后的微信群以获取资料与课前信息。&lt;/p&gt;
+
+&lt;p&gt;不管你是否已经毕业，还是只能来几节课，都欢迎填写这张表格报名：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://wj.qq.com/s/1401085/f0a5&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; style=&#34;color:#fff;font-size:20px; background:#5badf0;padding: 10px 20px 10px 20px;&#34;&gt;立即报名&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;之后，所有的Slides都会在我们的&lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;Github仓库&lt;/a&gt;公开，欢迎Star～&lt;/p&gt;
+
+&lt;p&gt;欢迎想来的同学长按识别二维码加群或加微信69oulciV@：
+&lt;img src=&#34;https://user-images.githubusercontent.com/8121231/27035049-82b2b8c2-4fb2-11e7-84f9-ccf2c05be98c.jpg&#34; alt=&#34;SJTUG Summer Class2017&#34; /&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -111,8 +307,11 @@ SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同
       <pubDate>Thu, 09 Mar 2017 22:11:40 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-03-09-gpg-sign-party/</guid>
-      <description>本周日(12日)下午3点到5点，在新图E216将举行GPG Sign Party&amp;amp;Yubikey安利活动。将手把手教大家签发/交换密钥与加密、签名信息，欢迎参加！
-校内同学点击这里加入学习室。 申请单号94388，密码165165</description>
+      <description>&lt;p&gt;本周日(12日)下午3点到5点，在新图E216将举行GPG Sign Party&amp;amp;Yubikey安利活动。将手把手教大家签发/交换密钥与加密、签名信息，欢迎参加！&lt;/p&gt;
+
+&lt;p&gt;校内同学点击&lt;a href=&#34;http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp&#34;&gt;这里加入学习室&lt;/a&gt;。
+申请单号94388，密码165165&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -121,8 +320,10 @@ SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同
       <pubDate>Tue, 21 Feb 2017 19:41:47 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-02-21-hotpot/</guid>
-      <description>又到了开学聚餐的时间啦！这次聚餐还是定在欧尚部落情，在本周六（25日）晚5:30GMT+8于拖鞋门前旗杆下集合。欢迎各位过来吃锅！
-如果时间安排不合适，可以填写这个表单。如果时间冲突的同学多的话可能会进行调整</description>
+      <description>&lt;p&gt;又到了开学聚餐的时间啦！这次聚餐还是定在欧尚部落情，在本周六（25日）晚5:30GMT+8于拖鞋门前旗杆下集合。欢迎各位过来吃锅！&lt;/p&gt;
+
+&lt;p&gt;如果时间安排不合适，可以填写&lt;a href=&#34;https://goo.gl/forms/tXNbYezH0pOeAHe83&#34;&gt;这个表单&lt;/a&gt;。如果时间冲突的同学多的话可能会进行调整&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -131,12 +332,38 @@ SJTUG本次暑假开设了夏季第二课堂，将面向初学者与感兴趣同
       <pubDate>Sun, 15 Jan 2017 23:12:56 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-01-15-writing-guide/</guid>
-      <description> 这里介绍了一下发布新文章的步骤
-安装Hugo, 或直接新建文章 安装hugo然后hugo new post/YYYY-MM-DD-article-title.md；或直接新建content/post/YYYY-MM-DD-article-title.md，手动指定date
-软件源新闻放在content/post/mirror-news下面，带上mirror-news的tag。
-软件源帮助放在content/post/mirror-help下面，带上mirror-help的tag，title设定成和name相同（注意大小写）。
-Front matters 头部+++的front matters部分，可以指定的部分有：
- title = &amp;quot;article title&amp;quot; 必填 author = &amp;quot;htfy96&amp;quot; 必填 tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;] 建议填写，只有包含news tag的文章才会在首页显示，其它常用tag包括announcement, guide, sharing等 activity_time = &amp;quot;2017-01-08T15:00:00+08:00&amp;quot;，格式同date，当有sharing标签时建议填写，代表活动开始时间 activity_place = &amp;quot;Main Library&amp;quot;，同上，代表活动地点 draft = true，当不想立即发布时才填写，默认情况false不用填写  测试并提交  使用hugo server看看最终效果是否理想 提交到 https://github.com/sjtug/portal ，主页会自动生成到sjtug.org  </description>
+      <description>
+
+&lt;p&gt;这里介绍了一下发布新文章的步骤&lt;/p&gt;
+
+&lt;h2 id=&#34;安装hugo-或直接新建文章&#34;&gt;安装Hugo, 或直接新建文章&lt;/h2&gt;
+
+&lt;p&gt;安装&lt;code&gt;hugo&lt;/code&gt;然后&lt;code&gt;hugo new post/YYYY-MM-DD-article-title.md&lt;/code&gt;；或直接新建&lt;code&gt;content/post/YYYY-MM-DD-article-title.md&lt;/code&gt;，手动指定&lt;code&gt;date&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;软件源新闻放在&lt;code&gt;content/post/mirror-news&lt;/code&gt;下面，带上&lt;code&gt;mirror-news&lt;/code&gt;的tag。&lt;/p&gt;
+
+&lt;p&gt;软件源帮助放在&lt;code&gt;content/post/mirror-help&lt;/code&gt;下面，带上&lt;code&gt;mirror-help&lt;/code&gt;的tag，title设定成和name相同（注意大小写）。&lt;/p&gt;
+
+&lt;h2 id=&#34;front-matters&#34;&gt;Front matters&lt;/h2&gt;
+
+&lt;p&gt;头部&lt;code&gt;+++&lt;/code&gt;的front matters部分，可以指定的部分有：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title = &amp;quot;article title&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author = &amp;quot;htfy96&amp;quot;&lt;/code&gt; 必填&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tags = [&amp;quot;tag1&amp;quot;, &amp;quot;tag2&amp;quot;]&lt;/code&gt; 建议填写，只有包含&lt;code&gt;news&lt;/code&gt; tag的文章才会在首页显示，其它常用tag包括&lt;code&gt;announcement&lt;/code&gt;, &lt;code&gt;guide&lt;/code&gt;, &lt;code&gt;sharing&lt;/code&gt;等&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;activity_time = &amp;quot;2017-01-08T15:00:00+08:00&amp;quot;&lt;/code&gt;，格式同date，当有&lt;code&gt;sharing&lt;/code&gt;标签时建议填写，代表活动开始时间&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;activity_place = &amp;quot;Main Library&amp;quot;&lt;/code&gt;，同上，代表活动地点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;draft = true&lt;/code&gt;，当不想立即发布时才填写，默认情况&lt;code&gt;false&lt;/code&gt;不用填写&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;测试并提交&#34;&gt;测试并提交&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;hugo server&lt;/code&gt;看看最终效果是否理想&lt;/li&gt;
+&lt;li&gt;提交到 &lt;a href=&#34;https://github.com/sjtug/portal&#34;&gt;https://github.com/sjtug/portal&lt;/a&gt; ，主页会自动生成到sjtug.org&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -145,8 +372,10 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Sat, 14 Jan 2017 20:55:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-01-14-announcing-new-portal/</guid>
-      <description>我们的首页已经更新到基于Hugo的版本，希望能给大家带来更好的阅读体验。
-接下来这里将会加入例行分享的报道及一些技术文章，欢迎大家订阅。</description>
+      <description>&lt;p&gt;我们的首页已经更新到基于Hugo的版本，希望能给大家带来更好的阅读体验。&lt;/p&gt;
+
+&lt;p&gt;接下来这里将会加入例行分享的报道及一些技术文章，欢迎大家订阅。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -155,11 +384,18 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Sun, 08 Jan 2017 20:55:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2017-01-08-halvm/</guid>
-      <description>本周日（1月8日）下午15:00 - 17:30，@张震巨巨在新图E210给大家介绍HaLVM项目，欢迎大家来参加分享
-项目地址：Github/HaLVM
-巨巨主页：Github/izgzhen
- HaLVM(Haskell Lightweight Virtual Machine)是一个让Glasgow Haskell Compiler套件直接在Xen虚拟环境下运行的项目。
- 分享资料 : sjtug/sharing/HaLVM</description>
+      <description>&lt;p&gt;本周日（1月8日）下午15:00 - 17:30，@张震巨巨在新图E210给大家介绍HaLVM项目，欢迎大家来参加分享&lt;/p&gt;
+
+&lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/GaloisInc/HaLVM&#34;&gt;Github/HaLVM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;巨巨主页：&lt;a href=&#34;https://github.com/izgzhen&#34;&gt;Github/izgzhen&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;HaLVM(Haskell Lightweight Virtual Machine)是一个让Glasgow Haskell Compiler套件直接在Xen虚拟环境下运行的项目。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-01-08&#34;&gt;sjtug/sharing/HaLVM&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -168,8 +404,10 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Sat, 12 Nov 2016 23:40:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2016-11-12-life-of-a-packet/</guid>
-      <description>11月12日晚18:00将在光彪楼二楼进行例行分享，由@贾枭 学长给大家带来分享 Life of a packet，欢迎大家来参与活动
-分享资料 : sjtug/sharing</description>
+      <description>&lt;p&gt;11月12日晚18:00将在光彪楼二楼进行例行分享，由@贾枭 学长给大家带来分享 Life of a packet，欢迎大家来参与活动&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-11-12&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -178,8 +416,10 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Sat, 29 Oct 2016 23:45:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2016-10-29-physical-engine/</guid>
-      <description>10月29日晚18:00将在新图E316进行例行分享，由大一巨巨 @时光机 给大家带来「简单的物理引擎」分享，欢迎大家来参与活动
-分享资料 : sjtug/sharing</description>
+      <description>&lt;p&gt;10月29日晚18:00将在新图E316进行例行分享，由大一巨巨 @时光机 给大家带来「简单的物理引擎」分享，欢迎大家来参与活动&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -188,9 +428,12 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Sun, 16 Oct 2016 22:45:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2016-10-16-c11-memory-model/</guid>
-      <description>10月16日晚18:00，@贾枭 学长在新图B416向大家介绍 C11 Memory Model 的有关知识。
-视频在 LiveEdu 可以看到。
-分享资料 : sjtug/sharing</description>
+      <description>&lt;p&gt;10月16日晚18:00，@贾枭 学长在新图B416向大家介绍 C11 Memory Model 的有关知识。&lt;/p&gt;
+
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -199,11 +442,15 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Tue, 04 Oct 2016 22:55:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/2016-10-04-dependent-type/</guid>
-      <description>10月4日晚18:00 - 21:00，@邵成 @钱泽森 两位同学在新图E316向大家介绍 Dependent Type。
-邵成：Fun with Dependent Types in Haskell
-钱泽森：How to Write a Safe Printf in Agda
-视频在 LiveEdu 可以看到
-分享资料 : sjtug/sharing</description>
+      <description>&lt;p&gt;10月4日晚18:00 - 21:00，@邵成 @钱泽森 两位同学在新图E316向大家介绍 Dependent Type。&lt;/p&gt;
+
+&lt;p&gt;邵成：Fun with Dependent Types in Haskell&lt;br /&gt;
+钱泽森：How to Write a Safe Printf in Agda&lt;/p&gt;
+
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-04&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -230,8 +477,10 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/archlinux/</guid>
-      <description>Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。
-使用方法： 编辑/etc/pacman.d/mirrorlist文件，添加Server = https://mirrors.sjtug.org/archlinux/$repo/os/$arch这一行，同时注释掉其它所有镜像。</description>
+      <description>&lt;p&gt;Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。&lt;/p&gt;
+
+&lt;p&gt;使用方法： 编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;文件，添加&lt;code&gt;Server = https://mirrors.sjtug.org/archlinux/$repo/os/$arch&lt;/code&gt;这一行，同时注释掉其它所有镜像。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -240,11 +489,18 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/archlinux-cn/</guid>
-      <description>Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。
-完整的包信息列表（包名称/架构/维护者/状态）请 点击这里 查看。
-仓库主地址：http://repo.archlinuxcn.org/
-使用方法：在 /etc/pacman.conf 文件末尾添加以下两行：
-[archlinuxcn] Server = https://mirrors.sjtug.org/archlinux-cn/$arch  </description>
+      <description>&lt;p&gt;Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。&lt;/p&gt;
+
+&lt;p&gt;完整的包信息列表（包名称/架构/维护者/状态）请 &lt;a href=&#34;https://github.com/archlinuxcn/repo&#34;&gt;点击这里&lt;/a&gt; 查看。&lt;/p&gt;
+
+&lt;p&gt;仓库主地址：&lt;a href=&#34;http://repo.archlinuxcn.org/&#34;&gt;http://repo.archlinuxcn.org/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;使用方法：在 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 文件末尾添加以下两行：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[archlinuxcn]
+Server = https://mirrors.sjtug.org/archlinux-cn/$arch
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -253,9 +509,12 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/debian/</guid>
-      <description>Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。
-使用方法：
-打开/etc/apt/sources.list，将类似于http://deb.debian.org/debian/的地址均替换为https://mirrors.sjtug.org/debian即可。</description>
+      <description>&lt;p&gt;Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;打开&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，将类似于&lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt;的地址均替换为&lt;code&gt;https://mirrors.sjtug.org/debian&lt;/code&gt;即可。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -264,8 +523,10 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/docker-registry/</guid>
-      <description>docker-registry 源是 Docker Hub 的反向代理，可以加速docker pull等需要下载镜像的命令。
-目前本镜像尚未配置完成，暂时无法使用。</description>
+      <description>&lt;p&gt;docker-registry 源是 Docker Hub 的反向代理，可以加速&lt;code&gt;docker pull&lt;/code&gt;等需要下载镜像的命令。&lt;/p&gt;
+
+&lt;p&gt;目前本镜像尚未配置完成，暂时无法使用。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -274,9 +535,86 @@ Front matters 头部+++的front matters部分，可以指定的部分有：
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/fedora/</guid>
-      <description>Fedora项目是一个由红帽公司所赞助，以统筹Fedora Linux操作系统开发的社区。Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;rdquo;Fedora&amp;rdquo;的 GNU/Linux 发行版。
-使用方法： 1. 备份旧的repoList：
-mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.backup   把/etc/yum.repos.d/fedora.repo换成以下内容：  [fedora] name=Fedora $releasever - $basearch - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;amp;arch=$basearch enabled=1 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch [fedora-debuginfo] name=Fedora $releasever - $basearch - Debug - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch [fedora-source] name=Fedora $releasever - Source - SJTUG failovermethod=priority baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;amp;arch=$basearch enabled=0 metadata_expire=7d gpgcheck=1 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch   把/etc/yum.repos.d/fedora-updates.repo换成以下内容：  [updates] name=Fedora $releasever - $basearch - Updates - SJTUG failovermethod=priority baseurl=https://mirrors.</description>
+      <description>&lt;p&gt;Fedora项目是一个由红帽公司所赞助，以统筹Fedora Linux操作系统开发的社区。Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;rdquo;Fedora&amp;rdquo;的 GNU/Linux 发行版。&lt;/p&gt;
+
+&lt;p&gt;使用方法：
+1. 备份旧的repoList：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup 
+mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.backup 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把&lt;code&gt;/etc/yum.repos.d/fedora.repo&lt;/code&gt;换成以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;[fedora] 
+name=Fedora $releasever - $basearch - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;amp;arch=$basearch 
+enabled=1 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[fedora-debuginfo] 
+name=Fedora $releasever - $basearch - Debug - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;amp;arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[fedora-source] 
+name=Fedora $releasever - Source - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;amp;arch=$basearch 
+enabled=0 
+metadata_expire=7d 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;把&lt;code&gt;/etc/yum.repos.d/fedora-updates.repo&lt;/code&gt;换成以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;code&gt;[updates]
+name=Fedora $releasever - $basearch - Updates - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;amp;arch=$basearch 
+enabled=1 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-debuginfo] 
+name=Fedora $releasever - $basearch - Updates - Debug - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/debug/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;amp;arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+ 
+[updates-source] 
+name=Fedora $releasever - Updates Source - SJTUG
+failovermethod=priority 
+baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/SRPMS/ 
+#mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;amp;arch=$basearch 
+enabled=0 
+gpgcheck=1 
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;运行&lt;code&gt;dnf makecache&lt;/code&gt;生成缓存&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
     <item>
@@ -285,9 +623,24 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/npm-registry/</guid>
-      <description>npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速npm install等需要下载的命令。
-使用方法：
- 短期使用: 在npm命令后加上--registry=https://mirrors.sjtug.org/npm-registry的参数，即可使用SJTUG源。 长期使用：  Xnix: 打开$HOME/.npmrc，添加以下内容：  registry=https://mirrors.sjtug.org/npm-registry  即可大幅提升下载速度。 Windows: 编辑%USERPROFILE%\.npmrc，同样加入以上内容即可使用SJTUG镜像源。   </description>
+      <description>&lt;p&gt;npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速&lt;code&gt;npm install&lt;/code&gt;等需要下载的命令。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期使用&lt;/strong&gt;: 在&lt;code&gt;npm&lt;/code&gt;命令后加上&lt;code&gt;--registry=https://mirrors.sjtug.org/npm-registry&lt;/code&gt;的参数，即可使用SJTUG源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期使用&lt;/strong&gt;：
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Xnix&lt;/strong&gt;: 打开&lt;code&gt;$HOME/.npmrc&lt;/code&gt;，添加以下内容：
+&lt;code&gt;
+registry=https://mirrors.sjtug.org/npm-registry
+&lt;/code&gt;
+即可大幅提升下载速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: 编辑&lt;code&gt;%USERPROFILE%\.npmrc&lt;/code&gt;，同样加入以上内容即可使用SJTUG镜像源。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -296,8 +649,10 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/putty/</guid>
-      <description>PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。
-使用方法：直接打开点击Download</description>
+      <description>&lt;p&gt;PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。&lt;/p&gt;
+
+&lt;p&gt;使用方法：直接打开点击Download&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -306,9 +661,14 @@ mv /etc/yum.repos.d/fedora.repo /etc/yum.repos.d/fedora.repo.backup mv /etc/yum.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/rust-static/</guid>
-      <description>rust-static储存了rust的工具链及rustup本身的镜像。
-使用方法：安装rustup，将以下环境变量加入~/.bashrc或类似文件中：
-export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup  </description>
+      <description>&lt;p&gt;rust-static储存了rust的工具链及&lt;code&gt;rustup&lt;/code&gt;本身的镜像。&lt;/p&gt;
+
+&lt;p&gt;使用方法：安装&lt;code&gt;rustup&lt;/code&gt;，将以下环境变量加入&lt;code&gt;~/.bashrc&lt;/code&gt;或类似文件中：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>
@@ -317,10 +677,14 @@ export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static export RUSTUP_UP
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://sjtug.org/post/mirror-help/ubuntu/</guid>
-      <description>Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。
-SJTUG镜像源可以加速软件包的安装。
-使用方式：
-使用sudo nano /etc/apt/sources.list打开镜像源列表文件。将类似于http://cn.archive.ubuntu.com/ubuntu的地址改成https://mirrors.sjtug.org/ubuntu，之后按Ctrl-O 回车保存，按Ctrl-X退出。最后执行sudo apt update即可。</description>
+      <description>&lt;p&gt;Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+
+&lt;p&gt;SJTUG镜像源可以加速软件包的安装。&lt;/p&gt;
+
+&lt;p&gt;使用方式：&lt;/p&gt;
+
+&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirrors.sjtug.org/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
+</description>
     </item>
     
   </channel>
