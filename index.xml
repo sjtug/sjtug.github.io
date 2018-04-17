@@ -6,10 +6,24 @@
     <description>Recent content on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 26 Mar 2018 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Apr 2018 19:00:00 +0800</lastBuildDate>
     
         <atom:link href="http://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SJTUG 2018 第 3 次分享：Rust 中的内存安全</title>
+      <link>http://sjtug.org/post/2018-04-22-memory-safety-in-rust/</link>
+      <pubDate>Sat, 14 Apr 2018 19:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/2018-04-22-memory-safety-in-rust/</guid>
+      <description>&lt;p&gt;本周日（22日）晚 19:00 将在 图书馆主馆 E309 进行本学期第 3 次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+
+&lt;p&gt;Rust 中的内存安全 @ 张宇宁&lt;/p&gt;
+
+&lt;p&gt;届时会通过teamviewer等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SJTUG 2018第二次分享：Concatenative Programming 初探</title>
