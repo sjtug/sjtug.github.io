@@ -88,7 +88,7 @@ mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.bac
 <pre><code>[fedora] 
 name=Fedora $releasever - $basearch - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;arch=$basearch 
 enabled=1 
 metadata_expire=7d 
@@ -98,7 +98,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [fedora-debuginfo] 
 name=Fedora $releasever - $basearch - Debug - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;arch=$basearch 
 enabled=0 
 metadata_expire=7d 
@@ -108,7 +108,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [fedora-source] 
 name=Fedora $releasever - Source - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;arch=$basearch 
 enabled=0 
 metadata_expire=7d 
@@ -123,7 +123,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 <pre><code>[updates]
 name=Fedora $releasever - $basearch - Updates - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/$basearch/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;arch=$basearch 
 enabled=1 
 gpgcheck=1 
@@ -132,7 +132,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [updates-debuginfo] 
 name=Fedora $releasever - $basearch - Updates - Debug - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/debug/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/$basearch/debug/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;arch=$basearch 
 enabled=0 
 gpgcheck=1 
@@ -141,7 +141,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [updates-source] 
 name=Fedora $releasever - Updates Source - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/SRPMS/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/SRPMS/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;arch=$basearch 
 enabled=0 
 gpgcheck=1 
@@ -203,6 +203,13 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
     
         
         <li>
+            <a href="http://sjtug.org/post/mirror-news/2018-05-07-domain-update/">镜像源域名更换为mirrors.sjtug.sjtu.edu.cn<aside class="dates">May 7</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
             <a href="http://sjtug.org/post/2018-04-22-memory-safety-in-rust/">SJTUG 2018 第 3 次分享：Rust 中的内存安全<aside class="dates">Apr 14</aside></a>
         </li>
         
@@ -260,13 +267,6 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
         
         <li>
             <a href="http://sjtug.org/post/2017-06-12-summer-class/">SJTUG暑期课堂报名中！<aside class="dates">Jun 12</aside></a>
-        </li>
-        
-   
-    
-        
-        <li>
-            <a href="http://sjtug.org/post/2017-03-09-gpg-sign-party/">GPG Sign Party &amp; Yubikey安利<aside class="dates">Mar 9</aside></a>
         </li>
         
    

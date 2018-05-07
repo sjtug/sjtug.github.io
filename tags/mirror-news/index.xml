@@ -6,10 +6,20 @@
     <description>Recent content in Mirror News on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Mar 2018 22:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 15:00:00 +0800</lastBuildDate>
     
         <atom:link href="http://sjtug.org/tags/mirror-news/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>镜像源域名更换为mirrors.sjtug.sjtu.edu.cn</title>
+      <link>http://sjtug.org/post/mirror-news/2018-05-07-domain-update/</link>
+      <pubDate>Mon, 07 May 2018 15:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2018-05-07-domain-update/</guid>
+      <description>&lt;p&gt;欢迎大家之后使用新域名访问&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>镜像源v2 Beta版上线！</title>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://sjtug.org/post/mirror-news/2018-05-07-domain-update/</loc>
+    <lastmod>2018-05-07T15:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sjtug.org/post/2018-04-22-memory-safety-in-rust/</loc>
     <lastmod>2018-04-14T19:00:00+08:00</lastmod>
   </url>
@@ -137,7 +142,7 @@
   
   <url>
     <loc>http://sjtug.org/tags/mirror-news/</loc>
-    <lastmod>2018-03-04T22:00:00+08:00</lastmod>
+    <lastmod>2018-05-07T15:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -149,13 +154,13 @@
   
   <url>
     <loc>http://sjtug.org/post/</loc>
-    <lastmod>2018-04-14T19:00:00+08:00</lastmod>
+    <lastmod>2018-05-07T15:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/</loc>
-    <lastmod>2018-04-14T19:00:00+08:00</lastmod>
+    <lastmod>2018-05-07T15:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

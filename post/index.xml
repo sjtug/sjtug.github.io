@@ -6,10 +6,20 @@
     <description>Recent content in Posts on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Apr 2018 19:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 15:00:00 +0800</lastBuildDate>
     
         <atom:link href="http://sjtug.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>镜像源域名更换为mirrors.sjtug.sjtu.edu.cn</title>
+      <link>http://sjtug.org/post/mirror-news/2018-05-07-domain-update/</link>
+      <pubDate>Mon, 07 May 2018 15:00:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2018-05-07-domain-update/</guid>
+      <description>&lt;p&gt;欢迎大家之后使用新域名访问&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SJTUG 2018 第 3 次分享：Rust 中的内存安全</title>
@@ -507,7 +517,7 @@ UPDATE(07-01)：更新第二周主题&lt;/p&gt;
       <guid>http://sjtug.org/post/mirror-help/archlinux/</guid>
       <description>&lt;p&gt;Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。&lt;/p&gt;
 
-&lt;p&gt;使用方法： 编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;文件，添加&lt;code&gt;Server = https://mirrors.sjtug.org/archlinux/$repo/os/$arch&lt;/code&gt;这一行，同时注释掉其它所有镜像。&lt;/p&gt;
+&lt;p&gt;使用方法： 编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;文件，添加&lt;code&gt;Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch&lt;/code&gt;这一行，同时注释掉其它所有镜像。&lt;/p&gt;
 </description>
     </item>
     
@@ -526,7 +536,7 @@ UPDATE(07-01)：更新第二周主题&lt;/p&gt;
 &lt;p&gt;使用方法：在 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 文件末尾添加以下两行：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;[archlinuxcn]
-Server = https://mirrors.sjtug.org/archlinux-cn/$arch
+Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -541,7 +551,7 @@ Server = https://mirrors.sjtug.org/archlinux-cn/$arch
 
 &lt;p&gt;使用方法：&lt;/p&gt;
 
-&lt;p&gt;打开&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，将类似于&lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt;的地址均替换为&lt;code&gt;https://mirrors.sjtug.org/debian&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，将类似于&lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt;的地址均替换为&lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/debian&lt;/code&gt;即可。&lt;/p&gt;
 </description>
     </item>
     
@@ -579,7 +589,7 @@ mv /etc/yum.repos.d/fedora-updates.repo /etc/yum.repos.d/fedora-updates.repo.bac
 &lt;pre&gt;&lt;code&gt;[fedora] 
 name=Fedora $releasever - $basearch - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/os/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-$releasever&amp;amp;arch=$basearch 
 enabled=1 
 metadata_expire=7d 
@@ -589,7 +599,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [fedora-debuginfo] 
 name=Fedora $releasever - $basearch - Debug - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/$basearch/debug/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-$releasever&amp;amp;arch=$basearch 
 enabled=0 
 metadata_expire=7d 
@@ -599,7 +609,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [fedora-source] 
 name=Fedora $releasever - Source - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/releases/$releasever/Everything/source/SRPMS/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&amp;amp;arch=$basearch 
 enabled=0 
 metadata_expire=7d 
@@ -614,7 +624,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 &lt;pre&gt;&lt;code&gt;[updates]
 name=Fedora $releasever - $basearch - Updates - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/$basearch/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&amp;amp;arch=$basearch 
 enabled=1 
 gpgcheck=1 
@@ -623,7 +633,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [updates-debuginfo] 
 name=Fedora $releasever - $basearch - Updates - Debug - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/$basearch/debug/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/$basearch/debug/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&amp;amp;arch=$basearch 
 enabled=0 
 gpgcheck=1 
@@ -632,7 +642,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 [updates-source] 
 name=Fedora $releasever - Updates Source - SJTUG
 failovermethod=priority 
-baseurl=https://mirrors.sjtug.org/fedora/linux/updates/$releasever/SRPMS/ 
+baseurl=https://mirrors.sjtug.sjtu.edu.cn/fedora/linux/updates/$releasever/SRPMS/ 
 #mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&amp;amp;arch=$basearch 
 enabled=0 
 gpgcheck=1 
@@ -656,13 +666,13 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 &lt;p&gt;使用方法：&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;短期使用&lt;/strong&gt;: 在&lt;code&gt;npm&lt;/code&gt;命令后加上&lt;code&gt;--registry=https://mirrors.sjtug.org/npm-registry&lt;/code&gt;的参数，即可使用SJTUG源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;短期使用&lt;/strong&gt;: 在&lt;code&gt;npm&lt;/code&gt;命令后加上&lt;code&gt;--registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry&lt;/code&gt;的参数，即可使用SJTUG源。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;长期使用&lt;/strong&gt;：
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Xnix&lt;/strong&gt;: 打开&lt;code&gt;$HOME/.npmrc&lt;/code&gt;，添加以下内容：
 &lt;code&gt;
-registry=https://mirrors.sjtug.org/npm-registry
+registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry
 &lt;/code&gt;
 即可大幅提升下载速度。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: 编辑&lt;code&gt;%USERPROFILE%\.npmrc&lt;/code&gt;，同样加入以上内容即可使用SJTUG镜像源。&lt;/li&gt;
@@ -693,8 +703,8 @@ registry=https://mirrors.sjtug.org/npm-registry
 
 &lt;p&gt;使用方法：安装&lt;code&gt;rustup&lt;/code&gt;，将以下环境变量加入&lt;code&gt;~/.bashrc&lt;/code&gt;或类似文件中：&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export RUSTUP_DIST_SERVER=https://mirrors.sjtug.org/rust-static
-export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;export RUSTUP_DIST_SERVER=https://mirrors.sjtug.sjtu.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
@@ -711,7 +721,7 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.org/rust-static/rustup
 
 &lt;p&gt;使用方式：&lt;/p&gt;
 
-&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirrors.sjtug.org/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
 </description>
     </item>
     
