@@ -157,6 +157,24 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
     </item>
     
     <item>
+      <title>kali</title>
+      <link>http://sjtug.org/post/mirror-help/kali/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-help/kali/</guid>
+      <description>&lt;p&gt;Kali Linux 是基于Debian的Linux发行版，设计用于数字鉴识和渗透测试。由 Offensive Security Ltd 维护和资助。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;编辑&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，在头部添加：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;deb https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main non-free contrib
+deb-src https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main non-free contrib
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>npm-registry</title>
       <link>http://sjtug.org/post/mirror-help/npm-registry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
