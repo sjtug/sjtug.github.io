@@ -726,6 +726,25 @@ registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry
     </item>
     
     <item>
+      <title>pypi</title>
+      <link>http://sjtug.org/post/mirror-help/pypi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-help/pypi/</guid>
+      <description>&lt;p&gt;Pypi是Python官方的包仓库，可以通过&lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;easy_install&lt;/code&gt;等方式从pypi安装&lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;tensorflow&lt;/code&gt;等常用包。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;创建或编辑&lt;code&gt;~/.pip/pip.conf&lt;/code&gt;文件，加入或修改&lt;code&gt;index-url&lt;/code&gt;相关段落为：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34;&gt;[global]
+index-url = https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple
+format = columns
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>rust-static</title>
       <link>http://sjtug.org/post/mirror-help/rust-static/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
