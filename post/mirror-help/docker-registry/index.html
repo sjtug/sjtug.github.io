@@ -74,7 +74,14 @@
                 <section id="post-body">
                     <p>docker-registry 源是 Docker Hub 的反向代理，可以加速<code>docker pull</code>等需要下载镜像的命令。</p>
 
-<p>目前本镜像尚未配置完成，暂时无法使用。</p>
+<p>使用方法：</p>
+
+<p>编辑或新建<code>/etc/docker/daemon.json</code>文件，向其中添加<code>registry-mirrors</code>项，使最终配置类似：</p>
+
+<pre><code class="language-json">{
+  &quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.sjtug.sjtu.edu.cn&quot;]
+}
+</code></pre>
 
                 </section>
             </article>

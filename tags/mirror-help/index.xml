@@ -64,7 +64,14 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
       <guid>http://sjtug.org/post/mirror-help/docker-registry/</guid>
       <description>&lt;p&gt;docker-registry 源是 Docker Hub 的反向代理，可以加速&lt;code&gt;docker pull&lt;/code&gt;等需要下载镜像的命令。&lt;/p&gt;
 
-&lt;p&gt;目前本镜像尚未配置完成，暂时无法使用。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;编辑或新建&lt;code&gt;/etc/docker/daemon.json&lt;/code&gt;文件，向其中添加&lt;code&gt;registry-mirrors&lt;/code&gt;项，使最终配置类似：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
+  &amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://docker.mirrors.sjtug.sjtu.edu.cn&amp;quot;]
+}
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
