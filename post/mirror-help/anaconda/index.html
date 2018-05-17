@@ -74,22 +74,31 @@
                 <section id="post-body">
                     <p>Anaconda 是一种Python语言的免费增值开源发行版，用于进行大规模数据处理, 预测分析, 和科学计算, 致力于简化包的管理和部署。Anaconda使用软件包管理系统Conda进行包管理。</p>
 
-<p>SJTUG源镜像了常用的conda附加库，以方便科学计算用户使用。</p>
+<p>SJTUG源镜像了常用的conda库，以方便科学计算用户使用。</p>
 
-<p><strong>使用说明</strong>: 使用<code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/{{你所需要的包名}}</code>来将SJTUG源添加作为这个包的上游。目前镜像的包包括：</p>
+<p><strong>使用说明</strong>: 使用<code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/{{你所需要的包名}}</code>来将SJTUG源添加作为这个包的上游。目前镜像的包与安装命令包括：</p>
 
-<pre><code>pkgs/free
-pkgs/main
-pkgs/mro
-pkgs/msys2
-pkgs/pro
-pkgs/r
-cloud/bioconda
-cloud/conda-forge
-cloud/matsci
-cloud/menpo
-cloud/soumith
-</code></pre>
+<ul>
+<li><strong>官方源</strong>:
+
+<ul>
+<li><code>pkgs/free</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/free</code></li>
+<li><code>pkgs/main</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/main</code></li>
+<li><code>pkgs/mro</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/mro</code></li>
+<li><code>pkgs/msys2</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/msys2</code></li>
+<li><code>pkgs/pro</code>: (deprecated) <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/pro</code></li>
+<li><code>pkgs/r</code>: (empty) <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/pkgs/r</code></li>
+</ul></li>
+<li><strong>第三方源</strong>:
+
+<ul>
+<li><code>cloud/bioconda</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/bioconda</code></li>
+<li><code>cloud/conda-forge</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/conda-forge</code></li>
+<li><code>cloud/matsci</code>: <code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/matsci</code></li>
+<li><code>cloud/menpo</code>: `<code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/menpo</code></li>
+<li><code>cloud/soumith</code>: `<code>conda config --add channels https://mirrors.sjtug.sjtu.edu.cn/anaconda/cloud/soumith</code></li>
+</ul></li>
+</ul>
 
                 </section>
             </article>
