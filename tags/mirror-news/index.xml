@@ -17,9 +17,12 @@
       <pubDate>Thu, 17 May 2018 21:40:00 +0800</pubDate>
       
       <guid>http://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</guid>
-      <description>&lt;p&gt;SJTUG 软件源镜像站 v2 正式上线后，现已加入 GNU、CTAN 官方镜像源列表：
-* &lt;a href=&#34;https://www.gnu.org/prep/ftp.html&#34;&gt;GNU Mirror List&lt;/a&gt;
-* &lt;a href=&#34;https://ctan.org/mirrors&#34;&gt;CTAN Sites&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;SJTUG 软件源镜像站 v2 正式上线后，现已加入 GNU、CTAN 官方镜像源列表：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/prep/ftp.html&#34;&gt;GNU Mirror List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ctan.org/mirrors&#34;&gt;CTAN Sites&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
