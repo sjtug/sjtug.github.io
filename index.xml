@@ -6,10 +6,22 @@
     <description>Recent content on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 08 May 2018 19:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 May 2018 21:40:00 +0800</lastBuildDate>
     
         <atom:link href="http://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SJTUG 镜像源加入 GNU、CTAN 官方镜像源列表</title>
+      <link>http://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</link>
+      <pubDate>Thu, 17 May 2018 21:40:00 +0800</pubDate>
+      
+      <guid>http://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 v2 正式上线后，现已加入 GNU、CTAN 官方镜像源列表：
+* &lt;a href=&#34;https://www.gnu.org/prep/ftp.html&#34;&gt;GNU Mirror List&lt;/a&gt;
+* &lt;a href=&#34;https://ctan.org/mirrors&#34;&gt;CTAN Sites&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SJTUG 2018 第 4 次分享：合作训练（Cooperative Training）</title>

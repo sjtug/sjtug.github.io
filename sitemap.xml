@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</loc>
+    <lastmod>2018-05-17T21:40:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sjtug.org/post/2018-05-12-cooperative-training/</loc>
     <lastmod>2018-05-08T19:00:00+08:00</lastmod>
   </url>
@@ -147,7 +152,7 @@
   
   <url>
     <loc>http://sjtug.org/tags/mirror-news/</loc>
-    <lastmod>2018-05-07T15:00:00+08:00</lastmod>
+    <lastmod>2018-05-17T21:40:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -159,13 +164,13 @@
   
   <url>
     <loc>http://sjtug.org/post/</loc>
-    <lastmod>2018-05-08T19:00:00+08:00</lastmod>
+    <lastmod>2018-05-17T21:40:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sjtug.org/</loc>
-    <lastmod>2018-05-08T19:00:00+08:00</lastmod>
+    <lastmod>2018-05-17T21:40:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
