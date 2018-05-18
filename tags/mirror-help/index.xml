@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mirror Help on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/mirror-help/</link>
+    <link>https://sjtug.org/tags/mirror-help/</link>
     <description>Recent content in Mirror Help on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-        <atom:link href="http://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>anaconda</title>
-      <link>http://sjtug.org/post/mirror-help/anaconda/</link>
+      <link>https://sjtug.org/post/mirror-help/anaconda/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/anaconda/</guid>
+      <guid>https://sjtug.org/post/mirror-help/anaconda/</guid>
       <description>&lt;p&gt;Anaconda 是一种Python语言的免费增值开源发行版，用于进行大规模数据处理, 预测分析, 和科学计算, 致力于简化包的管理和部署。Anaconda使用软件包管理系统Conda进行包管理。&lt;/p&gt;
 
 &lt;p&gt;SJTUG源镜像了常用的conda库，以方便科学计算用户使用。&lt;/p&gt;
@@ -48,10 +48,10 @@
     
     <item>
       <title>archlinux</title>
-      <link>http://sjtug.org/post/mirror-help/archlinux/</link>
+      <link>https://sjtug.org/post/mirror-help/archlinux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/archlinux/</guid>
+      <guid>https://sjtug.org/post/mirror-help/archlinux/</guid>
       <description>&lt;p&gt;Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的Arch只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。&lt;/p&gt;
 
 &lt;p&gt;使用方法： 编辑&lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;文件，添加&lt;code&gt;Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux/$repo/os/$arch&lt;/code&gt;这一行，同时注释掉其它所有镜像。&lt;/p&gt;
@@ -60,10 +60,10 @@
     
     <item>
       <title>archlinux-cn</title>
-      <link>http://sjtug.org/post/mirror-help/archlinux-cn/</link>
+      <link>https://sjtug.org/post/mirror-help/archlinux-cn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/archlinux-cn/</guid>
+      <guid>https://sjtug.org/post/mirror-help/archlinux-cn/</guid>
       <description>&lt;p&gt;Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。&lt;/p&gt;
 
 &lt;p&gt;完整的包信息列表（包名称/架构/维护者/状态）请 &lt;a href=&#34;https://github.com/archlinuxcn/repo&#34;&gt;点击这里&lt;/a&gt; 查看。&lt;/p&gt;
@@ -80,10 +80,10 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
     
     <item>
       <title>debian</title>
-      <link>http://sjtug.org/post/mirror-help/debian/</link>
+      <link>https://sjtug.org/post/mirror-help/debian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/debian/</guid>
+      <guid>https://sjtug.org/post/mirror-help/debian/</guid>
       <description>&lt;p&gt;Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。&lt;/p&gt;
 
 &lt;p&gt;使用方法：&lt;/p&gt;
@@ -94,10 +94,10 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
     
     <item>
       <title>docker-registry</title>
-      <link>http://sjtug.org/post/mirror-help/docker-registry/</link>
+      <link>https://sjtug.org/post/mirror-help/docker-registry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/docker-registry/</guid>
+      <guid>https://sjtug.org/post/mirror-help/docker-registry/</guid>
       <description>&lt;p&gt;docker-registry 源是 Docker Hub 的反向代理，可以加速&lt;code&gt;docker pull&lt;/code&gt;等需要下载镜像的命令。&lt;/p&gt;
 
 &lt;p&gt;使用方法：&lt;/p&gt;
@@ -113,10 +113,10 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
     
     <item>
       <title>fedora</title>
-      <link>http://sjtug.org/post/mirror-help/fedora/</link>
+      <link>https://sjtug.org/post/mirror-help/fedora/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/fedora/</guid>
+      <guid>https://sjtug.org/post/mirror-help/fedora/</guid>
       <description>&lt;p&gt;Fedora项目是一个由红帽公司所赞助，以统筹Fedora Linux操作系统开发的社区。Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;rdquo;Fedora&amp;rdquo;的 GNU/Linux 发行版。&lt;/p&gt;
 
 &lt;p&gt;使用方法：
@@ -201,10 +201,10 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
     
     <item>
       <title>kali</title>
-      <link>http://sjtug.org/post/mirror-help/kali/</link>
+      <link>https://sjtug.org/post/mirror-help/kali/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/kali/</guid>
+      <guid>https://sjtug.org/post/mirror-help/kali/</guid>
       <description>&lt;p&gt;Kali Linux 是基于Debian的Linux发行版，设计用于数字鉴识和渗透测试。由 Offensive Security Ltd 维护和资助。&lt;/p&gt;
 
 &lt;p&gt;使用方法：&lt;/p&gt;
@@ -219,10 +219,10 @@ deb-src https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main non-free contri
     
     <item>
       <title>npm-registry</title>
-      <link>http://sjtug.org/post/mirror-help/npm-registry/</link>
+      <link>https://sjtug.org/post/mirror-help/npm-registry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/npm-registry/</guid>
+      <guid>https://sjtug.org/post/mirror-help/npm-registry/</guid>
       <description>&lt;p&gt;npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速&lt;code&gt;npm install&lt;/code&gt;等需要下载的命令。&lt;/p&gt;
 
 &lt;p&gt;使用方法：&lt;/p&gt;
@@ -245,10 +245,10 @@ registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry
     
     <item>
       <title>putty</title>
-      <link>http://sjtug.org/post/mirror-help/putty/</link>
+      <link>https://sjtug.org/post/mirror-help/putty/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/putty/</guid>
+      <guid>https://sjtug.org/post/mirror-help/putty/</guid>
       <description>&lt;p&gt;PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。&lt;/p&gt;
 
 &lt;p&gt;使用方法：直接打开点击Download&lt;/p&gt;
@@ -257,10 +257,10 @@ registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry
     
     <item>
       <title>pypi</title>
-      <link>http://sjtug.org/post/mirror-help/pypi/</link>
+      <link>https://sjtug.org/post/mirror-help/pypi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/pypi/</guid>
+      <guid>https://sjtug.org/post/mirror-help/pypi/</guid>
       <description>&lt;p&gt;Pypi是Python官方的包仓库，可以通过&lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;easy_install&lt;/code&gt;等方式从pypi安装&lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;tensorflow&lt;/code&gt;等常用包。&lt;/p&gt;
 
 &lt;p&gt;使用方法：&lt;/p&gt;
@@ -276,10 +276,10 @@ format = columns
     
     <item>
       <title>rust-static</title>
-      <link>http://sjtug.org/post/mirror-help/rust-static/</link>
+      <link>https://sjtug.org/post/mirror-help/rust-static/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/rust-static/</guid>
+      <guid>https://sjtug.org/post/mirror-help/rust-static/</guid>
       <description>&lt;p&gt;rust-static储存了rust的工具链及&lt;code&gt;rustup&lt;/code&gt;本身的镜像。&lt;/p&gt;
 
 &lt;p&gt;使用方法：安装&lt;code&gt;rustup&lt;/code&gt;，将以下环境变量加入&lt;code&gt;~/.bashrc&lt;/code&gt;或类似文件中：&lt;/p&gt;
@@ -292,10 +292,10 @@ export RUSTUP_UPDATE_ROOT=https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup
     
     <item>
       <title>ubuntu</title>
-      <link>http://sjtug.org/post/mirror-help/ubuntu/</link>
+      <link>https://sjtug.org/post/mirror-help/ubuntu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/post/mirror-help/ubuntu/</guid>
+      <guid>https://sjtug.org/post/mirror-help/ubuntu/</guid>
       <description>&lt;p&gt;Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
 
 &lt;p&gt;SJTUG镜像源可以加速软件包的安装。&lt;/p&gt;

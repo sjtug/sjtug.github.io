@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/</link>
+    <link>https://sjtug.org/tags/</link>
     <description>Recent content in Tags on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 14 Jan 2017 20:55:00 +0800</lastBuildDate>
     
-        <atom:link href="http://sjtug.org/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sjtug.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Announcement</title>
-      <link>http://sjtug.org/tags/announcement/</link>
+      <link>https://sjtug.org/tags/announcement/</link>
       <pubDate>Sat, 14 Jan 2017 20:55:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/announcement/</guid>
+      <guid>https://sjtug.org/tags/announcement/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dining</title>
-      <link>http://sjtug.org/tags/dining/</link>
+      <link>https://sjtug.org/tags/dining/</link>
       <pubDate>Tue, 21 Feb 2017 19:41:47 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/dining/</guid>
+      <guid>https://sjtug.org/tags/dining/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Guide</title>
-      <link>http://sjtug.org/tags/guide/</link>
+      <link>https://sjtug.org/tags/guide/</link>
       <pubDate>Sun, 15 Jan 2017 23:12:56 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/guide/</guid>
+      <guid>https://sjtug.org/tags/guide/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mirror Help</title>
-      <link>http://sjtug.org/tags/mirror-help/</link>
+      <link>https://sjtug.org/tags/mirror-help/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sjtug.org/tags/mirror-help/</guid>
+      <guid>https://sjtug.org/tags/mirror-help/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mirror News</title>
-      <link>http://sjtug.org/tags/mirror-news/</link>
+      <link>https://sjtug.org/tags/mirror-news/</link>
       <pubDate>Thu, 17 May 2018 21:40:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/mirror-news/</guid>
+      <guid>https://sjtug.org/tags/mirror-news/</guid>
       <description></description>
     </item>
     
     <item>
       <title>News</title>
-      <link>http://sjtug.org/tags/news/</link>
+      <link>https://sjtug.org/tags/news/</link>
       <pubDate>Tue, 08 May 2018 19:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/news/</guid>
+      <guid>https://sjtug.org/tags/news/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sharing</title>
-      <link>http://sjtug.org/tags/sharing/</link>
+      <link>https://sjtug.org/tags/sharing/</link>
       <pubDate>Tue, 08 May 2018 19:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/sharing/</guid>
+      <guid>https://sjtug.org/tags/sharing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Summer_school</title>
-      <link>http://sjtug.org/tags/summer_school/</link>
+      <link>https://sjtug.org/tags/summer_school/</link>
       <pubDate>Sun, 25 Jun 2017 21:57:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/tags/summer_school/</guid>
+      <guid>https://sjtug.org/tags/summer_school/</guid>
       <description></description>
     </item>
     

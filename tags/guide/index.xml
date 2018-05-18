@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guide on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/guide/</link>
+    <link>https://sjtug.org/tags/guide/</link>
     <description>Recent content in Guide on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Jan 2017 23:12:56 +0800</lastBuildDate>
     
-        <atom:link href="http://sjtug.org/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sjtug.org/tags/guide/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>sjtug.org写作指南</title>
-      <link>http://sjtug.org/post/2017-01-15-writing-guide/</link>
+      <link>https://sjtug.org/post/2017-01-15-writing-guide/</link>
       <pubDate>Sun, 15 Jan 2017 23:12:56 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2017-01-15-writing-guide/</guid>
+      <guid>https://sjtug.org/post/2017-01-15-writing-guide/</guid>
       <description>
 
 &lt;p&gt;这里介绍了一下发布新文章的步骤&lt;/p&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharing on SJTUG - A Joyful Techie User Group</title>
-    <link>http://sjtug.org/tags/sharing/</link>
+    <link>https://sjtug.org/tags/sharing/</link>
     <description>Recent content in Sharing on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 08 May 2018 19:00:00 +0800</lastBuildDate>
     
-        <atom:link href="http://sjtug.org/tags/sharing/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://sjtug.org/tags/sharing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SJTUG 2018 第 4 次分享：合作训练（Cooperative Training）</title>
-      <link>http://sjtug.org/post/2018-05-12-cooperative-training/</link>
+      <link>https://sjtug.org/post/2018-05-12-cooperative-training/</link>
       <pubDate>Tue, 08 May 2018 19:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2018-05-12-cooperative-training/</guid>
+      <guid>https://sjtug.org/post/2018-05-12-cooperative-training/</guid>
       <description>&lt;p&gt;本周六（12日）晚 19:00 将在 图书馆主馆 E216 进行本学期第 4 次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
 
 &lt;p&gt;合作训练：CoT Cooperative Training @ 卢思迪&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>SJTUG 2018 第 3 次分享：Rust 中的内存安全</title>
-      <link>http://sjtug.org/post/2018-04-22-memory-safety-in-rust/</link>
+      <link>https://sjtug.org/post/2018-04-22-memory-safety-in-rust/</link>
       <pubDate>Sat, 14 Apr 2018 19:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2018-04-22-memory-safety-in-rust/</guid>
+      <guid>https://sjtug.org/post/2018-04-22-memory-safety-in-rust/</guid>
       <description>&lt;p&gt;本周日（22日）晚 19:00 将在 图书馆主馆 E309 进行本学期第 3 次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
 
 &lt;p&gt;Rust 中的内存安全 @ 张宇宁&lt;/p&gt;
@@ -41,10 +41,10 @@
     
     <item>
       <title>SJTUG 2018第二次分享：Concatenative Programming 初探</title>
-      <link>http://sjtug.org/post/2018-03-31-concatenative-programming/</link>
+      <link>https://sjtug.org/post/2018-03-31-concatenative-programming/</link>
       <pubDate>Mon, 26 Mar 2018 21:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2018-03-31-concatenative-programming/</guid>
+      <guid>https://sjtug.org/post/2018-03-31-concatenative-programming/</guid>
       <description>&lt;p&gt;本周六（31日）晚 19:00 将在 图书馆主馆 E216 进行本学期第二次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
 
 &lt;p&gt;Concatenative Programming 初探 @ 王竹阳&lt;/p&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>SJTUG 2018第一次分享：FOSS历史与Web开发入门</title>
-      <link>http://sjtug.org/post/2018-03-10-intro/</link>
+      <link>https://sjtug.org/post/2018-03-10-intro/</link>
       <pubDate>Sat, 10 Mar 2018 21:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2018-03-10-intro/</guid>
+      <guid>https://sjtug.org/post/2018-03-10-intro/</guid>
       <description>&lt;p&gt;本周六（10日）晚7点将在 图书馆主馆 E210 进行本学期第一次分享，欢迎大家带电脑前来参加。内容有：&lt;/p&gt;
 
 &lt;ol&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>Haskell小课堂 01</title>
-      <link>http://sjtug.org/post/2017-11-02-haskell-talk-01/</link>
+      <link>https://sjtug.org/post/2017-11-02-haskell-talk-01/</link>
       <pubDate>Thu, 02 Nov 2017 22:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2017-11-02-haskell-talk-01/</guid>
+      <guid>https://sjtug.org/post/2017-11-02-haskell-talk-01/</guid>
       <description>&lt;p&gt;Haskell 是一门默认惰性求值的纯函数式语言，在 stackoverflow 的统计中它是程序员在夜晚和双休日使用最多的语言。本周六的 Haskell 小课堂将带大家简单了解一下 Haskell 的语法和特性，以及代数数据类型、模式匹配、typeclass 等基础知识，为后续课程作铺垫。本次小课堂旨在从入门到入门，不需要前置知识。&lt;/p&gt;
 
 &lt;p&gt;本周六下午3:00将由王竹阳同学在新图B118给大家带来Haskell小课堂的第一节课程，欢迎同学们前来探讨。&lt;/p&gt;
@@ -84,10 +84,10 @@
     
     <item>
       <title>SJTUG例行分享：系统性能的测量与分析</title>
-      <link>http://sjtug.org/post/2017-10-28-performance-measurement/</link>
+      <link>https://sjtug.org/post/2017-10-28-performance-measurement/</link>
       <pubDate>Sat, 28 Oct 2017 19:00:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2017-10-28-performance-measurement/</guid>
+      <guid>https://sjtug.org/post/2017-10-28-performance-measurement/</guid>
       <description>&lt;p&gt;本周六将由贾枭学长给大家分享系统性能的测量与分析的常用思路与技巧，欢迎大家前来。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-10-28&#34;&gt;Slides下载&lt;/a&gt;&lt;/p&gt;
@@ -96,10 +96,10 @@
     
     <item>
       <title>GPG Sign Party &amp; Yubikey安利</title>
-      <link>http://sjtug.org/post/2017-03-09-gpg-sign-party/</link>
+      <link>https://sjtug.org/post/2017-03-09-gpg-sign-party/</link>
       <pubDate>Thu, 09 Mar 2017 22:11:40 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2017-03-09-gpg-sign-party/</guid>
+      <guid>https://sjtug.org/post/2017-03-09-gpg-sign-party/</guid>
       <description>&lt;p&gt;本周日(12日)下午3点到5点，在新图E216将举行GPG Sign Party&amp;amp;Yubikey安利活动。将手把手教大家签发/交换密钥与加密、签名信息，欢迎参加！&lt;/p&gt;
 
 &lt;p&gt;校内同学点击&lt;a href=&#34;http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp&#34;&gt;这里加入学习室&lt;/a&gt;。
@@ -109,10 +109,10 @@
     
     <item>
       <title>SJTUG例行分享：HaLVM</title>
-      <link>http://sjtug.org/post/2017-01-08-halvm/</link>
+      <link>https://sjtug.org/post/2017-01-08-halvm/</link>
       <pubDate>Sun, 08 Jan 2017 20:55:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2017-01-08-halvm/</guid>
+      <guid>https://sjtug.org/post/2017-01-08-halvm/</guid>
       <description>&lt;p&gt;本周日（1月8日）下午15:00 - 17:30，@张震巨巨在新图E210给大家介绍HaLVM项目，欢迎大家来参加分享&lt;/p&gt;
 
 &lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/GaloisInc/HaLVM&#34;&gt;Github/HaLVM&lt;/a&gt;&lt;/p&gt;
@@ -129,10 +129,10 @@
     
     <item>
       <title>SJTUG例行分享：Life of a packet</title>
-      <link>http://sjtug.org/post/2016-11-12-life-of-a-packet/</link>
+      <link>https://sjtug.org/post/2016-11-12-life-of-a-packet/</link>
       <pubDate>Sat, 12 Nov 2016 23:40:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2016-11-12-life-of-a-packet/</guid>
+      <guid>https://sjtug.org/post/2016-11-12-life-of-a-packet/</guid>
       <description>&lt;p&gt;11月12日晚18:00将在光彪楼二楼进行例行分享，由@贾枭 学长给大家带来分享 Life of a packet，欢迎大家来参与活动&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-11-12&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
@@ -141,10 +141,10 @@
     
     <item>
       <title>SJTUG例行分享：简单的物理引擎</title>
-      <link>http://sjtug.org/post/2016-10-29-physical-engine/</link>
+      <link>https://sjtug.org/post/2016-10-29-physical-engine/</link>
       <pubDate>Sat, 29 Oct 2016 23:45:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2016-10-29-physical-engine/</guid>
+      <guid>https://sjtug.org/post/2016-10-29-physical-engine/</guid>
       <description>&lt;p&gt;10月29日晚18:00将在新图E316进行例行分享，由大一巨巨 @时光机 给大家带来「简单的物理引擎」分享，欢迎大家来参与活动&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
@@ -153,10 +153,10 @@
     
     <item>
       <title>SJTUG例行分享：C11 Memory Model</title>
-      <link>http://sjtug.org/post/2016-10-16-c11-memory-model/</link>
+      <link>https://sjtug.org/post/2016-10-16-c11-memory-model/</link>
       <pubDate>Sun, 16 Oct 2016 22:45:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2016-10-16-c11-memory-model/</guid>
+      <guid>https://sjtug.org/post/2016-10-16-c11-memory-model/</guid>
       <description>&lt;p&gt;10月16日晚18:00，@贾枭 学长在新图B416向大家介绍 C11 Memory Model 的有关知识。&lt;/p&gt;
 
 &lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到。&lt;/p&gt;
@@ -167,10 +167,10 @@
     
     <item>
       <title>SJTUG例行分享：Dependent Type</title>
-      <link>http://sjtug.org/post/2016-10-04-dependent-type/</link>
+      <link>https://sjtug.org/post/2016-10-04-dependent-type/</link>
       <pubDate>Tue, 04 Oct 2016 22:55:00 +0800</pubDate>
       
-      <guid>http://sjtug.org/post/2016-10-04-dependent-type/</guid>
+      <guid>https://sjtug.org/post/2016-10-04-dependent-type/</guid>
       <description>&lt;p&gt;10月4日晚18:00 - 21:00，@邵成 @钱泽森 两位同学在新图E316向大家介绍 Dependent Type。&lt;/p&gt;
 
 &lt;p&gt;邵成：Fun with Dependent Types in Haskell&lt;br /&gt;
