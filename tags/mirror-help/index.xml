@@ -75,6 +75,11 @@
 &lt;pre&gt;&lt;code&gt;[archlinuxcn]
 Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;之后，请执行下面的命令安装 archlinuxcn-keyring 包导入 GPG key。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pacman -Sy archlinuxcn-keyring
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
