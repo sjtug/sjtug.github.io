@@ -612,6 +612,20 @@ Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
     </item>
     
     <item>
+      <title>dart_packages</title>
+      <link>https://sjtug.org/post/mirror-help/dart-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/dart-packages/</guid>
+      <description>&lt;p&gt;dart_packages镜像反代了Dart语言官方仓库 &lt;a href=&#34;https://pub.dartlang.org&#34;&gt;https://pub.dartlang.org&lt;/a&gt; ，可以加速Dart包的下载。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;设置环境变量&lt;code&gt;export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn&lt;/code&gt;即可。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>debian</title>
       <link>https://sjtug.org/post/mirror-help/debian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -733,6 +747,20 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
     </item>
     
     <item>
+      <title>flutter_infra</title>
+      <link>https://sjtug.org/post/mirror-help/flutter_infra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/flutter_infra/</guid>
+      <description>&lt;p&gt;Flutter_infra镜像是Google storage flutter_infra bucket的反向代理。能够加速Flutter本身的安装。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;在安装前，设置环境变量&lt;code&gt;export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn/flutter_infra&lt;/code&gt;即可。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>kali</title>
       <link>https://sjtug.org/post/mirror-help/kali/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -746,6 +774,31 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;deb https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main non-free contrib
 deb-src https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main non-free contrib
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>maven-central</title>
+      <link>https://sjtug.org/post/mirror-help/maven-central/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/maven-central/</guid>
+      <description>&lt;p&gt;Apache Maven仓库存放了可用于Maven的大量软件包（特别是Java软件）。目前本镜像为 &lt;a href=&#34;http://repo.maven.apache.org/maven2/&#34;&gt;http://repo.maven.apache.org/maven2/&lt;/a&gt; 的反向代理，能够加速安装。&lt;/p&gt;
+
+&lt;p&gt;使用方法：&lt;/p&gt;
+
+&lt;p&gt;修改Maven根目录下的&lt;code&gt;conf/setting.xml&lt;/code&gt;，增加一节&lt;code&gt;&amp;lt;mirror /&amp;gt;&lt;/code&gt;，具体如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;mirrors&amp;gt;
+    &amp;lt;!-- Other mirrors... --&amp;gt;
+    &amp;lt;mirror&amp;gt;
+        &amp;lt;id&amp;gt;sjtugmaven&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;sjtug maven&amp;lt;/name&amp;gt;
+        &amp;lt;url&amp;gt;https://mirrors.sjtug.sjtu.edu.cn/maven-central/&amp;lt;/url&amp;gt;
+        &amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;
+    &amp;lt;/mirror&amp;gt;
+&amp;lt;/mirrors&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

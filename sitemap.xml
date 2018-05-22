@@ -205,6 +205,10 @@
   </url>
   
   <url>
+    <loc>https://sjtug.org/post/mirror-help/dart-packages/</loc>
+  </url>
+  
+  <url>
     <loc>https://sjtug.org/post/mirror-help/debian/</loc>
   </url>
   
@@ -217,7 +221,15 @@
   </url>
   
   <url>
+    <loc>https://sjtug.org/post/mirror-help/flutter_infra/</loc>
+  </url>
+  
+  <url>
     <loc>https://sjtug.org/post/mirror-help/kali/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sjtug.org/post/mirror-help/maven-central/</loc>
   </url>
   
   <url>

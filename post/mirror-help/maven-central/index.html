@@ -1,0 +1,252 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.37.1" />
+		<title>maven-central &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>maven-central</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> htfy96
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>Apache Maven仓库存放了可用于Maven的大量软件包（特别是Java软件）。目前本镜像为 <a href="http://repo.maven.apache.org/maven2/">http://repo.maven.apache.org/maven2/</a> 的反向代理，能够加速安装。</p>
+
+<p>使用方法：</p>
+
+<p>修改Maven根目录下的<code>conf/setting.xml</code>，增加一节<code>&lt;mirror /&gt;</code>，具体如下：</p>
+
+<pre><code class="language-xml">&lt;mirrors&gt;
+    &lt;!-- Other mirrors... --&gt;
+    &lt;mirror&gt;
+        &lt;id&gt;sjtugmaven&lt;/id&gt;
+        &lt;name&gt;sjtug maven&lt;/name&gt;
+        &lt;url&gt;https://mirrors.sjtug.sjtu.edu.cn/maven-central/&lt;/url&gt;
+        &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
+    &lt;/mirror&gt;
+&lt;/mirrors&gt;
+</code></pre>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fmaven-central%2f - maven-central by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sjtug-portal" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/">SJTUG 镜像源加入 GNU、CTAN 官方镜像源列表<aside class="dates">May 17</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2018-05-12-cooperative-training/">SJTUG 2018 第 4 次分享：合作训练（Cooperative Training）<aside class="dates">May 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2018-05-07-domain-update/">镜像源域名更换为mirrors.sjtug.sjtu.edu.cn<aside class="dates">May 7</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2018-04-22-memory-safety-in-rust/">SJTUG 2018 第 3 次分享：Rust 中的内存安全<aside class="dates">Apr 14</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2018-03-31-concatenative-programming/">SJTUG 2018第二次分享：Concatenative Programming 初探<aside class="dates">Mar 26</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2018-03-10-intro/">SJTUG 2018第一次分享：FOSS历史与Web开发入门<aside class="dates">Mar 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2018-03-04-v2-beta/">镜像源v2 Beta版上线！<aside class="dates">Mar 4</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2017-11-02-haskell-talk-01/">Haskell小课堂 01<aside class="dates">Nov 2</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2017-10-28-performance-measurement/">SJTUG例行分享：系统性能的测量与分析<aside class="dates">Oct 28</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/2017-06-25-summer-class-schedule/">暑期课堂学生分流<aside class="dates">Jun 25</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2018 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>
