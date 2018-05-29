@@ -6,10 +6,20 @@
     <description>Recent content on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 17 May 2018 21:40:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 11:55:00 +0800</lastBuildDate>
     
         <atom:link href="https://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>镜像站将在05/29 晚11:00 UTC&#43;8维护</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-29-maintain/</link>
+      <pubDate>Tue, 29 May 2018 11:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-29-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 将在2018年5月29日晚11:00 UTC+8起进行服务器维护，届时服务将会出现短时间的不可用，希望大家予以谅解。维护时间据估计不会超过30分钟。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SJTUG 镜像源加入 GNU、CTAN 官方镜像源列表</title>
