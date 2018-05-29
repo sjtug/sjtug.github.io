@@ -6,10 +6,20 @@
     <description>Recent content in Posts on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 May 2018 11:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 May 2018 23:30:00 +0800</lastBuildDate>
     
         <atom:link href="https://sjtug.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>镜像源维护完成</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-29-maintain-complete/</link>
+      <pubDate>Tue, 29 May 2018 23:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-29-maintain-complete/</guid>
+      <description>&lt;p&gt;SJTUG 镜像源在今天晚上 11:00 ~ 11:21 按计划进行了例行维护，在维护期间服务暂时不可用，目前已经恢复正常。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>镜像站将在05/29 晚11:00 UTC&#43;8维护</title>
