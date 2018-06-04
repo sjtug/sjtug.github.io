@@ -6,10 +6,20 @@
     <description>Recent content in Posts on SJTUG - A Joyful Techie User Group</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 29 May 2018 23:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jun 2018 19:40:00 +0800</lastBuildDate>
     
         <atom:link href="https://sjtug.org/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ROS源上游故障</title>
+      <link>https://sjtug.org/post/mirror-news/2018-06-04-ros-failure/</link>
+      <pubDate>Mon, 04 Jun 2018 19:40:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-06-04-ros-failure/</guid>
+      <description>&lt;p&gt;今天中午12:00左右，ROS上游唯一的Rsync源出现故障无法进行同步，大部分国内镜像站都会受到影响。已经同步的包仍然可以正常下载，但12:00以后的更新将无法反馈到用户。目前我们在密切观察这一现象，若短时间内rsync源无法恢复，我们将会尝试切换到apt-cache源。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>镜像源维护完成</title>
