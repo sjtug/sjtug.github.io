@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Contacts on SJTUG - A Joyful Techie User Group</title>
+    <link>https://sjtug.org/contacts/</link>
+    <description>Recent content in Contacts on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 27 Nov 2016 15:26:37 +0800</lastBuildDate>
+    
+        <atom:link href="https://sjtug.org/contacts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
