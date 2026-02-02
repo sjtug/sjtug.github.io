@@ -1,0 +1,59 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SJTUG - A Joyful Techie User Group</title>
+    <link>https://sjtug.org/</link>
+    <description>Recent content on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://sjtug.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>https://sjtug.org/post/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contacts</title>
+      <link>https://sjtug.org/contacts/</link>
+      <pubDate>Sun, 27 Nov 2016 15:26:37 +0800</pubDate>
+      
+      <guid>https://sjtug.org/contacts/</guid>
+      <description>&lt;h2 id=&#34;code-of-conduct&#34;&gt;Code of conduct&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You just talk about whatever you&amp;rsquo;d like to talk
+about technology.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你可以畅所欲言 有关科技方面&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To join us, you promise to follow the Code of Conduct above.&lt;/p&gt;
+&lt;p&gt;要加入我们，你承诺遵守上述 Code of Conduct&lt;/p&gt;
+&lt;h2 id=&#34;join-us&#34;&gt;Join us&lt;/h2&gt;
+&lt;p&gt;SJTUG 的成员分布在各个讨论组中。欢迎加入我们：&lt;a href=&#34;https://sjtug.org/post/2021-03-09-welcome/&#34;&gt;SJTUG 2021 年春季招新&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;也欢迎关注我们的公共社交账号：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Twitter: &lt;a href=&#34;http://twitter.com/sjtug&#34;&gt;@sjtug&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/sjtug&#34;&gt;@sjtug&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://sjtug.org/about/</link>
+      <pubDate>Sun, 27 Nov 2016 15:12:37 +0800</pubDate>
+      
+      <guid>https://sjtug.org/about/</guid>
+      <description>&lt;p&gt;SJTUG&amp;rsquo;s a Joyful Techie User Group in &lt;a href=&#34;http://sjtu.edu.cn&#34;&gt;Shanghai Jiao Tong University&lt;/a&gt;. Topics will range over projects, techniques, resources, problems, cool ideas, or just any cool stuff relevant to technology. Discussions and talks take in the form of traditional &lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_user_group&#34;&gt;Linux User Groups&lt;/a&gt; that involves mailing lists and meet-ups. Hacking Thursday is our primary on-campus event since 2013 that we meet once a week for round table discussions. SJTUG is non-profit and absolutely free. All you need is curiosity and a passion for cool technologies.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

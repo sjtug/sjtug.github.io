@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sharing on SJTUG - A Joyful Techie User Group</title>
+    <link>https://sjtug.org/tags/sharing/</link>
+    <description>Recent content in sharing on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 19 Jun 2023 21:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://sjtug.org/tags/sharing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SJTUG x 交大超算 6 月吃吃喝喝与技术分享</title>
+      <link>https://sjtug.org/post/2023-06-19-hpc-llm-train/</link>
+      <pubDate>Mon, 19 Jun 2023 21:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2023-06-19-hpc-llm-train/</guid>
+      <description>&lt;p&gt;本周一 (19日) 14:00 在电院E咖三楼进行的 SJTUG 吃吃喝喝和技术分享活动圆满结束～&lt;/p&gt;
+&lt;p&gt;本次分享的嘉宾是方禹舜同学，题目是“面向超算集群的大语言模型并行训练初探”，活动中探讨了如何突破计算和内存资源的限制，采用并行化方法训练以大语言模型为首的各类大规模模型，并简短介绍了上海交通大学学生超算队的活动及相关超算赛事。&lt;/p&gt;
+&lt;p&gt;现场提供了小吃以及 SJTUG 贴纸。日后的吃吃喝喝活动不出意外也会继续提供以上福利，欢迎蹭饭！感谢 &lt;a href=&#34;https://net.sjtu.edu.cn&#34;&gt;交大网络信息中心&lt;/a&gt;(&lt;a href=&#34;https://hpc.sjtu.edu.cn/&#34;&gt;交大高性能计算中心&lt;/a&gt;) 对本次活动的赞助！&lt;/p&gt;
+&lt;p&gt;本次分享在 b 站上进行了直播，录播已经上传到 &lt;a href=&#34;https://www.dropbox.com/scl/fi/wk0sej7xrj39hwa4l6wiq/2023-06-19-14-16-41.mp4?dl=0&amp;amp;rlkey=2apx0eamrgcanzcddwrnuekkd&#34;&gt;Dropbox&lt;/a&gt;。slides 已经上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sjtug.org/images/2023-06.in-event.jpeg&#34; alt=&#34;in-event&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG x Naive Systems 11 月吃吃喝喝与技术分享</title>
+      <link>https://sjtug.org/post/2021-11-20-rust-sharing/</link>
+      <pubDate>Sat, 20 Nov 2021 20:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2021-11-20-rust-sharing/</guid>
+      <description>&lt;p&gt;下周五 (26日) 18:30 将在电院E咖二楼进行 SJTUG 吃吃喝喝和技术分享活动，欢迎大家参加～&lt;/p&gt;
+&lt;p&gt;本次分享的嘉宾是冷亦君同学，题目是“Use Abella to prove equivalence of datalog rules in Polonius (the new Rust borrow checker)”。
+届时现场会提供小吃、SJTUG 贴纸、以及来自 Naive Systems 的纪念品。感谢 &lt;a href=&#34;https://www.naivesystems.com&#34;&gt;Naive Systems&lt;/a&gt; 对本次活动的赞助！活动安排如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;18:30 - 19:30 技术分享时间&lt;/li&gt;
+&lt;li&gt;19:30 - 20:30 小吃和闲聊时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;电院E咖的位置在电子信息与电气工程学院 2 号楼和 3 号楼之间。&lt;/p&gt;
+&lt;p&gt;本次分享没有直播，下次一定。slides 已经上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://sjtug.org/images/2021-11.in-event.jpeg&#34; alt=&#34;in-event&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 技术分享：Build system, lazy evaluation and incremental computation</title>
+      <link>https://sjtug.org/post/2019-09-18-build-system/</link>
+      <pubDate>Thu, 12 Sep 2019 16:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2019-09-18-build-system/</guid>
+      <description>&lt;p&gt;在9月18日我们将会进行一次SJTUG技术分享以及开学吃锅活动！&lt;/p&gt;
+&lt;p&gt;本次带来技术分享的是张震学长，技术分享结束后是吃锅活动，欢迎大家参加技术分享/吃锅/both！&lt;/p&gt;
+&lt;p&gt;技术分享活动时间：9月18日 18:00-19:00
+地点：新图书馆 E216&lt;/p&gt;
+&lt;p&gt;标题：Build system, lazy evaluation and incremental computation&lt;/p&gt;
+&lt;p&gt;摘要：什么是 Build System（构建系统）的本质？工程实践中为什么有 make、bazel 等众多“轮子”？它们之间的区别是什么？Build system 和更为基础的 Lazy Evaluation（惰性求值）和 Incremental Computation（增量计算）这两种紧密联系的计算概念又有何联系？如何在你的开发实践中运用惰性求值和增量计算？这些概念在浏览器布局引擎、自动代码生成等应用里有什么样的应用？这次分享活动将从实际代码出发来探讨这些话题，并思考算法开发的未来趋势。&lt;/p&gt;
+&lt;p&gt;届时会通过 teamviewer、&lt;a href=&#34;https://live.bilibili.com/6254516&#34;&gt;bilibili 直播间&lt;/a&gt; 等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 技术分享：任务型对话概览</title>
+      <link>https://sjtug.org/post/2019-04-01-task-oriented-dialogue/</link>
+      <pubDate>Mon, 01 Apr 2019 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2019-04-01-task-oriented-dialogue/</guid>
+      <description>&lt;p&gt;周一（4月1日）晚 19:00 将在 图书馆主馆 E312 进行 SJTUG 技术分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+&lt;p&gt;任务型对话概览 @ 刘啸远&lt;/p&gt;
+&lt;p&gt;届时会通过 teamviewer、&lt;a href=&#34;https://live.bilibili.com/6254516&#34;&gt;bilibili 直播间&lt;/a&gt; 等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 技术分享：C&#43;&#43;中的运行期与编译期多态</title>
+      <link>https://sjtug.org/post/2018-12-15-polymorphism-in-cpp/</link>
+      <pubDate>Sat, 08 Dec 2018 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2018-12-15-polymorphism-in-cpp/</guid>
+      <description>&lt;p&gt;下周六（15日）晚 19:00 将在 李政道图书馆 209 进行 SJTUG 技术分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+&lt;p&gt;C++中的运行期与编译期多态 (Runtime and Compile-Time Polymorphism) in C++ @ 任云玮&lt;/p&gt;
+&lt;p&gt;届时会通过 teamviewer、&lt;a href=&#34;https://live.bilibili.com/6254516&#34;&gt;bilibili 直播间&lt;/a&gt; 等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 2018 第 4 次分享：合作训练（Cooperative Training）</title>
+      <link>https://sjtug.org/post/2018-05-12-cooperative-training/</link>
+      <pubDate>Tue, 08 May 2018 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2018-05-12-cooperative-training/</guid>
+      <description>&lt;p&gt;本周六（12日）晚 19:00 将在 图书馆主馆 E216 进行本学期第 4 次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+&lt;p&gt;合作训练：CoT Cooperative Training @ 卢思迪&lt;/p&gt;
+&lt;p&gt;届时会通过 teamviewer、&lt;a href=&#34;https://live.bilibili.com/6254516&#34;&gt;bilibili 直播间&lt;/a&gt; 等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 2018 第 3 次分享：Rust 中的内存安全</title>
+      <link>https://sjtug.org/post/2018-04-22-memory-safety-in-rust/</link>
+      <pubDate>Sat, 14 Apr 2018 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2018-04-22-memory-safety-in-rust/</guid>
+      <description>&lt;p&gt;本周日（22日）晚 19:00 将在 图书馆主馆 E309 进行本学期第 3 次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+&lt;p&gt;Rust 中的内存安全 @ 张宇宁&lt;/p&gt;
+&lt;p&gt;届时会通过teamviewer等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 2018第二次分享：Concatenative Programming 初探</title>
+      <link>https://sjtug.org/post/2018-03-31-concatenative-programming/</link>
+      <pubDate>Mon, 26 Mar 2018 21:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2018-03-31-concatenative-programming/</guid>
+      <description>&lt;p&gt;本周六（31日）晚 19:00 将在 图书馆主馆 E216 进行本学期第二次分享，欢迎大家带电脑前来参加。本次分享内容为：&lt;/p&gt;
+&lt;p&gt;Concatenative Programming 初探 @ 王竹阳&lt;/p&gt;
+&lt;p&gt;届时会通过teamviewer等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 2018第一次分享：FOSS历史与Web开发入门</title>
+      <link>https://sjtug.org/post/2018-03-10-intro/</link>
+      <pubDate>Sat, 10 Mar 2018 21:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2018-03-10-intro/</guid>
+      <description>&lt;p&gt;本周六（10日）晚7点将在 图书馆主馆 E210 进行本学期第一次分享，欢迎大家带电脑前来参加。内容有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Linux 入门与开源社区 @ 骆铮&lt;/li&gt;
+&lt;li&gt;Python Web Application 开发入门 @ 范舟&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;届时会通过teamviewer等进行现场直播，slides 会上传到 &lt;a href=&#34;https://github.com/sjtug/sharing&#34;&gt;https://github.com/sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haskell小课堂 01</title>
+      <link>https://sjtug.org/post/2017-11-02-haskell-talk-01/</link>
+      <pubDate>Thu, 02 Nov 2017 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2017-11-02-haskell-talk-01/</guid>
+      <description>&lt;p&gt;Haskell 是一门默认惰性求值的纯函数式语言，在 stackoverflow 的统计中它是程序员在夜晚和双休日使用最多的语言。本周六的 Haskell 小课堂将带大家简单了解一下 Haskell 的语法和特性，以及代数数据类型、模式匹配、typeclass 等基础知识，为后续课程作铺垫。本次小课堂旨在从入门到入门，不需要前置知识。&lt;/p&gt;
+&lt;p&gt;本周六下午3:00将由王竹阳同学在新图B118给大家带来Haskell小课堂的第一节课程，欢迎同学们前来探讨。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：系统性能的测量与分析</title>
+      <link>https://sjtug.org/post/2017-10-28-performance-measurement/</link>
+      <pubDate>Sat, 28 Oct 2017 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2017-10-28-performance-measurement/</guid>
+      <description>&lt;p&gt;本周六将由贾枭学长给大家分享系统性能的测量与分析的常用思路与技巧，欢迎大家前来。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-10-28&#34;&gt;Slides下载&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GPG Sign Party &amp; Yubikey安利</title>
+      <link>https://sjtug.org/post/2017-03-09-gpg-sign-party/</link>
+      <pubDate>Thu, 09 Mar 2017 22:11:40 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2017-03-09-gpg-sign-party/</guid>
+      <description>&lt;p&gt;本周日(12日)下午3点到5点，在新图E216将举行GPG Sign Party&amp;amp;Yubikey安利活动。将手把手教大家签发/交换密钥与加密、签名信息，欢迎参加！&lt;/p&gt;
+&lt;p&gt;校内同学点击&lt;a href=&#34;http://studyroom.lib.sjtu.edu.cn/reserve_plus.asp&#34;&gt;这里加入学习室&lt;/a&gt;。
+申请单号94388，密码165165&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：HaLVM</title>
+      <link>https://sjtug.org/post/2017-01-08-halvm/</link>
+      <pubDate>Sun, 08 Jan 2017 20:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2017-01-08-halvm/</guid>
+      <description>&lt;p&gt;本周日（1月8日）下午15:00 - 17:30，@张震巨巨在新图E210给大家介绍HaLVM项目，欢迎大家来参加分享&lt;/p&gt;
+&lt;p&gt;项目地址：&lt;a href=&#34;https://github.com/GaloisInc/HaLVM&#34;&gt;Github/HaLVM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;巨巨主页：&lt;a href=&#34;https://github.com/izgzhen&#34;&gt;Github/izgzhen&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;HaLVM(Haskell Lightweight Virtual Machine)是一个让Glasgow Haskell Compiler套件直接在Xen虚拟环境下运行的项目。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2017-01-08&#34;&gt;sjtug/sharing/HaLVM&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：Life of a packet</title>
+      <link>https://sjtug.org/post/2016-11-12-life-of-a-packet/</link>
+      <pubDate>Sat, 12 Nov 2016 23:40:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2016-11-12-life-of-a-packet/</guid>
+      <description>&lt;p&gt;11月12日晚18:00将在光彪楼二楼进行例行分享，由@贾枭 学长给大家带来分享 Life of a packet，欢迎大家来参与活动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-11-12&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：简单的物理引擎</title>
+      <link>https://sjtug.org/post/2016-10-29-physical-engine/</link>
+      <pubDate>Sat, 29 Oct 2016 23:45:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2016-10-29-physical-engine/</guid>
+      <description>&lt;p&gt;10月29日晚18:00将在新图E316进行例行分享，由大一巨巨 @时光机 给大家带来「简单的物理引擎」分享，欢迎大家来参与活动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：C11 Memory Model</title>
+      <link>https://sjtug.org/post/2016-10-16-c11-memory-model/</link>
+      <pubDate>Sun, 16 Oct 2016 22:45:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2016-10-16-c11-memory-model/</guid>
+      <description>&lt;p&gt;10月16日晚18:00，@贾枭 学长在新图B416向大家介绍 C11 Memory Model 的有关知识。&lt;/p&gt;
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-16&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG例行分享：Dependent Type</title>
+      <link>https://sjtug.org/post/2016-10-04-dependent-type/</link>
+      <pubDate>Tue, 04 Oct 2016 22:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/2016-10-04-dependent-type/</guid>
+      <description>&lt;p&gt;10月4日晚18:00 - 21:00，@邵成 @钱泽森 两位同学在新图E316向大家介绍 Dependent Type。&lt;/p&gt;
+&lt;p&gt;邵成：Fun with Dependent Types in Haskell&lt;br&gt;
+钱泽森：How to Write a Safe Printf in Agda&lt;/p&gt;
+&lt;p&gt;视频在 &lt;a href=&#34;https://www.liveedu.tv/sjtug/&#34;&gt;LiveEdu&lt;/a&gt; 可以看到&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分享资料&lt;/strong&gt; : &lt;a href=&#34;https://github.com/sjtug/sharing/tree/master/2016-10-04&#34;&gt;sjtug/sharing&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,221 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>julia-releases &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>julia-releases</h1>
+                    <h2 class="headline">
+                    August 5, 2020 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> johnnychen94
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <h2 id="julia-二进制安装程序">Julia 二进制安装程序</h2>
+<p>Julia 是一个全新的以科学计算为核心的通用编程语言，本镜像为其二进制发行程序。关于 Julia 下各种工具包的安装，请使用 <code>julia</code> 镜像。</p>
+<p>这里仅镜像 <a href="https://julialang.org/downloads/">JuliaLang Downloads</a> 中提供的稳定发行版以及 rc 版本。每日构建的测试版 (nightlies) 以及
+<a href="http://junolab.org/">Juno</a>/<a href="https://juliacomputing.com/products/juliapro">Julia Pro</a>等 IDE 版本不包括在内。</p>
+<p>尽管一些包管理工具（例如 <code>apt</code>, <code>pacman</code>, <code>conda</code>, <code>choco</code>) 中提供有 Julia，但是这些工具或多或少都存在一些由二进制
+依赖导致的问题，因此官方推荐的方式是根据自己的使用平台下载相应的二进制程序，然后通过解压的方式进行手动安装。</p>
+<h2 id="julia-一键安装">Julia 一键安装</h2>
+<p>对于习惯命令行的用户而言，<a href="https://github.com/johnnychen94/jill.py">jill.py</a> 是一个社区维护的全平台下一键安装
+Julia 的命令行工具。</p>
+<p>安装/更新 <code>jill</code>： <code>pip install jill --user -U</code> (需要 Python <code>3.6</code> 或更新的版本)</p>
+<ul>
+<li>安装 Julia：<code>jill install [VERSION] [--upstream UPSTREAM] [--confirm]</code>
+<ul>
+<li><code>jill install</code>：最新的 <code>x.y.z</code> 版本</li>
+<li><code>jill install --confirm</code>：无需交互确认直接安装</li>
+<li><code>jill install --upstream SJTUG</code>：从本镜像站下载并安装</li>
+<li><code>jill install 1.5</code>：安装最新的 <code>1.5.z</code> 版本</li>
+</ul>
+</li>
+<li>查询现存的上游镜像：<code>jill upstream</code></li>
+<li>帮助文档：<code>jill [COMMAND] --help</code>
+<ul>
+<li><code>jill --help</code>：查询存在的 <code>jill</code> 命令</li>
+<li><code>jill install --help</code>：查询 <code>install</code> 命令的使用方式</li>
+</ul>
+</li>
+</ul>
+<p>利用 <code>jill</code> 安装完成后即可通过在命令行执行 <code>julia</code>/<code>julia-1</code>/<code>julia-1.5</code> 来启动不同版本的 Julia.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fjulia-releases%2f - julia-releases by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

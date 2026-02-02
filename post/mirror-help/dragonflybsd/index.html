@@ -1,0 +1,237 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>dragonflybsd/dports &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>dragonflybsd/dports</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> liweitianux
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <h2 id="项目简介">项目简介</h2>
+<p><a href="https://www.dragonflybsd.org/">DragonFly BSD</a> 隶属于 <a href="https://en.wikipedia.org/wiki/BSD">BSD 系统家族</a>，
+是其中相对小众、但富有特色的一个成员，与 <a href="https://www.freebsd.org/">FreeBSD</a>、
+<a href="https://www.openbsd.org/">OpenBSD</a>、<a href="https://www.netbsd.org/">NetBSD</a>
+组成四大 BSD 操作系统。</p>
+<p>自 2003 年从 FreeBSD 4.8 衍生而来，
+DragonFly BSD 对虚拟内存、虚拟文件系统、网络协议栈等关键内核子系统做了大幅修改，
+尽可能地消除了锁和竞争，实现了出色的 SMP 性能。
+项目创始人 Matthew Dillon 自行开发的 <a href="https://en.wikipedia.org/wiki/HAMMER2">HAMMER2</a>
+文件系统是另一个主要特色，该文件系统拥有可媲美 ZFS 的功能和稳定性，但节省内存等资源。
+DragonFly BSD 的其他特色功能还有 vkernel、swapcache、LUKS、TrueCrypt、等等，
+详情可参考：<a href="https://www.dragonflybsd.org/features/">主要特性列表</a>。</p>
+<p>DragonFly BSD 的内核简洁小巧，代码整洁，在线手册 (man pages) 清晰，适合学习和研究。
+驱动程序和用户空间工具主要继承自 FreeBSD，同时与 FreeBSD 使用相同的包管理工具
+<a href="https://github.com/freebsd/pkg">pkg(8)</a>，可利用 FreeBSD 丰富全面的文档资源，
+用户体验良好。
+此外，DragonFly BSD 的社区虽小，但很友好。</p>
+<h2 id="镜像介绍">镜像介绍</h2>
+<p>SJTUG 镜像是 DragonFly BSD 在中国内地的首个镜像站点，
+依托于华东教育网骨干节点，提供稳定、快速的镜像服务。</p>
+<p>我们的镜像服务目前提供了如下内容：</p>
+<ul>
+<li><a href="https://mirror.sjtu.edu.cn/dragonflybsd/iso-images/">安装镜像 (ISO/IMG)</a></li>
+<li><a href="https://mirror.sjtu.edu.cn/dragonflybsd/dports/">预编译软件包</a>
+(收录了 3 个版本：当前开发版本、当前发布版本、上一发布版本)</li>
+</ul>
+<h2 id="使用方法">使用方法</h2>
+<p>创建 pkg(8) 仓库配置文件 <code>/usr/local/etc/pkg/repos/sjtug.conf</code>，添加以下内容：</p>
+<pre><code class="language-conf" data-lang="conf"># China, Shanghai
+SJTUG: {
+    url:        https://mirror.sjtu.edu.cn/dragonflybsd/dports/${ABI}/LATEST,
+    priority:   10,
+    enabled:    yes
+}
+</code></pre><p>然后执行 <code>pkg update -f</code> 更新索引即可开始使用了。</p>
+<p>注：仓库的优先级 (<code>priority</code>) 默认为 0，此处通过设置 <code>priority: 10</code>
+提高优先级来优先使用 SJTUG 镜像服务。</p>
+<h2 id="相关链接">相关链接</h2>
+<ul>
+<li>官方主页: <a href="https://www.dragonflybsd.org/">https://www.dragonflybsd.org/</a></li>
+<li>镜像列表: <a href="https://www.dragonflybsd.org/mirrors/">https://www.dragonflybsd.org/mirrors/</a></li>
+<li>系统源码: <a href="https://gitweb.dragonflybsd.org/dragonfly.git">官方 Gitweb</a>, <a href="https://github.com/DragonFlyBSD/DragonFlyBSD">GitHub</a></li>
+<li>GitHub: <a href="https://github.com/DragonFlyBSD/DragonFlyBSD">https://github.com/DragonFlyBSD</a></li>
+</ul>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fdragonflybsd%2f - dragonflybsd%2fdports by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

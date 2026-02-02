@@ -1,0 +1,316 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>Migrate to Hugo from Jekyll &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Migrate to Hugo from Jekyll</h1>
+                    <h2 class="headline">
+                    March 10, 2014 
+                    
+                    
+                    <br>
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
+<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
+With Jekyll, something that looked like</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ images/
+        logo.png
+</code></pre>
+<p>should become</p>
+<pre><code>▾ &lt;root&gt;/
+    ▾ static/
+        ▾ images/
+            logo.png
+</code></pre>
+<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
+<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
+<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="https://sjtug.org/overview/configuration/">Hugo configuration documentation</a> for details.</p>
+<h2 id="set-your-configuration-publish-folder-to-_site">Set your configuration publish folder to <code>_site</code></h2>
+<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<ol>
+<li>
+<p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<pre><code> git submodule deinit _site
+ git rm _site
+ git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
+</code></pre>
+</li>
+<li>
+<p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<pre><code> {
+     ..
+     &quot;publishdir&quot;: &quot;_site&quot;,
+     ..
+ }
+</code></pre>
+</li>
+</ol>
+<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
+<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="https://sjtug.org/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
+<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
+<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
+<p>Jekyll has <a href="http://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="https://sjtug.org/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
+<h3 id="implementation">Implementation</h3>
+<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
+<p>Jekyll&rsquo;s plugin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">    <span style="color:#66d9ef">module</span> Jekyll
+      <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ImageTag</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Liquid</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Tag</span>
+        @url <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+        @caption <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+        @class <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+        @link <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+        <span style="color:#e6db74">//</span> <span style="color:#66d9ef">Patterns</span>
+        <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS_AND_CAPTION</span> <span style="color:#f92672">=</span>
+        <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&#34;(.*?)&#34;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i</span>
+        <span style="color:#66d9ef">IMAGE_URL_WITH_CAPTION</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/((https?:\/\/|\/)(\S+))(\s+)&#34;(.*?)&#34;/i</span>
+        <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/(\w+)(\s+)((https?:\/\/|\/)(\S+))/i</span>
+        <span style="color:#66d9ef">IMAGE_URL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">/((https?:\/\/|\/)(\S+))/i</span>
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(tag_name, markup, tokens)
+          <span style="color:#66d9ef">super</span>
+          <span style="color:#66d9ef">if</span> markup <span style="color:#f92672">=~</span> <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK</span>
+            @class   <span style="color:#f92672">=</span> $1
+            @url     <span style="color:#f92672">=</span> $3
+            @caption <span style="color:#f92672">=</span> $7
+            @link <span style="color:#f92672">=</span> $9
+          <span style="color:#66d9ef">elsif</span> markup <span style="color:#f92672">=~</span> <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS_AND_CAPTION</span>
+            @class   <span style="color:#f92672">=</span> $1
+            @url     <span style="color:#f92672">=</span> $3
+            @caption <span style="color:#f92672">=</span> $7
+          <span style="color:#66d9ef">elsif</span> markup <span style="color:#f92672">=~</span> <span style="color:#66d9ef">IMAGE_URL_WITH_CAPTION</span>
+            @url     <span style="color:#f92672">=</span> $1
+            @caption <span style="color:#f92672">=</span> $5
+          <span style="color:#66d9ef">elsif</span> markup <span style="color:#f92672">=~</span> <span style="color:#66d9ef">IMAGE_URL_WITH_CLASS</span>
+            @class <span style="color:#f92672">=</span> $1
+            @url   <span style="color:#f92672">=</span> $3
+          <span style="color:#66d9ef">elsif</span> markup <span style="color:#f92672">=~</span> <span style="color:#66d9ef">IMAGE_URL</span>
+            @url <span style="color:#f92672">=</span> $1
+          <span style="color:#66d9ef">end</span>
+        <span style="color:#66d9ef">end</span>
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">render</span>(context)
+          <span style="color:#66d9ef">if</span> @class
+            source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;figure class=&#39;</span><span style="color:#e6db74">#{</span>@class<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&gt;&#34;</span>
+          <span style="color:#66d9ef">else</span>
+            source <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;figure&gt;&#34;</span>
+          <span style="color:#66d9ef">end</span>
+          <span style="color:#66d9ef">if</span> @link
+            source <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&lt;a href=</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">#{</span>@link<span style="color:#e6db74">}</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&gt;&#34;</span>
+          <span style="color:#66d9ef">end</span>
+          source <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&lt;img src=</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">#{</span>@url<span style="color:#e6db74">}</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&gt;&#34;</span>
+          <span style="color:#66d9ef">if</span> @link
+            source <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&lt;/a&gt;&#34;</span>
+          <span style="color:#66d9ef">end</span>
+          source <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&lt;figcaption&gt;</span><span style="color:#e6db74">#{</span>@caption<span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/figcaption&gt;&#34;</span> <span style="color:#66d9ef">if</span> @caption
+          source <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;&lt;/figure&gt;&#34;</span>
+          source
+        <span style="color:#66d9ef">end</span>
+      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">Liquid</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Template</span><span style="color:#f92672">.</span>register_tag(<span style="color:#e6db74">&#39;image&#39;</span>, <span style="color:#66d9ef">Jekyll</span><span style="color:#f92672">::</span><span style="color:#66d9ef">ImageTag</span>)
+</code></pre></div><p>is written as this Hugo shortcode:</p>
+<pre><code>&lt;!-- image --&gt;
+&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
+    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
+        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
+    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
+    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
+    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
+        {{ .Get &quot;title&quot; }}{{ end }}
+        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
+        {{ .Get &quot;caption&quot; }}
+        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
+            {{ .Get &quot;attr&quot; }}
+        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
+        &lt;/p&gt; {{ end }}
+    &lt;/figcaption&gt;
+    {{ end }}
+&lt;/figure&gt;
+&lt;!-- image --&gt;
+</code></pre>
+<h3 id="usage">Usage</h3>
+<p>I simply changed:</p>
+<pre><code>{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
+</code></pre>
+<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
+<pre><code>{{% fig class=&quot;full&quot; src=&quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
+</code></pre>
+<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
+<h2 id="finishing-touches">Finishing touches</h2>
+<h3 id="fix-content">Fix content</h3>
+<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
+<h3 id="clean-up">Clean up</h3>
+<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
+<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
+<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmigrate-from-jekyll%2f - Migrate%20to%20Hugo%20from%20Jekyll by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

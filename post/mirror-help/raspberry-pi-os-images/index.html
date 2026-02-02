@@ -1,0 +1,300 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>raspberry-pi-os-images &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>raspberry-pi-os-images</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> danyang685
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>主仓库地址： <a href="http://downloads.raspberrypi.org/">http://downloads.raspberrypi.org/</a></p>
+<p><strong>使用方法</strong></p>
+<p>根据需要的版本进入以下包含 Raspberry Pi OS 系统镜像的目录，选择<code>.zip</code>文件下载即可。推荐使用 <a href="https://www.balena.io/etcher/">balenaEtcher</a> 将镜像写入 SD 卡</p>
+<table>
+<thead>
+<tr>
+<th>Raspberry Pi OS 版本</th>
+<th>存储目录</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>精简版 Raspberry Pi OS 系统</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_lite_armhf/images/">raspios_lite_armhf</a></td>
+</tr>
+<tr>
+<td>常规版 Raspberry Pi OS 系统</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_armhf/images/">raspios_armhf</a></td>
+</tr>
+<tr>
+<td>完整版 Raspberry Pi OS 系统</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_full_armhf/images/">raspios_full_armhf</a></td>
+</tr>
+<tr>
+<td>精简版 Raspberry Pi OS 64位系统</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/">raspios_lite_arm64</a></td>
+</tr>
+<tr>
+<td>常规版 Raspberry Pi OS 64位系统</td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_arm64/images/">raspios_arm64</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong></p>
+<ul>
+<li>暂无 Raspberry Pi OS 64位完整版系统</li>
+<li>Raspberry Pi OS 是 Raspbian 的后继者，二者名称不同，但功能和界面相同。首个 Raspberry Pi OS 系统发行于 2020年5月27日</li>
+<li>2012年7月15日-2020年2月14日期间发行的旧版 Raspbian 系统镜像与 Raspberry Pi OS 位于不同目录，各版本分别位于：<a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian_lite/images/">raspbian_lite</a>、<a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian/images/">raspbian</a>、<a href="https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian_full/images/">raspbian_full</a>。</li>
+</ul>
+<p><strong>Raspberry Pi OS 常用设置</strong></p>
+<ul>
+<li>
+<p>无头初始化设置</p>
+<ul>
+<li>
+<p>启用 SSH：在 SD 卡 boot 分区中创建名为 <code>ssh</code> （不应包括任何扩展名或其他字符）的空白文件</p>
+</li>
+<li>
+<p>预设 WiFi 信息：在 SD 卡 boot 分区中创建名为 <code>wpa_supplicant.conf</code> 的文本文件，按如下格式填写 <code>YOUR_WiFi_NAME</code> 和 <code>YOUR_WiFi_PASSWORD</code> ，推荐设置为本机 WiFi 热点或拥有管理员权限的无线路由器 WiFi ，以便查找树莓派的 IP 地址</p>
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+	ssid=&quot;YOUR_WiFi_NAME&quot;
+	psk=&quot;YOUR_WiFi_PASSWORD&quot;
+}
+</code></pre></li>
+<li>
+<p>远程连接：插卡启动树莓派，在 WiFi 热点中查询 IP 分配情况，确认树莓派的 IP 地址，使用 SSH 进行远程连接。树莓派的默认 SSH 端口为 22，用户名为 <code>pi</code> ，默认密码为 <code>raspberry</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>命令行下的设置</p>
+<ul>
+<li>在终端输入 <code>sudo raspi-config</code> 命令进行基本设置。可将时区设置为 <code>Asia/Shanghai</code> ，将默认区域更改为 <code>en_US.UTF-8</code> （英文）或 <code>zh_CN.UTF-8</code> （中文）；连接USB键盘时，可将键盘布局修改为美式键盘（Generic 104-key PC -&gt; Other -&gt; English (US) -&gt; English (US)）；同时还可启用 VNC 以进行远程桌面连接。</li>
+</ul>
+</li>
+<li>
+<p>图形界面下的设置</p>
+<ul>
+<li>首次进入桌面时，根据提示进行鼠标操作设置即可</li>
+</ul>
+</li>
+<li>
+<p>apt 软件源修改</p>
+<ul>
+<li>
+<p>Raspberry Pi OS 系统镜像内预置的 apt 软件源在国内访问缓慢，可将 apt 软件源更改为 SJTUG 镜像源</p>
+<ul>
+<li>将 <code>/etc/apt/sources.list</code> 文件中的 raspbian 存储库由 <code>http://raspbian.raspberrypi.org/raspbian/</code> 更改为 <code>https://mirrors.sjtug.sjtu.edu.cn/raspbian/raspbian/</code> ，对于64位 Raspberry Pi OS ，将 <code>http://deb.debian.org/debian/</code> 更改为 <code>https://mirrors.sjtug.sjtu.edu.cn/debian/</code> ，将 <code>http://deb.debian.org/debian-security/</code> 更改为 <code>https://mirrors.sjtug.sjtu.edu.cn/debian-security/</code></li>
+<li>将 <code>/etc/apt/sources.list.d/raspi.list</code> 文件中的 raspberrypi 存储库由 <code>http://archive.raspberrypi.org/debian/</code> 更改为 <code>https://mirrors.sjtug.sjtu.edu.cn/raspberrypi/debian/</code></li>
+</ul>
+</li>
+<li>
+<p>可输入以下命令完成 apt 软件源设置（截至 2021-05-28 版仍然适用）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+sudo sed -i <span style="color:#e6db74">&#34;s|http://raspbian.raspberrypi.org/raspbian/|https://mirrors.sjtug.sjtu.edu.cn/raspbian/raspbian/|g&#34;</span> /etc/apt/sources.list
+sudo sed -i <span style="color:#e6db74">&#34;s|http://deb.debian.org/debian|https://mirrors.sjtug.sjtu.edu.cn/debian|g&#34;</span> /etc/apt/sources.list
+sudo sed -i <span style="color:#e6db74">&#34;s|http://archive.raspberrypi.org/debian/|https://mirrors.sjtug.sjtu.edu.cn/raspberrypi/debian/|g&#34;</span> /etc/apt/sources.list.d/raspi.list
+sudo apt update
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>添加 Raspbian 非官方软件源 Raspbian Addons（可选）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget -qO- https://mirror.sjtu.edu.cn/raspbian-addons/KEY.gpg | sudo apt-key add -
+echo <span style="color:#e6db74">&#34;deb https://mirror.sjtu.edu.cn/raspbian-addons/debian precise main&#34;</span> | sudo tee /etc/apt/sources.list.d/raspbian-addons.list
+sudo apt update
+</code></pre></div></li>
+<li>
+<p>软件包更新</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade -y <span style="color:#f92672">&amp;&amp;</span> sudo apt autoremove -y
+</code></pre></div></li>
+</ul>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fraspberry-pi-os-images%2f - raspberry-pi-os-images by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

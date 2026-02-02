@@ -1,0 +1,213 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>sjtug.org写作指南 &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>sjtug.org写作指南</h1>
+                    <h2 class="headline">
+                    January 15, 2017 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> htfy96
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/guide">guide</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>这里介绍了一下发布新文章的步骤</p>
+<h2 id="安装hugo-或直接新建文章">安装Hugo, 或直接新建文章</h2>
+<p>安装<code>hugo</code>然后<code>hugo new post/YYYY-MM-DD-article-title.md</code>；或直接新建<code>content/post/YYYY-MM-DD-article-title.md</code>，手动指定<code>date</code></p>
+<p>软件源新闻放在<code>content/post/mirror-news</code>下面，带上<code>mirror-news</code>的tag。</p>
+<p>软件源帮助放在<code>content/post/mirror-help</code>下面，带上<code>mirror-help</code>的tag，title设定成和name相同（注意大小写）。</p>
+<h2 id="front-matters">Front matters</h2>
+<p>头部<code>+++</code>的front matters部分，可以指定的部分有：</p>
+<ul>
+<li><code>title = &quot;article title&quot;</code> 必填</li>
+<li><code>author = &quot;htfy96&quot;</code> 必填</li>
+<li><code>tags = [&quot;tag1&quot;, &quot;tag2&quot;]</code> 建议填写，只有包含<code>news</code> tag的文章才会在首页显示，其它常用tag包括<code>announcement</code>, <code>guide</code>, <code>sharing</code>等</li>
+<li><code>activity_time = &quot;2017-01-08T15:00:00+08:00&quot;</code>，格式同date，当有<code>sharing</code>标签时建议填写，代表活动开始时间</li>
+<li><code>activity_place = &quot;Main Library&quot;</code>，同上，代表活动地点</li>
+<li><code>draft = true</code>，当不想立即发布时才填写，默认情况<code>false</code>不用填写</li>
+</ul>
+<h2 id="测试并提交">测试并提交</h2>
+<ul>
+<li>使用<code>hugo server</code>看看最终效果是否理想</li>
+<li>提交到 <a href="https://github.com/sjtug/portal">https://github.com/sjtug/portal</a> ，主页会自动生成到sjtug.org</li>
+</ul>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2f2017-01-15-writing-guide%2f - sjtug.org%e5%86%99%e4%bd%9c%e6%8c%87%e5%8d%97 by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

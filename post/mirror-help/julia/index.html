@@ -1,0 +1,262 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>julia &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>julia</h1>
+                    <h2 class="headline">
+                    August 5, 2020 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> johnnychen94
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>SJTUG 目前提供了 Julia 的官方包注册表 <a href="https://github.com/JuliaRegistries/General">General</a> 镜像来加速 Julia 包的安装。</p>
+<p>关于 Julia 的安装，请使用 <code>julia-releases</code> 镜像。</p>
+<p>注：本镜像的使用需要 Julia <code>v1.4.0</code> 或更新的版本。</p>
+<h2 id="使用方式">使用方式</h2>
+<p>只需要设置环境变量 <code>JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia</code> 即可切换镜像。若成功切换镜像，则能通过 <code>versioninfo()</code> 查询到相关信息，例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> versioninfo()
+Julia Version <span style="color:#ae81ff">1.5.0</span>
+Commit <span style="color:#ae81ff">96786e22</span>cc (<span style="color:#ae81ff">2020</span><span style="color:#f92672">-</span><span style="color:#ae81ff">08</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span> <span style="color:#ae81ff">23</span><span style="color:#f92672">:</span><span style="color:#ae81ff">44</span> UTC)
+Platform Info<span style="color:#f92672">:</span>
+  OS<span style="color:#f92672">:</span> macOS (x86_64<span style="color:#f92672">-</span>apple<span style="color:#f92672">-</span>darwin18<span style="color:#ae81ff">.7.0</span>)
+  CPU<span style="color:#f92672">:</span> Intel(R) Core(TM) i9<span style="color:#f92672">-</span><span style="color:#ae81ff">9880</span>H CPU <span style="color:#960050;background-color:#1e0010">@</span> <span style="color:#ae81ff">2.30</span>GHz
+  WORD_SIZE<span style="color:#f92672">:</span> <span style="color:#ae81ff">64</span>
+  LIBM<span style="color:#f92672">:</span> libopenlibm
+  LLVM<span style="color:#f92672">:</span> libLLVM<span style="color:#f92672">-</span><span style="color:#ae81ff">9.0.1</span> (ORCJIT, skylake)
+Environment<span style="color:#f92672">:</span>
+  JULIA_PKG_SERVER <span style="color:#f92672">=</span> https<span style="color:#f92672">://</span>mirrors<span style="color:#f92672">.</span>sjtug<span style="color:#f92672">.</span>sjtu<span style="color:#f92672">.</span>edu<span style="color:#f92672">.</span>cn<span style="color:#f92672">/</span>julia
+</code></pre></div><p>若不设置该环境变量则默认使用官方服务器 <code>pkg.julialang.org</code> 作为上游。本镜像站是其国内服务器的数据上游之一。</p>
+<h3 id="临时使用">临时使用</h3>
+<p>不同系统和命令行下设置环境变量的方式各不相同，在命令行下可以通过以下方式来临时修改环境变量</p>
+<ul>
+<li>Linux Bash: <code>export JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia</code></li>
+<li>Windows Powershell: <code>$env:JULIA_PKG_SERVER = 'https://mirrors.sjtug.sjtu.edu.cn/julia'</code></li>
+</ul>
+<p>也可以利用 JuliaCN 社区维护的中文本地化工具包 <a href="https://github.com/JuliaCN/JuliaZH.jl">JuliaZH</a> 来进行切换：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#66d9ef">using</span> JuliaZH <span style="color:#75715e"># 在 using 时会自动切换到国内的镜像站</span>
+JuliaZH<span style="color:#f92672">.</span>set_mirror(<span style="color:#e6db74">&#34;SJTUG&#34;</span>) <span style="color:#75715e"># 也可以选择手动切换到 BFSU 镜像</span>
+JuliaZH<span style="color:#f92672">.</span>mirrors <span style="color:#75715e"># 查询记录的上游信息</span>
+</code></pre></div><h3 id="永久使用">永久使用</h3>
+<p>不同系统和命令行下永久设定环境变量的方式也不相同，例如 Linux Bash 下可以通过修改 <code>~/.bashrc</code> 文件实现该目的：</p>
+<pre><code># ~/.bashrc
+export JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia
+</code></pre><p>此外，这里再提供一种针对 Julia 的全平台通用的方式：<code>$JULIA_DEPOT_PATH/config/startup.jl</code>
+( 默认为 <code>~/.julia/config/startup.jl</code> ) 文件定义了每次启动 Julia 时都会执行的命令，编辑该文件，添加以下内容即可：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia"><span style="color:#75715e"># ~/.julia/config/startup.jl</span>
+ENV[<span style="color:#e6db74">&#34;JULIA_PKG_SERVER&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/julia&#34;</span>
+</code></pre></div><p>也可以选择使用 <code>JuliaZH</code> 来一键修改/创建 <code>startup.jl</code> 文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">julia<span style="color:#f92672">&gt;</span> JuliaZH<span style="color:#f92672">.</span>generate_startup(<span style="color:#e6db74">&#34;SJTUG&#34;</span>)
+┌ Info<span style="color:#f92672">:</span> 添加 PkgServer
+│   服务器地址 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/julia&#34;</span>
+└   配置文件 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/root/.julia/config/startup.jl&#34;</span>
+</code></pre></div><p>若要临时禁止，可以通过 <code>julia --startup-file=no</code> 来取消执行 <code>startup.jl</code> 文件。</p>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="加快-condajl-相关操作的速度">加快 Conda.jl 相关操作的速度</h3>
+<p><code>Conda.jl</code> 的加速分为两部分：</p>
+<ul>
+<li><code>conda</code> 的安装：如果系统中没有找到 <code>conda</code> 的话，<code>Conda.jl</code> 会下载并安装一份 miniconda。如果这一步下载非常缓慢的话，你可以提前从 <a href="https://mirrors.bfsu.edu.cn/anaconda/archive/">BFSU 镜像站</a>下载并安装 anaconda，然后通过设置环境变量 <code>CONDA_JL_HOME=$HOME/anaconda3</code> 来指定 <code>Conda.jl</code> 所使用的<code>conda</code>，这样就避免重复下载 <code>miniconda</code>. （<code>$HOME/anaconda3</code>是 anaconda3 的默认安装位置，你可能需要根据具体情况进行调整。）</li>
+<li><code>conda add</code> 等操作的加速：这个只需要配置 anaconda 镜像源即可，即修改 <code>~/.condarc</code> 文件。具体的配置可以查看镜像站中 anaconda 镜像的使用说明。</li>
+</ul>
+<h3 id="为什么有些包的下载还是很慢">为什么有些包的下载还是很慢？</h3>
+<p>有两类数据不会被镜像：</p>
+<ul>
+<li>在 <code>deps/build.jl</code> 文件中硬编码的下载地址，例如 <a href="https://github.com/jheinen/GR.jl/blob/70f025d5cb439d036409f1985107cb5e1615097f/deps/build.jl#L116">GR</a>.</li>
+<li>在 <code>Artifacts.toml</code> 中没有给出 <code>download</code> 项的资源, 例如 <a href="https://github.com/JuliaImages/TestImages.jl/blob/eaa94348df619c65956e8cfb0032ecddb7a29d3a/Artifacts.toml">TestImages</a>.</li>
+</ul>
+<p>在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在 <code>build</code> 阶段报错。</p>
+<h3 id="为什么注册表还是从原地址下载">为什么注册表还是从原地址下载？</h3>
+<p>Julia <code>v1.4.0</code> 之前的版本采用的是 <code>git clone</code> 的方式拉取注册表。为了保持兼容性，如果现有的注册表是一个完整的 git 仓库的话，
+那么即使设置了 PkgServer 作为上游镜像也依然会通过 <code>git</code> 来进行更新，换句话说，不会通过镜像站来下载注册表数据。</p>
+<p>以默认注册表 <code>General</code> 为例，只需要手动将其重置到镜像站即可：</p>
+<ol>
+<li>删除当前注册表：<code>(@v1.4) pkg&gt; registry rm General</code></li>
+<li>从镜像站重新下载数据：<code>(@v1.4) pkg&gt; registry add General</code></li>
+</ol>
+<h3 id="为什么有些包还是从原地址下载">为什么有些包还是从原地址下载？</h3>
+<p>镜像站只镜像注册表中记录的包，因此如果某些包是通过指定 URL 的方式来安装的话，那么该包的更新不会从镜像站进行下载。
+这常见于那些还未注册的包及其版本，例如：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-julia" data-lang="julia">]add Flux<span style="color:#75715e">#master</span>
+]add https<span style="color:#f92672">://</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>FluxML<span style="color:#f92672">/</span>Flux<span style="color:#f92672">.</span>jl<span style="color:#f92672">.</span>git
+Pkg<span style="color:#f92672">.</span>add(PackageSpec(url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.com/FluxML/Flux.jl.git&#34;</span>))
+</code></pre></div>
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fjulia%2f - julia by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

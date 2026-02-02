@@ -1,0 +1,210 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>镜像站将于2月17日上午8时维护 &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>镜像站将于2月17日上午8时维护</h1>
+                    <h2 class="headline">
+                    February 10, 2021 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> skyzh
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-news">mirror-news</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>SJTUG 软件源镜像站致远镜像服务器将于 2021年2月17日 上午8时 UTC+8 起进行服务器架构升级，届时服务将会出现短时间的不可用，希望大家予以谅解。</p>
+<p>本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。</p>
+<p>本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：</p>
+<ul>
+<li>将 ftp.sjtu.edu.cn 的反向代理源更改为思源镜像服务器的对应镜像。</li>
+<li>解决部分目录重定向到错误路径导致 404 的问题。</li>
+<li>停止提供 nodejs-release, maven-central, npm-registry, google-fonts 服务，相关服务会重定向到上游。
+技术详情可以参阅 <a href="https://github.com/sjtug/mirror-docker-siyuan/projects/1">Zhiyuan Migration Project</a>。</li>
+</ul>
+<p>本次维护的服务不可用时间窗口预计如下。</p>
+<ul>
+<li>维护前 24 小时停止 rsync 服务，使得上游不再将用户重定向到本镜像站。</li>
+<li>Web 服务器重启将在 5 分钟内完成。在此期间，所有软件源均不可用。</li>
+<li>同步服务重启将在 30 分钟内完成。在此期间，前端将无法显示同步状态。</li>
+<li>涉及到子域名的服务（如 Docker 反代、anaconda）可能无法立即正常提供服务，在 1 小时内可以恢复。</li>
+</ul>
+<p>在新年来临之际，我谨代表 SJTUG 镜像站维护人员，祝大家在即将到来的一年里，阖家欢乐，万事如意。</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-news%2f2021-02-10-maintain%2f - %e9%95%9c%e5%83%8f%e7%ab%99%e5%b0%86%e4%ba%8e2%e6%9c%8817%e6%97%a5%e4%b8%8a%e5%8d%888%e6%97%b6%e7%bb%b4%e6%8a%a4 by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

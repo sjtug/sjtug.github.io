@@ -1,0 +1,228 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>guix &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>guix</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> pengmeiyu
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p><a href="https://guix.gnu.org/">GNU/Guix</a>是隶属于GNU项目的自由软件发行版。Guix可以作为独立的操作系统发行版安装在计算机上，可以作为软件包管理器安装在别的Linux发行版上。
+它的核心是一个函数式软件包管理器，支持事务性的升级、回滚操作。用户可以通过
+<a href="https://www.gnu.org/software/guile/">Guile</a>语言编写配置文件管理操作系统的服务或者管理用户安装的软件。</p>
+<h2 id="git-镜像">Git 镜像</h2>
+<p>Git 镜像的地址为 <a href="https://mirror.sjtu.edu.cn/git/guix.git">https://mirror.sjtu.edu.cn/git/guix.git</a> 。修改 <code>~/.config/guix/channels.scm</code> 文件即可在 <code>guix pull</code> 时使用。</p>
+<pre><code>(list (channel
+       (inherit (car %default-channels))
+       (url &quot;https://mirror.sjtu.edu.cn/git/guix.git&quot;)))
+</code></pre><h2 id="substitute-镜像">Substitute 镜像</h2>
+<p>镜像地址为 <a href="https://mirror.sjtu.edu.cn/guix/">https://mirror.sjtu.edu.cn/guix/</a>。
+镜像实现方式为智能缓存，在镜像站用户首次访问某个 nar 或 narinfo 时，它会被永久缓存在镜像上；
+之后的访问将直接从镜像服务器返回数据。</p>
+<ul>
+<li>guix命令支持使用 <code>--substitute-urls</code> 参数为单个命令的执行临时覆盖substitute服务器，例如：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">guix package -i &lt;package&gt; --substitute-urls<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://mirror.sjtu.edu.cn/guix/&#34;</span>
+</code></pre></div><ul>
+<li>如果您使用 Guix 管理整个操作系统，请修改操作系统配置文件 ，替换
+<code>substitute-urls</code> 参数。例如：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scheme" data-lang="scheme">(<span style="color:#a6e22e">operating-system</span>
+  (<span style="color:#a6e22e">services</span> (<span style="color:#a6e22e">modify-services</span> %desktop-services
+              (<span style="color:#a6e22e">guix-service-type</span>
+               config <span style="color:#66d9ef">=&gt; </span>(<span style="color:#a6e22e">guix-configuration</span>
+                          (<span style="color:#a6e22e">inherit</span> config)
+                          (<span style="color:#a6e22e">substitute-urls</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;https://mirror.sjtu.edu.cn/guix/&#34;</span>
+                                             <span style="color:#e6db74">&#34;https://ci.guix.gnu.org&#34;</span>))))))
+  <span style="color:#f92672">...</span>
+  )
+</code></pre></div><ul>
+<li>如果您在别的发行版上使用 Guix 包管理器，请修改 <code>guix-daemon</code> 的
+<code>--substitute-urls</code> 参数。比如修改 <code>guix-daemon.service</code> 的 <code>ExecStart</code> 为：</li>
+</ul>
+<pre><code class="language-conf" data-lang="conf">ExecStart=/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon --build-users-group=guixbuild --substitute-urls=&quot;https://mirror.sjtu.edu.cn/guix/&quot;
+</code></pre><p>本文档的编写参考了 <a href="https://guixcn.org/wiki/mirror/">https://guixcn.org/wiki/mirror/</a></p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fguix%2f - guix by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,248 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>emacs-elpa &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>emacs-elpa</h1>
+                    <h2 class="headline">
+                    August 14, 2020 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> skyzh
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>emacs-elpa 包含了 GNU ELPA, NonGNU ELPA, MELPA, MELPA Stable, Org 这 5 个镜像。</p>
+<table>
+<thead>
+<tr>
+<th>ELPA</th>
+<th>镜像地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://elpa.gnu.org/">GNU ELPA</a></td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/">https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/</a></td>
+</tr>
+<tr>
+<td><a href="https://elpa.gnu.org/nongnu/">NonGNU ELPA</a></td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/">https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/</a></td>
+</tr>
+<tr>
+<td><a href="https://melpa.org/">MELPA</a></td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/">https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/</a></td>
+</tr>
+<tr>
+<td><a href="https://stable.melpa.org/#/">MELPA Stable</a></td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/stable-melpa/">https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/stable-melpa/</a></td>
+</tr>
+<tr>
+<td><a href="https://orgmode.org/elpa.html">Org</a></td>
+<td><a href="https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/">https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用方法">使用方法</h2>
+<p>根据你的需求，设置 <code>package-archives</code> ，比如用 GNU ELPA 和 MELPA：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#66d9ef">setq</span> package-archives <span style="color:#f92672">&#39;</span>((<span style="color:#e6db74">&#34;gnu&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&#34;</span>)
+                         (<span style="color:#e6db74">&#34;melpa&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&#34;</span>)))
+
+</code></pre></div><h3 id="spacemacs-用户">Spacemacs 用户</h3>
+<h4 id="master-分支">master 分支</h4>
+<p>添加下面的代码到  <code>.spacemacs</code>  的  <code>dotspacemacs/user-init()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#66d9ef">setq</span> configuration-layer--elpa-archives
+    <span style="color:#f92672">&#39;</span>((<span style="color:#e6db74">&#34;melpa-cn&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&#34;</span>)
+      (<span style="color:#e6db74">&#34;org-cn&#34;</span>   <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&#34;</span>)
+      (<span style="color:#e6db74">&#34;gnu-cn&#34;</span>   <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&#34;</span>)))
+</code></pre></div><h4 id="develop-分支">develop 分支</h4>
+<p>使用 <code>configuration-layer-elpa-archives</code> 代替原来的 <code>configuration-layer--elpa-archives</code> （ <code>--</code> 换成 <code>-</code> ）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(<span style="color:#66d9ef">setq</span> configuration-layer-elpa-archives
+    <span style="color:#f92672">&#39;</span>((<span style="color:#e6db74">&#34;melpa-cn&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&#34;</span>)
+      (<span style="color:#e6db74">&#34;org-cn&#34;</span>   <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&#34;</span>)
+      (<span style="color:#e6db74">&#34;gnu-cn&#34;</span>   <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&#34;</span>)))
+</code></pre></div><h3 id="cask-用户">Cask 用户</h3>
+<p><a href="https://github.com/cask/cask">Cask</a> 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 Cask</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-lisp" data-lang="lisp">(source <span style="color:#e6db74">&#34;gnu&#34;</span>   <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&#34;</span>)
+(source <span style="color:#e6db74">&#34;melpa&#34;</span> <span style="color:#e6db74">&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&#34;</span>)
+</code></pre></div><p>本镜像上游为 <a href="https://elpa.emacs-china.org">https://elpa.emacs-china.org</a> 。</p>
+<p>SJTUG 不提供 rsync 镜像。</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2femacs-elpa%2f - emacs-elpa by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

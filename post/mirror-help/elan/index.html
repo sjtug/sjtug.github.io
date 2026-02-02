@@ -1,0 +1,221 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>elan &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>elan</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> alissa-tung, timechess
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <h1 id="glean-lean-4-镜像适配工具"><code>glean</code>: Lean 4 镜像适配工具</h1>
+<p>使用上海交通大学的 <a href="https://mirror.sjtu.edu.cn">https://mirror.sjtu.edu.cn</a> 镜像服务，软件源镜像托管在 <code>elan</code>
+和 <code>git/lean4-packages</code> 下。</p>
+<p>请自行修改命令中的版本号，可用版本参见：
+<a href="http://mirror.sjtu.edu.cn/elan/?mirror_intel_list">http://mirror.sjtu.edu.cn/elan/?mirror_intel_list</a></p>
+<p>也可以通过这个链接下载 glean。</p>
+<h2 id="安装-elan">安装 Elan</h2>
+<p>Elan 是 Lean 的版本管理工具，在 Lake 调用时根据项目 <code>lean-toolchain</code> 文件下载安装 Lean 并切换到对应的版本。</p>
+<p>例如要阅读 Mathematics in Lean，可以运行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">git clone --depth <span style="color:#ae81ff">1</span> https://mirror.sjtu.edu.cn/git/lean4-packages/mathematics_in_lean/
+</code></pre></div><p>然后通过 <code>cat lean-toolchain</code> 获取需要安装的版本。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">glean -install elan -version 3.1.1
+</code></pre></div><h2 id="安装-lean">安装 Lean</h2>
+<p>以下操作会安装 Lean 与 Lean 工具链，包含语言服务器、构建工具等。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">glean -install lean --version 4.5.0
+</code></pre></div><p>如需安装 nightly 版本，请以如下例子中的格式编辑命令。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">glean -install lean --version 4.4.0-nightly-2023-11-12
+</code></pre></div><p>nightly 可用版本参见 <a href="http://mirror.sjtu.edu.cn/elan/leanprover/lean4_nightly/releases/download?mirror_intel_list">lean4_nightly</a></p>
+<h2 id="在构建项目前下载依赖">在构建项目前下载依赖</h2>
+<p>每当下载完一个 Lean 项目后，在启动 VSCode 或命令行运行 <code>lake build</code> 前，可以提前通过镜像下载依赖。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">glean -lake-manifest-path ~/EG/lake-manifest.json
+</code></pre></div><p>此处使用选项 <code>-lake-manifest-path ~/EG/lake-manifest.json</code> 来手动指定了 <code>lake-manifest.json</code> 文件的位置。
+也可以在进入一个 Lean4 Lake 项目后，直接运行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">glean
+</code></pre></div><p>命令。这样，glean 会自动找到当前项目中 <code>lake-manifest.json</code> 文件的位置。</p>
+<h3 id="如何判断自己是否在在一个-lean4-lake-项目路径工作">如何判断自己是否在在一个 Lean4 Lake 项目路径工作？</h3>
+<p>运行 <code>ls</code> 命令，如果能找到 <code>lakefile.lean</code>，即代表正在 Lean4 Lake 项目路径工作。</p>
+<p>使用 <code>code .</code> 启动 VSCode 来使用 Lean 时，也需要确保正在 Lean4 Lake 项目路径工作。</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2felan%2f - elan by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

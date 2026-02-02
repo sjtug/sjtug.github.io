@@ -1,0 +1,952 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mirror-news on SJTUG - A Joyful Techie User Group</title>
+    <link>https://sjtug.org/tags/mirror-news/</link>
+    <description>Recent content in mirror-news on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 29 Jan 2026 00:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://sjtug.org/tags/mirror-news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>思源镜像站2月2日维护公告</title>
+      <link>https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/</link>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/</guid>
+      <description>&lt;p&gt;各位镜像站用户，&lt;/p&gt;
+&lt;p&gt;思源镜像站将在2026年2月2日（UTC+8）上午10时至下午5时进行维护，内容为存储设备硬件维护与更新，届时思源镜像站上的镜像可能出现短暂的不可用。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirror.sjtu.edu.cn 上的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>致远集群维护公告</title>
+      <link>https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/</link>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/</guid>
+      <description>&lt;p&gt;各位 SJTUG 镜像站用户，&lt;/p&gt;
+&lt;p&gt;由于致远镜像站出现网络故障，SJTUG 镜像站将于 2025年11月11日（UTC+8）凌晨0点至24点间进行维护，届时致远镜像站上的镜像可能出现短时间的不可用。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>致远集群维护公告</title>
+      <link>https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/</link>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/</guid>
+      <description>&lt;p&gt;各位镜像站用户，&lt;/p&gt;
+&lt;p&gt;致远镜像站将在2025年10月10日（UTC+8）晚上11点至次日凌晨5点进行维护，内容为系统升级与日常维护，届时致远镜像站上的镜像可能出现短暂的不可用。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>思源集群维护公告</title>
+      <link>https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/</link>
+      <pubDate>Sat, 27 Sep 2025 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/</guid>
+      <description>&lt;p&gt;思源镜像站将在2025年9月28日（UTC+8）上午10点至下午5点进行维护，内容为DNS解析切换和存储优化，届时思源镜像站上的镜像可能出现短暂不可用。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirror.sjtu.edu.cn 上的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>移除 Intel Extension for Pytorch 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2025-08-31-remove-intel-extension-for-pytorch/</link>
+      <pubDate>Sun, 31 Aug 2025 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-08-31-remove-intel-extension-for-pytorch/</guid>
+      <description>&lt;p&gt;由于 Intel Extension for Pytorch 已经在 PyPI 以及 Intel 托管存储提供预构建轮子，我们已重定向该镜像至 Intel 托管存储，并将在一段时间后彻底移除。&lt;/p&gt;
+&lt;p&gt;请目前使用该镜像的用户迁移至 Intel 托管存储（参考 &lt;a href=&#34;https://pytorch-extension.intel.com&#34;&gt;https://pytorch-extension.intel.com&lt;/a&gt;），或使用 SJTUG 提供的 PyPI 镜像源（参考 &lt;a href=&#34;https://mirror.sjtu.edu.cn/docs/pypi/web/simple&#34;&gt;https://mirror.sjtu.edu.cn/docs/pypi/web/simple&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;如有任何问题或建议，请随时联系我们。感谢您的支持与关注！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>思源镜像站存储集群维护</title>
+      <link>https://sjtug.org/post/mirror-news/2025-07-25-storage-migration/</link>
+      <pubDate>Sat, 26 Jul 2025 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-07-25-storage-migration/</guid>
+      <description>&lt;p&gt;各位 SJTUG 镜像站用户，&lt;/p&gt;
+&lt;p&gt;为提升镜像站服务质量，保证镜像站服务稳定性，SJTUG 思源站点的存储集群将于下周一（2025年7月28日 UTC+8）进行供电优化等维护工作。&lt;/p&gt;
+&lt;p&gt;迁移期间，SJTUG 思源站点上的所有磁盘存储的软件源将处于不可用状态，维护时间段暂定于2025年7月28日中午12:00至次日凌晨6:00（UTC+8）。&lt;/p&gt;
+&lt;p&gt;镜像站维护团队将在维护工作结束后尽快恢复服务，期间部分镜像源将重定向到 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz.org&lt;/a&gt; 处理，感谢 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz.org&lt;/a&gt; 的协助。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>思源镜像站存储故障</title>
+      <link>https://sjtug.org/post/mirror-news/2025-05-10-storage-fault/</link>
+      <pubDate>Sat, 10 May 2025 18:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-05-10-storage-fault/</guid>
+      <description>&lt;p&gt;各位 SJTUG 镜像站用户，&lt;/p&gt;
+&lt;p&gt;由于思源镜像站主要存储发生故障，SJTUG 思源站点上的所有软件源处于不可用状态。镜像站维护团队正积极调查故障原因，目前判断需要下周一（2025年5月12日 UTC+8）进入机房行进一步排查，最早需要40个小时后恢复。&lt;/p&gt;
+&lt;p&gt;我们正采取临时措施，将部分镜像源重定向到 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz.org&lt;/a&gt; 处理，感谢 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz&lt;/a&gt; 的协助。&lt;/p&gt;
+&lt;p&gt;本次故障的影响范围是 mirror.sjtu.edu.cn 上存储于 &lt;code&gt;data55T&lt;/code&gt; 磁盘中的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>思源镜像站存储故障</title>
+      <link>https://sjtug.org/post/mirror-news/2025-03-25-storage-fault/</link>
+      <pubDate>Tue, 25 Mar 2025 18:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2025-03-25-storage-fault/</guid>
+      <description>&lt;p&gt;各位 SJTUG 镜像站用户，&lt;/p&gt;
+&lt;p&gt;由于思源镜像站主要存储发生故障，SJTUG 思源站点上的所有软件源处于不可用状态。镜像站维护团队正积极调查故障原因，目前判断需要明天（2025年3月26日 UTC+8）进入机房行进一步排查，最早需要16个小时后恢复。&lt;/p&gt;
+&lt;p&gt;我们正采取临时措施，将部分镜像源重定向到 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz.org&lt;/a&gt; 处理，感谢 &lt;a href=&#34;https://mirrorz.org&#34;&gt;mirrorz&lt;/a&gt; 的协助。&lt;/p&gt;
+&lt;p&gt;本次故障的影响范围是 mirror.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;我们对给您带来的不便表示歉意，感谢您的理解与支持。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于11月28日凌晨0时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2024-11-28-maintain/</link>
+      <pubDate>Wed, 27 Nov 2024 04:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-11-28-maintain/</guid>
+      <description>&lt;p&gt;各位 SJTUG 镜像站用户，&lt;/p&gt;
+&lt;p&gt;由于思源镜像站存储架构变化，SJTUG 镜像站预计于 2024年11月28日凌晨0时至4时 UTC+8 进行架构迁移，届时服务将可能出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirror.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>移除废弃的 Homebrew 分支镜像 &amp; 维护简报</title>
+      <link>https://sjtug.org/post/mirror-news/2024-07-10-remove-deprecated-brew-casks/</link>
+      <pubDate>Wed, 10 Jul 2024 03:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-07-10-remove-deprecated-brew-casks/</guid>
+      <description>&lt;p&gt;在 5 月我们曾通知您，我们将移除 Linuxbrew Core 镜像。现在由于 Homebrew Cask Drivers, Homebrew Cask Fonts 及 Homebrew Cask Versions 已经被合并入 Homebrew Cask，我们决定同时移除这些镜像。若您的 Linuxbrew 在近 1 年内未更新过，可能会受到影响。&lt;/p&gt;
+&lt;p&gt;另，近期我们对镜像进行了以下维护操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修复了 CVE-2024-6387&lt;/li&gt;
+&lt;li&gt;将 Zhiyuan 服务器从 Fedora 38 升级至 Fedora 40&lt;/li&gt;
+&lt;li&gt;新增 &lt;a href=&#34;https://mirror.sjtu.edu.cn/racket/&#34;&gt;racket 安装器镜像&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;新增 &lt;a href=&#34;https://mirror.sjtu.edu.cn/github/intel-extension-for-pytorch&#34;&gt;intel-extension-for-pytorch&lt;/a&gt; 镜像 (&lt;a href=&#34;https://github.com/sjtug/mirror-requests/issues/364&#34;&gt;mirror-requests#364&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;修复 ghcup 签名问题 (&lt;a href=&#34;https://github.com/sjtug/mirror-requests/issues/365&#34;&gt;mirror-requests#365&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如有任何问题或建议，请随时联系我们。感谢您的支持与关注！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于7月4日上午4时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2024-07-04-maintain/</link>
+      <pubDate>Tue, 02 Jul 2024 04:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-07-04-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的两台服务器将于 2024年7月4日周二 上午1时 UTC+8 进行服务器架构升级，停机窗口详见下文。届时服务将会出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 和 mirror.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将致远镜像服务器的操作系统从 Fedora 38 升级到 Fedora 40。&lt;/li&gt;
+&lt;li&gt;对思源镜像服务器的 Debian 12 操作系统应用内核更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年7月4日 上午1时起，我们将对致远镜像站 (mirrors.sjtug.sjtu.edu.cn) 进行主版本升级。系统升级将在 2 小时内完成，期间将停止服务。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;li&gt;2023年7月4日 上午1时起，我们将对思源镜像站 (mirror.sjtu.edu.cn) 进行内核升级。系统升级将在 30 分钟内完成，期间将停止服务。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站自6月3日起公网服务不可用</title>
+      <link>https://sjtug.org/post/mirror-news/2024-06-03-maintain/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-06-03-maintain/</guid>
+      <description>&lt;p&gt;由于上游校园主干网络临时维护，SJTUG 软件源镜像站 (mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn) 目前公网服务中断。&lt;/p&gt;
+&lt;p&gt;本次服务中断的影响范围是 mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2024年6月3日 (周一) 至 2024年6月6日（周四）：上游校园主干网络维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+&lt;p&gt;2024年6月6日更新：维护已完成，镜像站已恢复服务。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>移除 Linuxbrew Core</title>
+      <link>https://sjtug.org/post/mirror-news/2024-05-30-remove-linuxbrew-core/</link>
+      <pubDate>Thu, 30 May 2024 04:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-05-30-remove-linuxbrew-core/</guid>
+      <description>&lt;p&gt;由于 Linuxbrew Core 在 2021 年已经被合并入 Homebrew Core，且上游仓库在 3 个月前已经删除，我们决定移除 Linuxbrew Core 镜像。若您的 Linuxbrew 在近 3 年内未更新过，可能会受到影响。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增若干新镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2024-03-13-new-mirrors/</link>
+      <pubDate>Wed, 13 Mar 2024 15:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-03-13-new-mirrors/</guid>
+      <description>&lt;p&gt;近两年来，我站添加了若干新的仓库，以更好地满足老师与同学们的学术、工作及生活需求&lt;/p&gt;
+&lt;p&gt;Aug 2021 - 2022:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;debian-ports (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/281&#34;&gt;PR #281&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;homebrew-bundle.git (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/288&#34;&gt;PR #288&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2023 - 2024:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;crates.io sparse index (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/358&#34;&gt;PR #358&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;opencloudos&lt;/li&gt;
+&lt;li&gt;termux (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/386&#34;&gt;PR #386&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;openkylin (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/385&#34;&gt;PR #385&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;immortalwrt (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/392&#34;&gt;PR #392&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;pop-os (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/394&#34;&gt;PR #394&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;packman (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/398&#34;&gt;PR #398&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;debian-cdimage (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/403&#34;&gt;PR #403&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;leopard.sh (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/414&#34;&gt;PR #414&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;anthon (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/419&#34;&gt;PR #419&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;endeavouros (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/426&#34;&gt;PR #426&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;elan (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/427&#34;&gt;PR #427&lt;/a&gt;) &amp;amp; lean4 (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/428&#34;&gt;PR #428&lt;/a&gt;, 在此感谢 &lt;a href=&#34;https://github.com/alissa-tung&#34;&gt;@alissa-tung&lt;/a&gt; (&lt;a href=&#34;https://github.com/timechess&#34;&gt;@timechess&lt;/a&gt; 的协助！)&lt;/li&gt;
+&lt;li&gt;Office Tool Plus (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/444&#34;&gt;PR #444&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;nspawn (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/446&#34;&gt;PR #446&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2024 -:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alhp (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/459&#34;&gt;PR #459&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;registry.k8s.io (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/461&#34;&gt;PR #461&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;bmclapi (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/462&#34;&gt;PR #462&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时，我们也适当下架了一些利用率较低或已被废弃的镜像&lt;/p&gt;
+&lt;p&gt;2022 - 2023:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;linuxbrew-bottles (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/311&#34;&gt;PR #311&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;download.flutter.io (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/332&#34;&gt;PR #332&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;mageia (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/333&#34;&gt;PR #333&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2024 -:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;k8s.gcr.io (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/461&#34;&gt;PR #461&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;scientificlinux (&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/457&#34;&gt;PR #457&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，我们也对架构进行了综合升级&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将更多仓库接入对象存储，依托交大云对象存储实现扩容与更灵活高效的服务 (&lt;a href=&#34;https://github.com/sjtug/rsync-sjtug&#34;&gt;rsync-sjtug&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;支持 mirrorz，为用户提供更智能的分流及更友好的帮助服务 (&lt;a href=&#34;https://mirrorz.org/&#34;&gt;mirrorz&lt;/a&gt; 及 &lt;a href=&#34;https://help.mirrors.cernet.edu.cn/&#34;&gt;mirrorz-help&lt;/a&gt;，在此感谢 &lt;a href=&#34;https://github.com/ZenithalHourlyRate&#34;&gt;@ZenithalHourlyRate&lt;/a&gt; 及 &lt;a href=&#34;https://github.com/taoky&#34;&gt;@taoky&lt;/a&gt; 的协助)&lt;/li&gt;
+&lt;li&gt;Siyuan 镜像服务器升级至 Debian 12，Zhiyuan 镜像服务器升级至 Fedora 38&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 registry.k8s.io &amp; 废弃 k8s.gcr.io</title>
+      <link>https://sjtug.org/post/mirror-news/2024-02-16-k8s-registry/</link>
+      <pubDate>Fri, 16 Feb 2024 04:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-02-16-k8s-registry/</guid>
+      <description>&lt;p&gt;kubernetes 官方在约一年前退役了 k8s.gcr.io，并将仓库迁移至 registry.k8s.io。如今，我们开始对 registry.k8s.io 的同步，并在 mirrors.sjtug.sjtu.edu.cn/registry.k8s.io 及 registry-k8s-io.mirrors.sjtug.sjtu.edu.cn 两个位置提供服务。&lt;/p&gt;
+&lt;p&gt;为兼容现有用户，mirrors.sjtug.sjtu.edu.cn/k8s.gcr.io 及 k8s-gcr-io.mirrors.sjtug.sjtu.edu.cn 将被重定向至新位置，旧仓库的使用将不会受到影响。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>移除 scientific linux</title>
+      <link>https://sjtug.org/post/mirror-news/2024-02-08-remove-scientific/</link>
+      <pubDate>Thu, 08 Feb 2024 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2024-02-08-remove-scientific/</guid>
+      <description>&lt;p&gt;由于 scientific linux 已经停止支持多年，近一个月未见活跃用户，我们决定将其下线。所有指向 scientific 镜像的流量已被重定向至中国科学技术大学开源镜像站 (&lt;a href=&#34;https://mirrors.ustc.edu.cn/&#34;&gt;https://mirrors.ustc.edu.cn/&lt;/a&gt;)。在此感谢中科大开源镜像站的协助！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>致远服务器失去同步 &amp; 重定向 julia 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2023-12-19-redirect-julia/</link>
+      <pubDate>Tue, 19 Dec 2023 02:20:00 -0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-12-19-redirect-julia/</guid>
+      <description>&lt;p&gt;由于致远服务器 (mirrors.sjtug.sjtu.edu.cn) 存储盘满，其上所有仓库于 2 天前同步中断。我们正在释放存储空间，受影响的仓库预计会在 12 小时内恢复同步。&lt;/p&gt;
+&lt;p&gt;另，由于 julia 仓库占用空间极大 (6TB)，用户量较低，我们正在考虑将其同步方式转换为反向代理+缓存。在转换期间，所有指向 julia 镜像的流量将会被重定向至北京大学开源镜像站 (&lt;a href=&#34;https://mirrors.pku.edu.cn/&#34;&gt;https://mirrors.pku.edu.cn/&lt;/a&gt;)。在此感谢北京大学开源镜像站的协助！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>思源镜像站 11/03 服务异常中断</title>
+      <link>https://sjtug.org/post/mirror-news/2023-11-03-outage/</link>
+      <pubDate>Thu, 02 Nov 2023 12:08:00 -0700</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-11-03-outage/</guid>
+      <description>&lt;p&gt;由于上游交大云服务故障，思源镜像站 (mirror.sjtu.edu.cn) 于 11/03 1:12 至 05:07 服务中断，总故障时间 3 小时 55 分钟。在此过程中，致远镜像站 (mirrors.sjtug.sjtu.edu.cn) 的部分存储服务也受到影响导致无法访问。现在本站所有服务已经恢复正常。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于9月19-20日上午4时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2023-09-19-maintain/</link>
+      <pubDate>Tue, 12 Sep 2023 17:30:00 -0700</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-09-19-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的两台服务器将分别于 2023年9月19日周二 上午4时 UTC+8 及 2023年9月20日周三 上午4时 UTC+8 进行服务器架构升级，停机窗口详见下文。届时服务将会出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 和 mirror.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将致远镜像服务器的操作系统从 Fedora 37 升级到 Fedora 38。&lt;/li&gt;
+&lt;li&gt;将思源镜像服务器的操作系统从 Debian 11 升级到 Debian 12。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2023年9月19日 上午4时起，我们将对致远镜像站 (mirrors.sjtug.sjtu.edu.cn) 进行主版本升级。系统升级将在 2 小时内完成，期间将停止服务。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;li&gt;2023年9月20日 上午4时起，我们将对思源镜像站 (mirror.sjtu.edu.cn) 进行主版本升级。系统升级将在 2 小时内完成，期间将停止服务。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站自6月3日起公网服务不可用</title>
+      <link>https://sjtug.org/post/mirror-news/2023-06-03-maintain/</link>
+      <pubDate>Sat, 03 Jun 2023 16:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-06-03-maintain/</guid>
+      <description>&lt;p&gt;由于上游校园主干网络临时维护，SJTUG 软件源镜像站 (mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn) 目前公网服务中断。&lt;/p&gt;
+&lt;p&gt;本次服务中断的影响范围是 mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2023年6月3日 (周六) 至 2023年6月5日（周一）：上游校园主干网络维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+&lt;p&gt;2023年6月3日 19:00 更新：不可用时间窗口更新&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于2月22日下午4时及2月23日上午8时15分维护</title>
+      <link>https://sjtug.org/post/mirror-news/2023-02-23-maintain/</link>
+      <pubDate>Mon, 20 Feb 2023 09:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-02-23-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的致远服务器 (mirrors.sjtug.sjtu.edu.cn) 将于 2023年2月22日周三 至 2023年2月23日周四 UTC+8 部分时段进行服务器架构升级，停机窗口详见下文。届时服务将会出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将致远镜像服务器的操作系统从 Fedora 35 升级到 Fedora 37。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2023年2月22日 下午4时起，我们将对致远镜像站进行初期升级。初期升级将在 30 分钟内完成，期间可能会出现服务中断的情况。&lt;/li&gt;
+&lt;li&gt;2023年2月23日 上午4时起，我们将对致远镜像站进行主版本升级。系统升级将在 2 小时内完成，期间将停止服务。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;li&gt;2023年2月23日 上午8时15分起，我们将更新配置。系统配置将在 1 小时内完成，期间可能会出现服务中断的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于2月17日上午8时45分维护</title>
+      <link>https://sjtug.org/post/mirror-news/2023-02-17-maintain/</link>
+      <pubDate>Wed, 15 Feb 2023 17:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2023-02-17-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的致远服务器 (mirrors.sjtug.sjtu.edu.cn) 将于 2023年2月17日周五 上午8时45分 UTC+8 进行硬件检修。在此期间服务会中断大约一小时。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。与此同时，思源服务器 (mirror.sjtu.edu.cn) 上的软件源将不受影响。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的硬件进行维护，以提供更好的使用体验。&lt;/p&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2023年2月17日 (周五) 上午8时45分：我们将使致远服务器离线并进行硬件维护，在此期间服务会中断约一小时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站于10月16日至10月24日公网服务不可用</title>
+      <link>https://sjtug.org/post/mirror-news/2022-10-16-maintain/</link>
+      <pubDate>Sun, 16 Oct 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2022-10-16-maintain/</guid>
+      <description>&lt;p&gt;接上海交通大学网络信息中心通知，由于上游校园主干网络维护，SJTUG 软件源镜像站 (mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn) 目前公网服务中断。&lt;/p&gt;
+&lt;p&gt;本次服务中断的影响范围是 mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2022年10月16日 (周日) 至 2022年10月24日（周一）：上游校园主干网络维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站于6月2日至6月6日公网服务不可用</title>
+      <link>https://sjtug.org/post/mirror-news/2022-06-02-maintain/</link>
+      <pubDate>Thu, 02 Jun 2022 21:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2022-06-02-maintain/</guid>
+      <description>&lt;p&gt;接上海交通大学网络信息中心通知，由于上游校园主干网络维护，SJTUG 软件源镜像站 (mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn) 目前公网服务中断。&lt;/p&gt;
+&lt;p&gt;本次服务中断的影响范围是 mirror.sjtu.edu.cn 及 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2022年6月2日 (周四) 至 2022年6月6日（周一）：上游校园主干网络维护&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于11月14日周日上午4时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2021-11-05-maintain/</link>
+      <pubDate>Fri, 05 Nov 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-11-05-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的致远服务器 (mirrors.sjtug.sjtu.edu.cn) 将于 2021年11月14日周日 上午4时 UTC+8 进行系统升级。在此期间服务会中断大约半小时。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将致远镜像服务器的操作系统从 Fedora 33 升级到 Fedora 35。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2021年11月12日 (周五) 上午8时：我们将升级服务器上的软件包，并进行重启，为周日的升级做准备。期间服务可能会中断 5 分钟。&lt;/li&gt;
+&lt;li&gt;2021年11月14日 (周日) 上午4时：服务器将重启进行系统升级，在此期间服务会中断大约半小时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站10月7日9时起服务不可用 (已恢复)</title>
+      <link>https://sjtug.org/post/mirror-news/2021-10-07-outage/</link>
+      <pubDate>Thu, 07 Oct 2021 09:45:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-10-07-outage/</guid>
+      <description>&lt;p&gt;由于 mirrors.sjtug.sjtu.edu.cn 升级时出现问题，镜像站服务目前处于不完全可用状态。我们正在调查服务器升级失败的原因，并尝试重启服务器。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上午11时更新：初步确定服务器无法启动的原因是意外将三年前的 grub 配置覆盖了最新配置，导致无法正常进入系统。正在尝试重新生成 grub 引导配置。&lt;/li&gt;
+&lt;li&gt;下午3时更新：我们已经进入 Fedora recovery mode 进行修复工作。&lt;/li&gt;
+&lt;li&gt;8日上午9时更新：服务已经恢复。我们还将做一些维护工作，期间可能有服务中断。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于近期 HTTPS 证书问题的相关提示 (已更新证书)</title>
+      <link>https://sjtug.org/post/mirror-news/2021-10-04-cert/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-10-04-cert/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像使用 Let&amp;rsquo;s Encrypt 签发的 HTTPS 证书提供服务。2021 年 9 月 30 日晚上 10 时，用于交叉签名根证书的 &lt;a href=&#34;https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/&#34;&gt;DST Root CA X3 过期&lt;/a&gt;。因此，在老版本系统中，您可能会碰到错误的“证书过期”提示。&lt;/p&gt;
+&lt;p&gt;如果您在更新软件包时遇到困难，可以参考对应软件源的帮助文档，先将软件源设置成 HTTP 协议访问；而后参考 &lt;a href=&#34;https://github.com/tuna/issues/issues/1342#issuecomment-931412628&#34;&gt;TUNA 的解决方案&lt;/a&gt; 更新您的系统，从而从 SJTUG 镜像站获取最新的软件更新。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;10月12日0时更新：mirrors.sjtug.sjtu.edu.cn 已经去掉了 DST Root CA X3，证书链仅保留 ISRG Root X1。&lt;/li&gt;
+&lt;li&gt;10月12日0时更新：mirror.sjtu.edu.cn 已经去掉了 DST Root CA X3，证书链仅保留 ISRG Root X1。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于10月6-7日上午8时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2021-09-26-maintain/</link>
+      <pubDate>Sun, 26 Sep 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-09-26-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站的两台服务器将分别于 2021年10月6日 上午8时 UTC+8 和 2021年10月7日 上午8时 UTC+8 起进行服务器架构升级，届时服务将会出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 和 mirror.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将致远镜像服务器的操作系统从 Fedora 31 升级到 Fedora 33。&lt;/li&gt;
+&lt;li&gt;将思源镜像服务器的操作系统从 Debian 10 升级到 Debian 11。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2021年10月6日 上午8时起，我们将首先维护思源镜像站 (mirror.sjtu.edu.cn)。Debian 系统升级将在 30 分钟内完成，期间可能会出现服务中断的情况。&lt;/li&gt;
+&lt;li&gt;之后将进行机器重启，思源镜像站的所有服务可能会出现 5 分钟左右的中断。如出现兼容性问题，可能会中断更长时间。&lt;/li&gt;
+&lt;li&gt;2021年10月7日 上午4时起，我们将维护致远镜像站 (mirrors.sjtug.sjtu.edu.cn)。Fedora 系统升级将在 2 小时内完成，期间将停止服务。&lt;/li&gt;
+&lt;li&gt;2021年10月7日 上午8时起，我们将更新配置。Fedora 系统配置将在 30 分钟内完成，期间可能会出现服务中断的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;感谢您对 SJTUG 镜像站的关注。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;更新：致远镜像站将升级到 Fedora 33 而非 Fedora 34。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;更新：致远镜像站将会在 4 时起停机更新，而非 8 时。&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 DGL, Fedora Rawhide, OpenBSD, Raspbian Addons, Ubuntu Kylin, Ubuntu Cloud Images, Zorinos ISOs 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2021-08-26-new-mirrors/</link>
+      <pubDate>Thu, 26 Aug 2021 15:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-08-26-new-mirrors/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像在近期添加了一批新的镜像源。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加 Raspbian Addons 镜像。&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/261&#34;&gt;PR#261&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Fedora Rawhide 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/264&#34;&gt;PR#264&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 DGL (anaconda/cloud/dglteam) 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/268&#34;&gt;PR#268&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 OpenBSD 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/269&#34;&gt;PR#269&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Ubuntu Kylin 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/270&#34;&gt;PR#270&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Zorinos ISOs 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/271&#34;&gt;PR#271&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Ubuntu Cloud Images 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/275&#34;&gt;PR#275&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与此同时，我们也做了一些功能上的更新：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修复了 ghcup 的同步。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/274&#34;&gt;PR#274&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Caddy Web Server 升级到了 2.4.3。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/271&#34;&gt;PR#271&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Zhiyuan 镜像服务器 (mirrors.sjtug) 支持 IPv6。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 AlmaLinux, Armbian, Fedora development, ghcup, Linux kernel, Rocky Linux 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2021-05-25-new-mirrors/</link>
+      <pubDate>Tue, 25 May 2021 14:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-05-25-new-mirrors/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像在近期添加了一批新的镜像源。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;添加 ghcup 镜像。&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/225&#34;&gt;PR#225&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Armbian 和 AlmaLinux 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/227&#34;&gt;PR#227&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加 Linux kernel 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/228&#34;&gt;PR#228&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加了 Fedora development 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/236&#34;&gt;PR#236&lt;/a&gt; &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/238&#34;&gt;PR#238&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;添加了 Rocky Linux 镜像 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/246&#34;&gt;PR#246&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与此同时，我们也做了一些功能上的更新：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Homebrew 支持从 ghcr.io 同步。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/245&#34;&gt;PR#245&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rsync 的磁盘限制大大减小，可以为下游提供文件同步服务了。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/240&#34;&gt;PR#240&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;git 源切换到了 git.sjtu.edu.cn 提供服务，用户体验更好。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/249&#34;&gt;PR#249&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Caddy Web Server 升级到了 2.4.0。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/248&#34;&gt;PR#248&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 conda-forge/osx-arm64, GIMP, MacPorts, VSCodium 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2021-03-23-new-mirrors/</link>
+      <pubDate>Tue, 23 Mar 2021 14:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-03-23-new-mirrors/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像在本月添加了一批新的镜像源。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;conda-forge 添加了 Apple M1 平台支持。&lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/222&#34;&gt;PR#222&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GIMP &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/220&#34;&gt;PR#220&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MacPorts &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/216&#34;&gt;PR#216&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VSCodium &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/208&#34;&gt;PR#208&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与此同时，我们也做了一些功能上的更新：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储在 SJTU S3 上的软件源现在可以浏览所有文件了。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/212&#34;&gt;PR#212&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Flutter 切换到了新上游。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/209&#34;&gt;PR#209&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openSUSE 添加到了官方源。 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-unified/pull/215&#34;&gt;PR#215&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 Bioconductor, openEuler, Void Linux, Wireshark 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2021-03-06-new-mirrors/</link>
+      <pubDate>Sat, 06 Mar 2021 18:40:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-03-06-new-mirrors/</guid>
+      <description>&lt;p&gt;近期，SJTUG 的镜像同步工具 mirror-clone &lt;a href=&#34;https://github.com/sjtug/mirror-clone/pull/57&#34;&gt;添加了 Rsync 支持&lt;/a&gt;。
+在此基础上，我们增加了 Bioconductor, Void Linux 和 Wireshark 镜像。这三个镜像都存储在 SJTU 对象存储服务上。
+从这些软件源下载软件时，您会被自动重定向到 SJTU 对象存储服务。&lt;/p&gt;
+&lt;p&gt;我们还增加了 openEuler 镜像，存储在思源 (mirror.sjtu.edu.cn) 服务器上。&lt;/p&gt;
+&lt;p&gt;您可以参阅镜像站首页的帮助文档，配置相关软件使用 SJTUG 镜像。&lt;/p&gt;
+&lt;p&gt;与此同时，由于致远服务器压力过大，我们将部分软件源迁移到了其他存储中。您可以调整相关软件的设置，以取得最好的使用体验。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;manjaro 迁移到了思源服务器。&lt;/li&gt;
+&lt;li&gt;archlinux 迁移到了思源服务器。&lt;/li&gt;
+&lt;li&gt;ctan 迁移到了思源服务器。&lt;/li&gt;
+&lt;li&gt;anaconda 迁移到了 SJTU 对象存储服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于2月17日上午8时维护</title>
+      <link>https://sjtug.org/post/mirror-news/2021-02-10-maintain/</link>
+      <pubDate>Wed, 10 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-02-10-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站致远镜像服务器将于 2021年2月17日 上午8时 UTC+8 起进行服务器架构升级，届时服务将会出现短时间的不可用，希望大家予以谅解。&lt;/p&gt;
+&lt;p&gt;本次维护的影响范围是 mirrors.sjtug.sjtu.edu.cn 上存储的所有软件源。&lt;/p&gt;
+&lt;p&gt;本次维护将会对服务器上的镜像站软件架构进行升级，以提供更好的使用体验。升级内容包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将 ftp.sjtu.edu.cn 的反向代理源更改为思源镜像服务器的对应镜像。&lt;/li&gt;
+&lt;li&gt;解决部分目录重定向到错误路径导致 404 的问题。&lt;/li&gt;
+&lt;li&gt;停止提供 nodejs-release, maven-central, npm-registry, google-fonts 服务，相关服务会重定向到上游。
+技术详情可以参阅 &lt;a href=&#34;https://github.com/sjtug/mirror-docker-siyuan/projects/1&#34;&gt;Zhiyuan Migration Project&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本次维护的服务不可用时间窗口预计如下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;维护前 24 小时停止 rsync 服务，使得上游不再将用户重定向到本镜像站。&lt;/li&gt;
+&lt;li&gt;Web 服务器重启将在 5 分钟内完成。在此期间，所有软件源均不可用。&lt;/li&gt;
+&lt;li&gt;同步服务重启将在 30 分钟内完成。在此期间，前端将无法显示同步状态。&lt;/li&gt;
+&lt;li&gt;涉及到子域名的服务（如 Docker 反代、anaconda）可能无法立即正常提供服务，在 1 小时内可以恢复。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在新年来临之际，我谨代表 SJTUG 镜像站维护人员，祝大家在即将到来的一年里，阖家欢乐，万事如意。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 apache, DragonFlyBSD 等镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2021-01-04-siyuan-available/</link>
+      <pubDate>Mon, 04 Jan 2021 16:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-01-04-siyuan-available/</guid>
+      <description>&lt;p&gt;SJTUG 的新服务器“思源 (Siyuan)”服务器已经在 &lt;a href=&#34;https://mirror.sjtu.edu.cn&#34;&gt;https://mirror.sjtu.edu.cn&lt;/a&gt; 上线。
+该服务器兼容原 &lt;a href=&#34;https://ftp.sjtu.edu.cn&#34;&gt;ftp.sjtu.edu.cn&lt;/a&gt; 服务器提供的服务，并在此基础上增加了许多软件源镜像。
+原先的 &lt;a href=&#34;https://ftp.sjtu.edu.cn&#34;&gt;ftp.sjtu.edu.cn&lt;/a&gt; 将在近几个月内解析至 SJTUG 思源镜像服务器。&lt;/p&gt;
+&lt;p&gt;新服务器兼容以下 18 个 &lt;a href=&#34;https://ftp.sjtu.edu.cn&#34;&gt;ftp.sjtu.edu.cn&lt;/a&gt; 上的软件源镜像。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;centos&lt;/li&gt;
+&lt;li&gt;debian&lt;/li&gt;
+&lt;li&gt;debian-cd&lt;/li&gt;
+&lt;li&gt;debian-security&lt;/li&gt;
+&lt;li&gt;deepin&lt;/li&gt;
+&lt;li&gt;deepin-cd&lt;/li&gt;
+&lt;li&gt;fedora/linux&lt;/li&gt;
+&lt;li&gt;fedora/epel&lt;/li&gt;
+&lt;li&gt;fedora-secondary&lt;/li&gt;
+&lt;li&gt;linuxmint&lt;/li&gt;
+&lt;li&gt;linuxmint-cd&lt;/li&gt;
+&lt;li&gt;mageia&lt;/li&gt;
+&lt;li&gt;opensuse&lt;/li&gt;
+&lt;li&gt;openvz&lt;/li&gt;
+&lt;li&gt;remi&lt;/li&gt;
+&lt;li&gt;scientific&lt;/li&gt;
+&lt;li&gt;ubuntu&lt;/li&gt;
+&lt;li&gt;ubuntu-cd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;新服务器新增了以下 8 个镜像。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;apache&lt;/li&gt;
+&lt;li&gt;docker-ce&lt;/li&gt;
+&lt;li&gt;ubuntu-cdimage&lt;/li&gt;
+&lt;li&gt;ubuntu-ports&lt;/li&gt;
+&lt;li&gt;openwrt&lt;/li&gt;
+&lt;li&gt;rpmfusion&lt;/li&gt;
+&lt;li&gt;dragonflybsd/dports&lt;/li&gt;
+&lt;li&gt;dragonflybsd/iso-images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与此同时，我们也上线了大量常用 git 仓库镜像。&lt;/p&gt;
+&lt;p&gt;欢迎大家继续使用 SJTUG 镜像站。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 FreeCAD 镜像与 GitHub Release 智能缓存</title>
+      <link>https://sjtug.org/post/mirror-news/2021-01-02-add-github-release-freecad/</link>
+      <pubDate>Sat, 02 Jan 2021 09:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2021-01-02-add-github-release-freecad/</guid>
+      <description>&lt;p&gt;FreeCAD 镜像可以在 &lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/github-release/FreeCAD/FreeCAD/releases/download/?mirror_intel_list&#34;&gt;这里&lt;/a&gt; 访问，我们已经全量同步了近 3 个版本。&lt;/p&gt;
+&lt;p&gt;目前 GitHub Release 智能缓存只开放了 FreeCAD 项目的缓存。您可以在 &lt;a href=&#34;https://github.com/sjtug/mirror-requests/issues&#34;&gt;mirror-requests&lt;/a&gt; 中通过 issue 的方式请求添加新的 GitHub Release 镜像。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Dart 与 Flutter 镜像源已全量同步</title>
+      <link>https://sjtug.org/post/mirror-news/2020-12-25-fix-flutter/</link>
+      <pubDate>Fri, 25 Dec 2020 13:15:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-12-25-fix-flutter/</guid>
+      <description>&lt;p&gt;在 Flutter 中文社区的大力支持下，我们修复了 Dart 与 Flutter 镜像访问不稳定的问题。请参考帮助文档进行配置。欢迎大家继续使用 SJTUG 镜像源。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Guix 镜像源正式上线</title>
+      <link>https://sjtug.org/post/mirror-news/2020-12-21-release-guix/</link>
+      <pubDate>Mon, 21 Dec 2020 15:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-12-21-release-guix/</guid>
+      <description>&lt;p&gt;在 Guix 中文社区的大力支持下，我们上线了 Guix 镜像源。Guix 镜像源的实现方式是智能缓存。当镜像站用户第一次请求某个资源时，它会被永久缓存在镜像站服务器上。&lt;/p&gt;
+&lt;p&gt;Guix 镜像源分为 git 镜像和 substitute 镜像，请参考帮助文档进行配置。欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PyPI 全量同步镜像源重新上线</title>
+      <link>https://sjtug.org/post/mirror-news/2020-12-08-add-pypi/</link>
+      <pubDate>Thu, 10 Dec 2020 13:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-12-08-add-pypi/</guid>
+      <description>&lt;p&gt;继 SJTUG 镜像源智能缓存上线后，我们从清华大学开源软件镜像站 (TUNA) 全量同步了 PyPI 软件源。感谢上海交通大学网络信息中心和 TUNA 的支持。欢迎大家继续使用 PyPI 镜像源。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 镜像源智能缓存正式上线</title>
+      <link>https://sjtug.org/post/mirror-news/2020-12-07-announcing-new-arch/</link>
+      <pubDate>Mon, 07 Dec 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-12-07-announcing-new-arch/</guid>
+      <description>&lt;p&gt;SJTUG 镜像在近期进行了一次更新。我们开发了智能缓存工具 &lt;a href=&#34;https://github.com/sjtug/mirror-intel&#34;&gt;mirror-intel&lt;/a&gt;，
+并将部分反向代理软件源移植到了智能缓存系统上。&lt;/p&gt;
+&lt;p&gt;智能缓存的后端是由上海交通大学网络信息中心提供的对象存储服务。&lt;/p&gt;
+&lt;p&gt;当您访问智能缓存软件源时，服务器会先检测文件是否在对象存储中。如果存在，请求会直接被重定向到 &lt;a href=&#34;https://s3.jcloud.sjtu.edu.cn&#34;&gt;https://s3.jcloud.sjtu.edu.cn&lt;/a&gt; 。
+否则，请求会被重定向到上游；与此同时，智能缓存会将文件同步到对象存储中。&lt;/p&gt;
+&lt;p&gt;目前通过智能缓存提供服务的软件源镜像包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rust-static (rustup 镜像源)。上游为 &lt;a href=&#34;https://static.rust-lang.org&#34;&gt;https://static.rust-lang.org&lt;/a&gt; 。近三个月的工具链均已缓存。&lt;/li&gt;
+&lt;li&gt;crates.io (cargo 包管理器镜像源)。上游为 &lt;a href=&#34;https://static.crates.io&#34;&gt;https://static.crates.io&lt;/a&gt; 。所有包都已缓存。&lt;/li&gt;
+&lt;li&gt;homebrew-bottles。上游为清华大学开源软件镜像站 (TUNA)。所有包都已缓存。&lt;/li&gt;
+&lt;li&gt;pypi-packages。上游为清华大学开源软件镜像站 (TUNA)。正在同步中。&lt;/li&gt;
+&lt;li&gt;flathub, fedora-ostree, fedora-iot 均使用官方 ostree 上游。所有分支都已缓存。ostree 镜像还在测试阶段，正式版会在近几个月内发布。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家的使用～&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 emacs-elpa 与 msys2 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2020-09-28-new-mirrors/</link>
+      <pubDate>Mon, 28 Sep 2020 14:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-09-28-new-mirrors/</guid>
+      <description>&lt;p&gt;SJTUG 镜像在最近两个月中新增了下面两个镜像。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;emacs-elpa (包含 GNU ELPA, MELPA, MELPA Stable, Marmalade, Org, Sunrise Commander ELPA, user42 ELPA)，上游 emacs-china。&lt;/li&gt;
+&lt;li&gt;msys2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;九月中旬，镜像站的反向代理服务出现了一些稳定性问题。我们更换了反向代理方式，提高了 crates.io 等镜像的稳定性。&lt;/p&gt;
+&lt;p&gt;在 @johnnychen94 的帮助下，镜像站解决了 julia 镜像缺失文件的问题。&lt;/p&gt;
+&lt;p&gt;Qt 镜像已加入官方源。在使用官方安装器进行安装时，国内用户会自动使用 SJTUG 镜像站下载文件。&lt;/p&gt;
+&lt;p&gt;Ubuntu, Debian 等 apt 源禁用了 https 自动跳转，现在可以直接使用 http 协议访问。&lt;/p&gt;
+&lt;p&gt;欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增 archlinuxarm, julia, mongodb, Qt 镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2020-08-05-new-mirrors/</link>
+      <pubDate>Wed, 05 Aug 2020 18:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-08-05-new-mirrors/</guid>
+      <description>&lt;p&gt;SJTUG 镜像源近期迎来了一大批更新。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;改变了 archlinux 镜像的同步方式，实时性更强。&lt;/li&gt;
+&lt;li&gt;新增 archlinuxarm 源。&lt;/li&gt;
+&lt;li&gt;在 anaconda 中新增了 PyTorch 源。&lt;/li&gt;
+&lt;li&gt;新增 julia 源。该镜像源将成为中国大陆境内官方 Pkg Server 的上游之一。&lt;/li&gt;
+&lt;li&gt;新增 mongodb 源。&lt;/li&gt;
+&lt;li&gt;新增 Qt 源。我们近期在联系 Qt，希望将镜像加入官方镜像列表中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎大家体验！&lt;/p&gt;
+&lt;p&gt;2019-2020 年我们还新增/修复了下面这些镜像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;增强了 anaconda 同步的稳定性，修复了部分源 404 的问题。&lt;/li&gt;
+&lt;li&gt;修复了 CRAN 的同步问题。&lt;/li&gt;
+&lt;li&gt;修复了 crates.io 的重定向问题。&lt;/li&gt;
+&lt;li&gt;修复了 dart-package 的重定向问题。&lt;/li&gt;
+&lt;li&gt;pypi 改为反代。&lt;/li&gt;
+&lt;li&gt;修复了 maven 的访问问题。&lt;/li&gt;
+&lt;li&gt;新增了 google-fonts 反代。&lt;/li&gt;
+&lt;li&gt;新增了 packagist 元数据。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于4月20日凌晨2点维护</title>
+      <link>https://sjtug.org/post/mirror-news/2020-04-18-maintain/</link>
+      <pubDate>Sat, 18 Apr 2020 19:00:00 -0400</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2020-04-18-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 将在 2020年4月20日 凌晨2时 UTC+8起进行服务器维护，届时服务将会出现短时间的不可用，希望大家予以谅解。预计维护时间：2小时。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>关于19年10月软件源日志泄漏的通告</title>
+      <link>https://sjtug.org/post/mirror-news/2019-10-10-data-leak/</link>
+      <pubDate>Thu, 10 Oct 2019 19:37:00 -0700</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2019-10-10-data-leak/</guid>
+      <description>&lt;h1 id=&#34;发生了什么&#34;&gt;发生了什么&lt;/h1&gt;
+&lt;p&gt;由于镜像状态页面的Access Token未被合理限权，未授权外部用户可以查看软件源的所有日志。&lt;/p&gt;
+&lt;h1 id=&#34;范围&#34;&gt;范围&lt;/h1&gt;
+&lt;p&gt;2018年4月3日2019年10月10日的日志，其中可能会对用户造成影响的内容包括：用户的IP、访问时间与路径&lt;/p&gt;
+&lt;h1 id=&#34;目前采取的措施&#34;&gt;目前采取的措施&lt;/h1&gt;
+&lt;p&gt;目前已经此漏洞已被以下措施修复：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注销了之前未被限权的Access Token&lt;/li&gt;
+&lt;li&gt;更换了日志账户的Account Token&lt;/li&gt;
+&lt;li&gt;在完成日志权限模型之前，暂时停止日志上传&lt;/li&gt;
+&lt;li&gt;更换了泄漏的代理后端的IP，并换用了随机性更强的域名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;之后将会更加审慎处理相关信息的接口，保障数据安全。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Pypi镜像源改为反代</title>
+      <link>https://sjtug.org/post/mirror-news/2019-10-09-remove-pypi/</link>
+      <pubDate>Wed, 09 Oct 2019 22:23:00 -0700</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2019-10-09-remove-pypi/</guid>
+      <description>&lt;p&gt;由于PyPI镜像占用空间过大，经过权衡我们决定放弃PyPI的全量镜像。出于兼容性考虑，https://mirrors.sjtug.sjtu.edu.cn/pypi/web 现在反代 &lt;a href=&#34;https://pypi.org&#34;&gt;https://pypi.org&lt;/a&gt; （与原有URL相同，已有用户不必进行更改）。有需要的用户可以迁移到其他镜像或继续使用反代服务。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将于21日凌晨2点维护</title>
+      <link>https://sjtug.org/post/mirror-news/2019-06-19-maintain/</link>
+      <pubDate>Wed, 19 Jun 2019 13:51:00 -0700</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2019-06-19-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 将在 2019年6月21日 凌晨2时 UTC+8起进行服务器维护，届时服务将会出现短时间的不可用，希望大家予以谅解。预计维护时间：2小时。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站已支持TLS v1.3访问</title>
+      <link>https://sjtug.org/post/mirror-news/2019-03-06-tls-1.3/</link>
+      <pubDate>Wed, 06 Mar 2019 20:00:00 -0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2019-03-06-tls-1.3/</guid>
+      <description>&lt;p&gt;镜像站现已正式支持TLS 1.3访问。使用 curl &amp;gt;= 7.52.0 的软件会自动采用TLS 1.3以降低访问延时。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站已于01/05恢复正常</title>
+      <link>https://sjtug.org/post/mirror-news/2019-01-04-outage/</link>
+      <pubDate>Fri, 04 Jan 2019 20:30:00 -0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2019-01-04-outage/</guid>
+      <description>&lt;p&gt;由于网页服务器异常crash，镜像站于1月4日14时到5日3时期间无法正常访问。目前已经修复，欢迎大家继续使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站11/22 6:31开始服务暂时不可用</title>
+      <link>https://sjtug.org/post/mirror-news/2018-11-22-outage/</link>
+      <pubDate>Thu, 22 Nov 2018 05:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-11-22-outage/</guid>
+      <description>&lt;p&gt;镜像站在11/22早6:31开始，服务暂时不可用，目前我们正在调查原因。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将在 11/22 凌晨3时 UTC&#43;8维护</title>
+      <link>https://sjtug.org/post/mirror-news/2018-11-20-maintain/</link>
+      <pubDate>Tue, 20 Nov 2018 11:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-11-20-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 将在2018年11月22日 凌晨3时 UTC+8起进行服务器维护，届时服务将会出现短时间的不可用，希望大家予以谅解。预计维护时间：1小时。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>新增homebrew与raspbian/raspberrypi镜像</title>
+      <link>https://sjtug.org/post/mirror-news/2018-06-15-raspbian-homebrew/</link>
+      <pubDate>Fri, 15 Jun 2018 15:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-06-15-raspbian-homebrew/</guid>
+      <description>&lt;p&gt;新增了MacOS的homebrew包管理器与适用于树莓派的raspbian/raspberrypi仓库的镜像。&lt;/p&gt;
+&lt;p&gt;欢迎大家查看&lt;code&gt;git/homebrew-{core/cask}.git&lt;/code&gt;、&lt;code&gt;homebrew-bottles&lt;/code&gt;与&lt;code&gt;raspbian&lt;/code&gt;/&lt;code&gt;raspberrypi&lt;/code&gt;了解如何使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ROS源上游故障</title>
+      <link>https://sjtug.org/post/mirror-news/2018-06-04-ros-failure/</link>
+      <pubDate>Mon, 04 Jun 2018 19:40:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-06-04-ros-failure/</guid>
+      <description>&lt;p&gt;今天中午12:00左右，ROS上游唯一的Rsync源出现故障无法进行同步，大部分国内镜像站都会受到影响。已经同步的包仍然可以正常下载，但12:00以后的更新将无法反馈到用户。目前我们在密切观察这一现象，若短时间内rsync源无法恢复，我们将会尝试切换到apt-cache源。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像源维护完成</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-29-maintain-complete/</link>
+      <pubDate>Tue, 29 May 2018 23:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-29-maintain-complete/</guid>
+      <description>&lt;p&gt;SJTUG 镜像源在今天晚上 11:00 ~ 11:21 按计划进行了例行维护，在维护期间服务暂时不可用，目前已经恢复正常。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像站将在05/29 晚11:00 UTC&#43;8维护</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-29-maintain/</link>
+      <pubDate>Tue, 29 May 2018 11:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-29-maintain/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 将在2018年5月29日晚11:00 UTC+8起进行服务器维护，届时服务将会出现短时间的不可用，希望大家予以谅解。维护时间据估计不会超过30分钟。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SJTUG 镜像源加入 GNU、CTAN 官方镜像源列表</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</link>
+      <pubDate>Thu, 17 May 2018 21:40:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-17-gnu-ctan-repo/</guid>
+      <description>&lt;p&gt;SJTUG 软件源镜像站 v2 正式上线后，现已加入 GNU、CTAN 官方镜像源列表：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.gnu.org/prep/ftp.html&#34;&gt;GNU Mirror List&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ctan.org/mirrors&#34;&gt;CTAN Sites&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像源域名更换为mirrors.sjtug.sjtu.edu.cn</title>
+      <link>https://sjtug.org/post/mirror-news/2018-05-07-domain-update/</link>
+      <pubDate>Mon, 07 May 2018 15:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-05-07-domain-update/</guid>
+      <description>&lt;p&gt;欢迎大家之后使用新域名访问&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>镜像源v2 Beta版上线！</title>
+      <link>https://sjtug.org/post/mirror-news/2018-03-04-v2-beta/</link>
+      <pubDate>Sun, 04 Mar 2018 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2018-03-04-v2-beta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>喜迎校庆 SJTUG Mirrors加入Arch Linux镜像源</title>
+      <link>https://sjtug.org/post/mirror-news/2016-04-07-arch-repo/</link>
+      <pubDate>Thu, 07 Apr 2016 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2016-04-07-arch-repo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SJTUG Demo镜像源成立</title>
+      <link>https://sjtug.org/post/mirror-news/2016-03-17-established/</link>
+      <pubDate>Thu, 17 Mar 2016 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-news/2016-03-17-established/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

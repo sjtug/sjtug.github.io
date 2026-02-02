@@ -1,0 +1,272 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>docker-ce &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>docker-ce</h1>
+                    <h2 class="headline">
+                    August 21, 2021 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> hmsjy2017
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <h1 id="docker-community-edition-镜像使用帮助">Docker Community Edition 镜像使用帮助</h1>
+<p><strong>注意: 本镜像只提供 Debian/Ubuntu/Fedora/CentOS/RHEL 的 docker 软件包，非 dockerhub</strong></p>
+<h2 id="debianubuntu-用户">Debian/Ubuntu 用户</h2>
+<p>以下内容根据 <a href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/">TUNA文档</a> 修改而来。</p>
+<p>如果你过去安装过 docker，先删掉:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get remove docker docker-engine docker.io
+</code></pre></div><p>首先安装依赖:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+</code></pre></div><p>根据你的发行版，下面的内容有所不同。你使用的发行版：</p>
+<details><summary>Debian</summary>
+信任 Docker 的 GPG 公钥:
+<pre>curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -</pre>
+对于 amd64 架构的计算机，添加软件仓库:
+<pre>
+sudo add-apt-repository \
+   "deb [arch=amd64] https://mirror.sjtu.edu.cn/docker-ce/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+</pre>
+如果你用的是树莓派或其它ARM架构计算机，请运行:
+<pre>
+echo "deb [arch=armhf] https://mirror.sjtu.edu.cn/docker-ce/linux/debian \
+     $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+</pre>
+最后安装
+<pre>
+sudo apt-get update
+sudo apt-get install docker-ce
+</pre>
+</details>
+<details><summary>Ubuntu</summary>
+信任 Docker 的 GPG 公钥:
+<pre>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</pre>
+对于 amd64 架构的计算机，添加软件仓库:
+<pre>
+sudo add-apt-repository \
+   "deb [arch=amd64] https://mirror.sjtu.edu.cn/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+</pre>
+如果你用的是树莓派或其它ARM架构计算机，请运行:
+<pre>
+echo "deb [arch=armhf] https://mirror.sjtu.edu.cn/docker-ce/linux/ubuntu \
+     $(lsb_release -cs) stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+</pre>
+最后安装
+<pre>
+sudo apt-get update
+sudo apt-get install docker-ce
+</pre>
+</details>
+<h2 id="fedoracentosrhel">Fedora/CentOS/RHEL</h2>
+<p>以下内容根据<a href="https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/">TUNA文档</a>修改而来。</p>
+<p>如果你之前安装过 docker，请先删掉</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum remove docker docker-common docker-selinux docker-engine
+</code></pre></div><p>安装一些依赖</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+</code></pre></div><p>根据你的发行版下载repo文件:</p>
+<details><summary>CentOS/RHEL</summary>
+<pre>
+wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
+</pre>
+</details>
+<details><summary>Fedora</summary>
+<pre>
+wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/fedora/docker-ce.repo
+</pre>
+</details>
+<p>把软件仓库地址替换为 SJTUG:</p>
+<pre>
+sudo sed -i 's+download.docker.com+mirror.sjtu.edu.cn/docker-ce+' /etc/yum.repos.d/docker-ce.repo
+</pre>
+<p>最后安装:</p>
+<pre>
+sudo yum makecache fast
+sudo yum install docker-ce
+</pre>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fdocker-ce%2f - docker-ce by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>

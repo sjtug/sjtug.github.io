@@ -1,0 +1,233 @@
+    <!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="SJTUG">
+		<meta name="description" content="SJTU *NIX User Group">
+		<meta name="generator" content="Hugo 0.83.1" />
+		<title>anaconda &middot; SJTUG - A Joyful Techie User Group</title>
+		<link rel="shortcut icon" href="https://sjtug.org/images/favicon.ico">
+		<link rel="stylesheet" href="https://sjtug.org/css/style.css">
+		<link rel="stylesheet" href="https://sjtug.org/css/highlight.css">
+		
+
+		
+		<link rel="stylesheet" href="https://sjtug.org/fontawesome/css/font-awesome.min.css">
+		
+
+		
+        <link href="" rel="alternate" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+        <link href="" rel="feed" type="application/rss+xml" title="SJTUG - A Joyful Techie User Group" />
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='https://sjtug.org/'> <span class="arrow">←</span>Home</a>
+	
+
+	
+    <a href='https://sjtug.org/about/'>About</a>
+	
+	
+	
+    <a href='https://sjtug.org/post/'>Archive</a>
+	
+
+	
+		<a href='https://mirrors.sjtug.sjtu.edu.cn/'>Mirrors</a>
+	
+
+	
+    <a class="cta" id="join" href='https://sjtug.org/contacts/'>Contacts</a>
+	
+
+</nav>
+
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>anaconda</h1>
+                    <h2 class="headline">
+                    January 1, 0001 
+                    
+                        <br>
+                        <i class="fa fa-user" aria-hidden="true"></i> htfy96
+                    
+                    
+                    <br>
+                    
+                    
+                        
+                            <a href="https://sjtug.org/tags/mirror-help">mirror-help</a>
+                        
+                    
+                    
+                    </h2>
+                </header>
+                 
+                <section id="post-body">
+                    <p>Anaconda 是一种 Python 语言的免费增值开源发行版，用于进行大规模数据处理, 预测分析, 和科学计算, 致力于简化包的管理和部署。Anaconda 使用软件包管理系统 conda 进行包管理。</p>
+<p>SJTUG 源镜像了常用的 conda 库，以方便科学计算用户使用。</p>
+<p><strong>Note: 如果您正在从其他镜像源切换到 SJTUG，请检查我们是否同步了你所需要的 repo，以及该 repo 是否支持您使用的平台 (e.g. linux-64)。如果没有，请删除相关配置，并提出新镜像请求。</strong></p>
+<p><strong>使用说明</strong></p>
+<p>编辑 <code>~/.condarc</code></p>
+<pre><code>default_channels:
+  - https://mirror.sjtu.edu.cn/anaconda/pkgs/r
+  - https://mirror.sjtu.edu.cn/anaconda/pkgs/main
+custom_channels:
+  conda-forge: https://mirror.sjtu.edu.cn/anaconda/cloud/
+  pytorch: https://mirror.sjtu.edu.cn/anaconda/cloud/
+channels:
+  - defaults
+</code></pre><p>在 <code>custom_channels</code> 中您可以添加下面所列的其他第三方源。我们建议您使用上面的方法配置，而非执行下面的指令。</p>
+<p>您也可以使用<code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/{{你所需要的包名}}</code>来将SJTUG源添加作为这个包的上游。目前镜像的包与安装命令包括：</p>
+<ul>
+<li><strong>官方源</strong>:
+<ul>
+<li><code>pkgs/free</code>: <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/free</code></li>
+<li><code>pkgs/main</code>: <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/main</code></li>
+<li><code>pkgs/mro</code>: <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/mro</code></li>
+<li><code>pkgs/msys2</code>: <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/msys2</code></li>
+<li><code>pkgs/pro</code>: (deprecated) <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/pro</code></li>
+<li><code>pkgs/r</code>: (empty) <code>conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/r</code></li>
+</ul>
+</li>
+<li><strong>第三方源</strong>:
+<ul>
+<li><code>cloud/bioconda</code>: <code>conda config --set custom_channels.bioconda https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/conda-forge</code>: <code>conda config --set custom_channels.conda-forge https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/menpo</code>: <code>conda config --set custom_channels.menpo https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/soumith</code>: <code>conda config --set custom_channels.soumith https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/viscid-hub</code>: <code>conda config --set custom_channels.viscid-hub https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/atztogo</code>: <code>conda config --set custom_channels.atztogo https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/pytorch</code>: <code>conda config --set custom_channels.pytorch https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+<li><code>cloud/pytorch-test</code>: <code>conda config --set custom_channels.pytorch-test https://mirror.sjtu.edu.cn/anaconda/cloud/</code></li>
+</ul>
+</li>
+</ul>
+<p>此外，在 Conda 4.7 后，官方的 default 源组默认只包含 main 和 r (windows 会包含 msys2) channel，其他官方源仍支持手动添加。但官方建议不再使用 free channel，详见 <a href="https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/">Why We Removed the “Free” Channel in Conda 4.7</a>。</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/sjtug">
+                        <img class="avatar" src="https://sjtug.org/images/avatar.png">
+                        <div>
+                            <span class="dark">SJTUG</span>
+                            <span>SJTUG information automata</span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fsjtug.org%2fpost%2fmirror-help%2fanaconda%2f - anaconda by @sjtug"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2026-02-02-siyuan-maintain/">思源镜像站2月2日维护公告<aside class="dates">Jan 29</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-11-10-zhiyuan-network-fault/">致远集群维护公告<aside class="dates">Nov 10</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-10-08-zhiyuan-system-maintainance/">致远集群维护公告<aside class="dates">Oct 8</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="https://sjtug.org/post/mirror-news/2025-09-27-dns-migration/">思源集群维护公告<aside class="dates">Sep 27</aside></a>
+        </li>
+        
+   
+</ul>
+
+            <footer id="footer">
+    
+        <div id="social">
+
+	
+	
+    <a class="symbol" href="https://www.github.com/sjtug">
+        <i class="fa fa-github"></i>
+    </a>
+    
+    <a class="symbol" href="https://www.twitter.com/sjtug">
+        <i class="fa fa-twitter"></i>
+    </a>
+    
+
+
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2026 SJTUG
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://sjtug.org/js/main.js"></script>
+<script src="https://sjtug.org/js/highlight.js"></script>
+<script src="https://sjtug.org/js/three.min.js"></script>
+<script src="https://sjtug.org/js/rocket.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+    </body>
+</html>
