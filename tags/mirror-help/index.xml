@@ -1,0 +1,1994 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mirror-help on SJTUG - A Joyful Techie User Group</title>
+    <link>https://sjtug.org/tags/mirror-help/</link>
+    <description>Recent content in mirror-help on SJTUG - A Joyful Techie User Group</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 08 Jun 2023 18:27:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://sjtug.org/tags/mirror-help/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pop-os</title>
+      <link>https://sjtug.org/post/mirror-help/pop-os/</link>
+      <pubDate>Thu, 08 Jun 2023 18:27:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/pop-os/</guid>
+      <description>&lt;p&gt;PopOS 是 system76 公司基于 ubuntu 开发的衍生版，具有称为 COSMIC 的定制 GNOME桌面环境，内置大量的库和开发工具。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s@http://apt.pop-os.org/@https://mirror.sjtu.edu.cn/pop-os/@g&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/pop-os-apps.sources
+sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s@http://apt.pop-os.org/@https://mirror.sjtu.edu.cn/pop-os/@g&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/pop-os-release.sources
+sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s@http://apt.pop-os.org/@https://mirror.sjtu.edu.cn/@g&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/system.sources
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker-ce</title>
+      <link>https://sjtug.org/post/mirror-help/docker-ce/</link>
+      <pubDate>Sat, 21 Aug 2021 00:33:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/docker-ce/</guid>
+      <description>&lt;h1 id=&#34;docker-community-edition-镜像使用帮助&#34;&gt;Docker Community Edition 镜像使用帮助&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;注意: 本镜像只提供 Debian/Ubuntu/Fedora/CentOS/RHEL 的 docker 软件包，非 dockerhub&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;debianubuntu-用户&#34;&gt;Debian/Ubuntu 用户&lt;/h2&gt;
+&lt;p&gt;以下内容根据 &lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/&#34;&gt;TUNA文档&lt;/a&gt; 修改而来。&lt;/p&gt;
+&lt;p&gt;如果你过去安装过 docker，先删掉:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get remove docker docker-engine docker.io
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;首先安装依赖:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;根据你的发行版，下面的内容有所不同。你使用的发行版：&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;Debian&lt;/summary&gt;
+信任 Docker 的 GPG 公钥:
+&lt;pre&gt;curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -&lt;/pre&gt;
+对于 amd64 架构的计算机，添加软件仓库:
+&lt;pre&gt;
+sudo add-apt-repository \
+   &#34;deb [arch=amd64] https://mirror.sjtu.edu.cn/docker-ce/linux/debian \
+   $(lsb_release -cs) \
+   stable&#34;
+&lt;/pre&gt;
+如果你用的是树莓派或其它ARM架构计算机，请运行:
+&lt;pre&gt;
+echo &#34;deb [arch=armhf] https://mirror.sjtu.edu.cn/docker-ce/linux/debian \
+     $(lsb_release -cs) stable&#34; | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+&lt;/pre&gt;
+最后安装
+&lt;pre&gt;
+sudo apt-get update
+sudo apt-get install docker-ce
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Ubuntu&lt;/summary&gt;
+信任 Docker 的 GPG 公钥:
+&lt;pre&gt;curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -&lt;/pre&gt;
+对于 amd64 架构的计算机，添加软件仓库:
+&lt;pre&gt;
+sudo add-apt-repository \
+   &#34;deb [arch=amd64] https://mirror.sjtu.edu.cn/docker-ce/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable&#34;
+&lt;/pre&gt;
+如果你用的是树莓派或其它ARM架构计算机，请运行:
+&lt;pre&gt;
+echo &#34;deb [arch=armhf] https://mirror.sjtu.edu.cn/docker-ce/linux/ubuntu \
+     $(lsb_release -cs) stable&#34; | \
+    sudo tee /etc/apt/sources.list.d/docker.list
+&lt;/pre&gt;
+最后安装
+&lt;pre&gt;
+sudo apt-get update
+sudo apt-get install docker-ce
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;h2 id=&#34;fedoracentosrhel&#34;&gt;Fedora/CentOS/RHEL&lt;/h2&gt;
+&lt;p&gt;以下内容根据&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/&#34;&gt;TUNA文档&lt;/a&gt;修改而来。&lt;/p&gt;
+&lt;p&gt;如果你之前安装过 docker，请先删掉&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo yum remove docker docker-common docker-selinux docker-engine
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装一些依赖&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;根据你的发行版下载repo文件:&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;CentOS/RHEL&lt;/summary&gt;
+&lt;pre&gt;
+wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;Fedora&lt;/summary&gt;
+&lt;pre&gt;
+wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/fedora/docker-ce.repo
+&lt;/pre&gt;
+&lt;/details&gt;
+&lt;p&gt;把软件仓库地址替换为 SJTUG:&lt;/p&gt;
+&lt;pre&gt;
+sudo sed -i &#39;s+download.docker.com+mirror.sjtu.edu.cn/docker-ce+&#39; /etc/yum.repos.d/docker-ce.repo
+&lt;/pre&gt;
+&lt;p&gt;最后安装:&lt;/p&gt;
+&lt;pre&gt;
+sudo yum makecache fast
+sudo yum install docker-ce
+&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>alpine</title>
+      <link>https://sjtug.org/post/mirror-help/alpine/</link>
+      <pubDate>Sat, 17 Apr 2021 17:44:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/alpine/</guid>
+      <description>&lt;p&gt;Alpine Linux 是一个面向安全，轻量级的基于musl libc与busybox项目的Linux发行版。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/dl-cdn.alpinelinux.org/mirrors.sjtug.sjtu.edu.cn/g&amp;#39;&lt;/span&gt; /etc/apk/repositories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>ghcup</title>
+      <link>https://sjtug.org/post/mirror-help/ghcup/</link>
+      <pubDate>Tue, 30 Mar 2021 23:50:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ghcup/</guid>
+      <description>&lt;p&gt;Ghcup 是一种用于安装 Haskell 的工具，它使得用户可以轻易地在 GNU/Linux、macOS 和 FreeBSD 上安装特定版本的 ghc，并从零开始搭建好一个全新的 Haskell 开发环境（包括 cabal 与 HLS 支持）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;创建 &lt;code&gt;~/.ghcup/config.yaml&lt;/code&gt; 并输入以下内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;url-source:
+    OwnSource: &amp;quot;https://mirror.sjtu.edu.cn/ghcup/yaml/ghcup/data/ghcup-0.0.8.yaml&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;如果您尚未安装 ghcup，请在完成以上步骤后，于终端中执行以下指令（请不要以 root 用户执行），随后跟随屏幕上的指引完成安装。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl --proto &#39;=https&#39; --tlsv1.2 -LsSf https://mirror.sjtu.edu.cn/ghcup/script/install.sh | sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;若您希望使用官网的安装器,请执行以下指令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://get-ghcup.haskell.org | GHCUP_BASE_URL=&amp;quot;https://mirror.sjtu.edu.cn/ghcup/packages/~ghcup&amp;quot; sh
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;故障排除&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;ghcup 出现形如 &lt;code&gt;[ Error ] JSON decoding failed with: AesonException&lt;/code&gt; 的错误&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这可能是由于本机 ghcup 版本与配置文件版本不匹配造成。
+ghcup 于 0.1.15.1 版本前使用 0.0.4 版本的配置文件，此版本及之后的版本使用 0.0.5+ 版本的配置文件。
+请尝试将 &lt;code&gt;config.yaml&lt;/code&gt; 中的 &lt;code&gt;ghcup-0.0.6.yaml&lt;/code&gt; 改为 &lt;code&gt;ghcup-0.0.4.yaml&lt;/code&gt; （抑或反之）后重试。&lt;/p&gt;
+&lt;p&gt;请注意，ghcup 上游倾向于仅更新最新版本配置文件中的内容，当版本发生变化后请及时更新配置文件版本。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;通过 ghcup 安装软件包时出现 &lt;code&gt;Error: Download failed ...&lt;/code&gt; 错误&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这一错误可能是由于您的 ghcup 版本过老，使用的配置文件已经长久未更新，其中包含的软件包版本过旧所致。我们将尽力保留旧版本的软件包，但当存储空间不足时，可能随时删除旧文件。本镜像站仅保证同步最新版本配置文件中包含的软件包。&lt;/p&gt;
+&lt;p&gt;当出现上述现象时，请首先尝试更新 ghcup 的版本，并根据 &lt;code&gt;故障排除 1&lt;/code&gt; 的指示修改配置文件。若 ghcup 已无法更新，可以尝试删除 &lt;code&gt;~/.ghcup&lt;/code&gt; 整个文件夹（这一操作将删除 ghcup 以及所有通过 ghcup 安装的软件），并根据 &lt;code&gt;使用说明&lt;/code&gt; 重新安装最新版本的 ghcup。&lt;/p&gt;
+&lt;p&gt;若完成以上步骤后问题仍未解决，请至 &lt;a href=&#34;https://github.com/sjtug/mirror-requests&#34;&gt;此处&lt;/a&gt; 向我们反馈 BUG。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>qt</title>
+      <link>https://sjtug.org/post/mirror-help/qt/</link>
+      <pubDate>Mon, 22 Feb 2021 11:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/qt/</guid>
+      <description>&lt;p&gt;通常来说，Qt 在线安装器会自动选择最近的镜像，因此无需做特殊设置即可使用 SJTUG Qt 镜像。&lt;/p&gt;
+&lt;p&gt;你可以通过下面的方法手动指定 Qt 镜像。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用离线安装器安装：在 &lt;a href=&#34;https://www.qt.io/offline-installers&#34;&gt;Offline Installers&lt;/a&gt; 页面中找到需要下载的版本，并将链接中的
+&lt;code&gt;http://download.qt.io&lt;/code&gt; 替换为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/qt&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;使用在线安装器安装：参考 &lt;a href=&#34;https://wiki.qt.io/Online_Installer_4.x#Selecting_a_mirror_for_opensource&#34;&gt;Qt Wiki&lt;/a&gt;，
+在命令行中给安装器提供 &lt;code&gt;--mirror https://mirrors.sjtug.sjtu.edu.cn/qt&lt;/code&gt; 的参数。比如在 macOS 上：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;./qt-unified-macOS-x86_64-4.0.1-1-online.app/Contents/MacOS/qt-unified-macOS-x86_64-4.0.1-1-online --mirror https://mirrors.sjtug.sjtu.edu.cn/qt
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>fedora-ostree</title>
+      <link>https://sjtug.org/post/mirror-help/fedora-ostree/</link>
+      <pubDate>Mon, 04 Jan 2021 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/fedora-ostree/</guid>
+      <description>&lt;p&gt;fedora-ostree 是 Fedora Silverblue (原 Atomic Workstation) 的智能缓存。
+Fedora Silverblue 通过 rpm-ostree 管理整个系统。
+当您第一次请求镜像中的资源时，如果文件没有被镜像服务器缓存，我们会将您重定向回原站，
+并在后台进行缓存。目前镜像服务器上已经预先缓存了所有 fedora-ostree 仓库的分支。&lt;/p&gt;
+&lt;p&gt;使用方法：编辑 &lt;code&gt;/etc/ostree/remotes.d/fedora.conf&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-plain&#34; data-lang=&#34;plain&#34;&gt;[remote &amp;#34;fedora&amp;#34;]
+url=https://mirror.sjtu.edu.cn/fedora-ostree
+gpg-verify=true
+gpgkeypath=/etc/pki/rpm-gpg/
+# contenturl=mirrorlist=https://ostree.fedoraproject.org/mirrorlist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>flathub</title>
+      <link>https://sjtug.org/post/mirror-help/flathub/</link>
+      <pubDate>Mon, 04 Jan 2021 22:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/flathub/</guid>
+      <description>&lt;p&gt;Flathub 镜像是 &lt;a href=&#34;https://flathub.org&#34;&gt;flathub.org&lt;/a&gt; 的智能缓存。当您请求镜像中的资源时，
+如果文件没有被镜像服务器缓存，我们会将您重定向回原站，并在后台进行缓存。
+目前镜像服务器上已经预先缓存了所有 Flathub 软件的分支。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo flatpak remote-modify flathub --url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirror.sjtu.edu.cn/flathub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果出现错误可尝试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://mirror.sjtu.edu.cn/flathub/flathub.gpg
+sudo flatpak remote-modify --gpg-import&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;flathub.gpg flathub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;目前 sel.flathub.org 已经重定向到 SJTUG 镜像站。如果您原先使用该服务器作为 Flathub 上游，
+无需做任何设置即可使用。&lt;/p&gt;
+&lt;p&gt;Flathub 中部分软件由于重分发授权问题，需要从官方服务器下载，无法使用镜像站加速。比如
+NVIDIA 驱动、JetBrains 系列软件等。如果您的使用体验不佳，请及时通过 GitHub 或邮件向我们反馈。&lt;/p&gt;
+&lt;p&gt;如果您中断了某次安装，重新下载可能会出现找不到文件的问题。您可以使用 &lt;code&gt;flatpak repair&lt;/code&gt; 解决相关的问题。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>gcr.io</title>
+      <link>https://sjtug.org/post/mirror-help/gcr-io/</link>
+      <pubDate>Fri, 23 Oct 2020 10:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/gcr-io/</guid>
+      <description>&lt;p&gt;该镜像是 gcr.io 反代。将所有需要用到 gcr.io 的地址换成 gcr-io.mirrors.sjtug.sjtu.edu.cn 即可。比如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;docker pull gcr-io.mirrors.sjtug.sjtu.edu.cn/google_containers/echoserver:1.4
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>git/opam-repository.git</title>
+      <link>https://sjtug.org/post/mirror-help/opam-git/</link>
+      <pubDate>Tue, 13 Oct 2020 19:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/opam-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://opam.ocaml.org&#34;&gt;opam&lt;/a&gt; 是 OCaml 的包管理器。SJTUG 提供 opam 的反代服务。&lt;/p&gt;
+&lt;p&gt;首次使用 opam，可以使用 SJTUG 镜像源初始化 opam。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opam init default https://mirrors.sjtug.sjtu.edu.cn/git/opam-repository.git
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;使用下面的指令，可以将默认源替换为 SJTUG 镜像。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opam repo set-url default https://mirrors.sjtug.sjtu.edu.cn/git/opam-repository.git --all --set-default
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>emacs-elpa</title>
+      <link>https://sjtug.org/post/mirror-help/emacs-elpa/</link>
+      <pubDate>Fri, 14 Aug 2020 14:55:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/emacs-elpa/</guid>
+      <description>&lt;p&gt;emacs-elpa 包含了 GNU ELPA, NonGNU ELPA, MELPA, MELPA Stable, Org 这 5 个镜像。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;ELPA&lt;/th&gt;
+&lt;th&gt;镜像地址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://elpa.gnu.org/&#34;&gt;GNU ELPA&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://elpa.gnu.org/nongnu/&#34;&gt;NonGNU ELPA&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/nongnu/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://melpa.org/&#34;&gt;MELPA&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://stable.melpa.org/#/&#34;&gt;MELPA Stable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/stable-melpa/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/stable-melpa/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://orgmode.org/elpa.html&#34;&gt;Org&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&#34;&gt;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;p&gt;根据你的需求，设置 &lt;code&gt;package-archives&lt;/code&gt; ，比如用 GNU ELPA 和 MELPA：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;setq&lt;/span&gt; package-archives &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gnu&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&amp;#34;&lt;/span&gt;)
+                         (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;melpa&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&amp;#34;&lt;/span&gt;)))
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;spacemacs-用户&#34;&gt;Spacemacs 用户&lt;/h3&gt;
+&lt;h4 id=&#34;master-分支&#34;&gt;master 分支&lt;/h4&gt;
+&lt;p&gt;添加下面的代码到  &lt;code&gt;.spacemacs&lt;/code&gt;  的  &lt;code&gt;dotspacemacs/user-init()&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;setq&lt;/span&gt; configuration-layer--elpa-archives
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;melpa-cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&amp;#34;&lt;/span&gt;)
+      (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org-cn&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&amp;#34;&lt;/span&gt;)
+      (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gnu-cn&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;develop-分支&#34;&gt;develop 分支&lt;/h4&gt;
+&lt;p&gt;使用 &lt;code&gt;configuration-layer-elpa-archives&lt;/code&gt; 代替原来的 &lt;code&gt;configuration-layer--elpa-archives&lt;/code&gt; （ &lt;code&gt;--&lt;/code&gt; 换成 &lt;code&gt;-&lt;/code&gt; ）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;setq&lt;/span&gt; configuration-layer-elpa-archives
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;((&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;melpa-cn&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&amp;#34;&lt;/span&gt;)
+      (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org-cn&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/org/&amp;#34;&lt;/span&gt;)
+      (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gnu-cn&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;cask-用户&#34;&gt;Cask 用户&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/cask/cask&#34;&gt;Cask&lt;/a&gt; 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 Cask&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-lisp&#34; data-lang=&#34;lisp&#34;&gt;(source &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gnu&amp;#34;&lt;/span&gt;   &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/gnu/&amp;#34;&lt;/span&gt;)
+(source &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;melpa&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/melpa/&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;本镜像上游为 &lt;a href=&#34;https://elpa.emacs-china.org&#34;&gt;https://elpa.emacs-china.org&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;SJTUG 不提供 rsync 镜像。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>julia</title>
+      <link>https://sjtug.org/post/mirror-help/julia/</link>
+      <pubDate>Wed, 05 Aug 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/julia/</guid>
+      <description>&lt;p&gt;SJTUG 目前提供了 Julia 的官方包注册表 &lt;a href=&#34;https://github.com/JuliaRegistries/General&#34;&gt;General&lt;/a&gt; 镜像来加速 Julia 包的安装。&lt;/p&gt;
+&lt;p&gt;关于 Julia 的安装，请使用 &lt;code&gt;julia-releases&lt;/code&gt; 镜像。&lt;/p&gt;
+&lt;p&gt;注：本镜像的使用需要 Julia &lt;code&gt;v1.4.0&lt;/code&gt; 或更新的版本。&lt;/p&gt;
+&lt;h2 id=&#34;使用方式&#34;&gt;使用方式&lt;/h2&gt;
+&lt;p&gt;只需要设置环境变量 &lt;code&gt;JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia&lt;/code&gt; 即可切换镜像。若成功切换镜像，则能通过 &lt;code&gt;versioninfo()&lt;/code&gt; 查询到相关信息，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;julia&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; versioninfo()
+Julia Version &lt;span style=&#34;color:#ae81ff&#34;&gt;1.5.0&lt;/span&gt;
+Commit &lt;span style=&#34;color:#ae81ff&#34;&gt;96786e22&lt;/span&gt;cc (&lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;08&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;01&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;23&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;44&lt;/span&gt; UTC)
+Platform Info&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+  OS&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; macOS (x86_64&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;apple&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;darwin18&lt;span style=&#34;color:#ae81ff&#34;&gt;.7.0&lt;/span&gt;)
+  CPU&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; Intel(R) Core(TM) i9&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;9880&lt;/span&gt;H CPU &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2.30&lt;/span&gt;GHz
+  WORD_SIZE&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;
+  LIBM&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; libopenlibm
+  LLVM&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; libLLVM&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;9.0.1&lt;/span&gt; (ORCJIT, skylake)
+Environment&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
+  JULIA_PKG_SERVER &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; https&lt;span style=&#34;color:#f92672&#34;&gt;://&lt;/span&gt;mirrors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sjtug&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sjtu&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;edu&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;cn&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;julia
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若不设置该环境变量则默认使用官方服务器 &lt;code&gt;pkg.julialang.org&lt;/code&gt; 作为上游。本镜像站是其国内服务器的数据上游之一。&lt;/p&gt;
+&lt;h3 id=&#34;临时使用&#34;&gt;临时使用&lt;/h3&gt;
+&lt;p&gt;不同系统和命令行下设置环境变量的方式各不相同，在命令行下可以通过以下方式来临时修改环境变量&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux Bash: &lt;code&gt;export JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows Powershell: &lt;code&gt;$env:JULIA_PKG_SERVER = &#39;https://mirrors.sjtug.sjtu.edu.cn/julia&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;也可以利用 JuliaCN 社区维护的中文本地化工具包 &lt;a href=&#34;https://github.com/JuliaCN/JuliaZH.jl&#34;&gt;JuliaZH&lt;/a&gt; 来进行切换：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;using&lt;/span&gt; JuliaZH &lt;span style=&#34;color:#75715e&#34;&gt;# 在 using 时会自动切换到国内的镜像站&lt;/span&gt;
+JuliaZH&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_mirror(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SJTUG&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# 也可以选择手动切换到 BFSU 镜像&lt;/span&gt;
+JuliaZH&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mirrors &lt;span style=&#34;color:#75715e&#34;&gt;# 查询记录的上游信息&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;永久使用&#34;&gt;永久使用&lt;/h3&gt;
+&lt;p&gt;不同系统和命令行下永久设定环境变量的方式也不相同，例如 Linux Bash 下可以通过修改 &lt;code&gt;~/.bashrc&lt;/code&gt; 文件实现该目的：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# ~/.bashrc
+export JULIA_PKG_SERVER=https://mirrors.sjtug.sjtu.edu.cn/julia
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;此外，这里再提供一种针对 Julia 的全平台通用的方式：&lt;code&gt;$JULIA_DEPOT_PATH/config/startup.jl&lt;/code&gt;
+( 默认为 &lt;code&gt;~/.julia/config/startup.jl&lt;/code&gt; ) 文件定义了每次启动 Julia 时都会执行的命令，编辑该文件，添加以下内容即可：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ~/.julia/config/startup.jl&lt;/span&gt;
+ENV[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JULIA_PKG_SERVER&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/julia&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;也可以选择使用 &lt;code&gt;JuliaZH&lt;/code&gt; 来一键修改/创建 &lt;code&gt;startup.jl&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;julia&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; JuliaZH&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;generate_startup(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SJTUG&amp;#34;&lt;/span&gt;)
+┌ Info&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; 添加 PkgServer
+│   服务器地址 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/julia&amp;#34;&lt;/span&gt;
+└   配置文件 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/root/.julia/config/startup.jl&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;若要临时禁止，可以通过 &lt;code&gt;julia --startup-file=no&lt;/code&gt; 来取消执行 &lt;code&gt;startup.jl&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;h2 id=&#34;常见问题&#34;&gt;常见问题&lt;/h2&gt;
+&lt;h3 id=&#34;加快-condajl-相关操作的速度&#34;&gt;加快 Conda.jl 相关操作的速度&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Conda.jl&lt;/code&gt; 的加速分为两部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;conda&lt;/code&gt; 的安装：如果系统中没有找到 &lt;code&gt;conda&lt;/code&gt; 的话，&lt;code&gt;Conda.jl&lt;/code&gt; 会下载并安装一份 miniconda。如果这一步下载非常缓慢的话，你可以提前从 &lt;a href=&#34;https://mirrors.bfsu.edu.cn/anaconda/archive/&#34;&gt;BFSU 镜像站&lt;/a&gt;下载并安装 anaconda，然后通过设置环境变量 &lt;code&gt;CONDA_JL_HOME=$HOME/anaconda3&lt;/code&gt; 来指定 &lt;code&gt;Conda.jl&lt;/code&gt; 所使用的&lt;code&gt;conda&lt;/code&gt;，这样就避免重复下载 &lt;code&gt;miniconda&lt;/code&gt;. （&lt;code&gt;$HOME/anaconda3&lt;/code&gt;是 anaconda3 的默认安装位置，你可能需要根据具体情况进行调整。）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;conda add&lt;/code&gt; 等操作的加速：这个只需要配置 anaconda 镜像源即可，即修改 &lt;code&gt;~/.condarc&lt;/code&gt; 文件。具体的配置可以查看镜像站中 anaconda 镜像的使用说明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么有些包的下载还是很慢&#34;&gt;为什么有些包的下载还是很慢？&lt;/h3&gt;
+&lt;p&gt;有两类数据不会被镜像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 &lt;code&gt;deps/build.jl&lt;/code&gt; 文件中硬编码的下载地址，例如 &lt;a href=&#34;https://github.com/jheinen/GR.jl/blob/70f025d5cb439d036409f1985107cb5e1615097f/deps/build.jl#L116&#34;&gt;GR&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;Artifacts.toml&lt;/code&gt; 中没有给出 &lt;code&gt;download&lt;/code&gt; 项的资源, 例如 &lt;a href=&#34;https://github.com/JuliaImages/TestImages.jl/blob/eaa94348df619c65956e8cfb0032ecddb7a29d3a/Artifacts.toml&#34;&gt;TestImages&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在安装包含这两类数据的包时，其数据依然是从原始地址进行下载，因此若网络不稳定则可能会在 &lt;code&gt;build&lt;/code&gt; 阶段报错。&lt;/p&gt;
+&lt;h3 id=&#34;为什么注册表还是从原地址下载&#34;&gt;为什么注册表还是从原地址下载？&lt;/h3&gt;
+&lt;p&gt;Julia &lt;code&gt;v1.4.0&lt;/code&gt; 之前的版本采用的是 &lt;code&gt;git clone&lt;/code&gt; 的方式拉取注册表。为了保持兼容性，如果现有的注册表是一个完整的 git 仓库的话，
+那么即使设置了 PkgServer 作为上游镜像也依然会通过 &lt;code&gt;git&lt;/code&gt; 来进行更新，换句话说，不会通过镜像站来下载注册表数据。&lt;/p&gt;
+&lt;p&gt;以默认注册表 &lt;code&gt;General&lt;/code&gt; 为例，只需要手动将其重置到镜像站即可：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;删除当前注册表：&lt;code&gt;(@v1.4) pkg&amp;gt; registry rm General&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;从镜像站重新下载数据：&lt;code&gt;(@v1.4) pkg&amp;gt; registry add General&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;为什么有些包还是从原地址下载&#34;&gt;为什么有些包还是从原地址下载？&lt;/h3&gt;
+&lt;p&gt;镜像站只镜像注册表中记录的包，因此如果某些包是通过指定 URL 的方式来安装的话，那么该包的更新不会从镜像站进行下载。
+这常见于那些还未注册的包及其版本，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-julia&#34; data-lang=&#34;julia&#34;&gt;]add Flux&lt;span style=&#34;color:#75715e&#34;&gt;#master&lt;/span&gt;
+]add https&lt;span style=&#34;color:#f92672&#34;&gt;://&lt;/span&gt;github&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;com&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;FluxML&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;Flux&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;jl&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;git
+Pkg&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add(PackageSpec(url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://github.com/FluxML/Flux.jl.git&amp;#34;&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>julia-releases</title>
+      <link>https://sjtug.org/post/mirror-help/julia-releases/</link>
+      <pubDate>Wed, 05 Aug 2020 12:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/julia-releases/</guid>
+      <description>&lt;h2 id=&#34;julia-二进制安装程序&#34;&gt;Julia 二进制安装程序&lt;/h2&gt;
+&lt;p&gt;Julia 是一个全新的以科学计算为核心的通用编程语言，本镜像为其二进制发行程序。关于 Julia 下各种工具包的安装，请使用 &lt;code&gt;julia&lt;/code&gt; 镜像。&lt;/p&gt;
+&lt;p&gt;这里仅镜像 &lt;a href=&#34;https://julialang.org/downloads/&#34;&gt;JuliaLang Downloads&lt;/a&gt; 中提供的稳定发行版以及 rc 版本。每日构建的测试版 (nightlies) 以及
+&lt;a href=&#34;http://junolab.org/&#34;&gt;Juno&lt;/a&gt;/&lt;a href=&#34;https://juliacomputing.com/products/juliapro&#34;&gt;Julia Pro&lt;/a&gt;等 IDE 版本不包括在内。&lt;/p&gt;
+&lt;p&gt;尽管一些包管理工具（例如 &lt;code&gt;apt&lt;/code&gt;, &lt;code&gt;pacman&lt;/code&gt;, &lt;code&gt;conda&lt;/code&gt;, &lt;code&gt;choco&lt;/code&gt;) 中提供有 Julia，但是这些工具或多或少都存在一些由二进制
+依赖导致的问题，因此官方推荐的方式是根据自己的使用平台下载相应的二进制程序，然后通过解压的方式进行手动安装。&lt;/p&gt;
+&lt;h2 id=&#34;julia-一键安装&#34;&gt;Julia 一键安装&lt;/h2&gt;
+&lt;p&gt;对于习惯命令行的用户而言，&lt;a href=&#34;https://github.com/johnnychen94/jill.py&#34;&gt;jill.py&lt;/a&gt; 是一个社区维护的全平台下一键安装
+Julia 的命令行工具。&lt;/p&gt;
+&lt;p&gt;安装/更新 &lt;code&gt;jill&lt;/code&gt;： &lt;code&gt;pip install jill --user -U&lt;/code&gt; (需要 Python &lt;code&gt;3.6&lt;/code&gt; 或更新的版本)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 Julia：&lt;code&gt;jill install [VERSION] [--upstream UPSTREAM] [--confirm]&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;jill install&lt;/code&gt;：最新的 &lt;code&gt;x.y.z&lt;/code&gt; 版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jill install --confirm&lt;/code&gt;：无需交互确认直接安装&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jill install --upstream SJTUG&lt;/code&gt;：从本镜像站下载并安装&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jill install 1.5&lt;/code&gt;：安装最新的 &lt;code&gt;1.5.z&lt;/code&gt; 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;查询现存的上游镜像：&lt;code&gt;jill upstream&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;帮助文档：&lt;code&gt;jill [COMMAND] --help&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;jill --help&lt;/code&gt;：查询存在的 &lt;code&gt;jill&lt;/code&gt; 命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jill install --help&lt;/code&gt;：查询 &lt;code&gt;install&lt;/code&gt; 命令的使用方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利用 &lt;code&gt;jill&lt;/code&gt; 安装完成后即可通过在命令行执行 &lt;code&gt;julia&lt;/code&gt;/&lt;code&gt;julia-1&lt;/code&gt;/&lt;code&gt;julia-1.5&lt;/code&gt; 来启动不同版本的 Julia.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>https://sjtug.org/post/mirror-help/mongodb/</link>
+      <pubDate>Sat, 01 Aug 2020 23:30:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/mongodb/</guid>
+      <description>&lt;p&gt;mongodb 源是 &lt;a href=&#34;http://repo.mongodb.org&#34;&gt;repo.mongodb.org&lt;/a&gt; 的全量同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;请参照官方教程配置并安装 &lt;a href=&#34;https://docs.mongodb.com/manual/administration/install-on-linux/&#34;&gt;https://docs.mongodb.com/manual/administration/install-on-linux/&lt;/a&gt;。
+在安装过程中，把 &lt;code&gt;https://repo.mongodb.org/&lt;/code&gt; 替换为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/mongodb/&lt;/code&gt;。比如在 Ubuntu focal 中使用时，可以执行以下指令。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | apt-key add -
+echo &amp;quot;deb [ arch=amd64,arm64 ] https://mirrors.sjtug.sjtu.edu.cn/mongodb/apt/ubuntu/ focal/mongodb-org/4.4 multiverse&amp;quot; | tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>crates.io</title>
+      <link>https://sjtug.org/post/mirror-help/crates.io/</link>
+      <pubDate>Thu, 09 Jul 2020 01:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/crates.io/</guid>
+      <description>&lt;p&gt;编辑 &lt;code&gt;~/.cargo/config.toml&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[source]
+
+[source.mirror]
+registry = &amp;quot;sparse+https://mirrors.sjtug.sjtu.edu.cn/crates.io-index/&amp;quot;
+
+[source.crates-io]
+replace-with = &amp;quot;mirror&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;若您的 cargo 版本低于 1.68，请使用以下配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[source]
+
+[source.mirror]
+registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&amp;quot;
+
+[source.crates-io]
+replace-with = &amp;quot;mirror&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>git/crates.io-index</title>
+      <link>https://sjtug.org/post/mirror-help/creates.io.git/</link>
+      <pubDate>Thu, 09 Jul 2020 01:00:00 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/creates.io.git/</guid>
+      <description>&lt;p&gt;编辑 &lt;code&gt;~/.cargo/config&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[source]
+
+[source.mirror]
+registry = &amp;quot;https://mirrors.sjtug.sjtu.edu.cn/git/crates.io-index/&amp;quot;
+
+[source.crates-io]
+replace-with = &amp;quot;mirror&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>cran</title>
+      <link>https://sjtug.org/post/mirror-help/cran/</link>
+      <pubDate>Sat, 04 Jul 2020 15:33:04 +0800</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/cran/</guid>
+      <description>&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;在安装时指定 repo。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;install.packages&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lattice&amp;#34;&lt;/span&gt;, repos&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/cran/&amp;#34;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;.Rprofile&lt;/code&gt; 中设置默认 repo。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-R&#34; data-lang=&#34;R&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;options&lt;/span&gt;(repos&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;structure&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;c&lt;/span&gt;(CRAN&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirrors.sjtug.sjtu.edu.cn/cran/&amp;#34;&lt;/span&gt;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>alhp</title>
+      <link>https://sjtug.org/post/mirror-help/alhp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/alhp/</guid>
+      <description>&lt;p&gt;ALHP 是一个基于 Arch Linux 官方软件仓库使用 &lt;a href=&#34;https://en.wikipedia.org/wiki/Interprocedural_optimization&#34;&gt;LTO（链接时优化）&lt;/a&gt;、不同的 &lt;a href=&#34;https://www.phoronix.com/scan.php?page=news_item&amp;amp;px=GCC-11-x86-64-Feature-Levels&#34;&gt;x86-64 特性级别&lt;/a&gt;和 &lt;code&gt;-O3&lt;/code&gt; 提供构建的非官方用户仓库。&lt;/p&gt;
+&lt;p&gt;完整的包信息列表（包名称/架构/维护者/状态）请&lt;a href=&#34;https://status.alhp.dev&#34;&gt;点击这里&lt;/a&gt;查看。&lt;/p&gt;
+&lt;p&gt;仓库主地址：https://somegit.dev/ALHP/ALHP.GO&lt;/p&gt;
+&lt;p&gt;以下内容翻译并修改自 &lt;a href=&#34;https://somegit.dev/ALHP/ALHP.GO/src/branch/main/README.md&#34;&gt;ALHP README&lt;/a&gt;，有删减，建议查阅原文以获取最新信息。&lt;/p&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;h3 id=&#34;1-检查系统支持&#34;&gt;1. 检查系统支持&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：在启用任何仓库之前，请检查您的系统是否支持您想要启用的特性级别（例如 &lt;code&gt;x86-64-v3&lt;/code&gt;）。
+&lt;strong&gt;如果不提前检查，可能会导致您的系统无法启动，并且您将需要降级任何您可能已经升级的软件包。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用以下命令检查 CPU 支持的特性级别：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/lib/ld-linux-x86-64.so.2 --help
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;支持 &lt;code&gt;x86-64-v3&lt;/code&gt; 的系统输出片段示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Subdirectories of glibc-hwcaps directories, in priority order:
+  x86-64-v4
+  x86-64-v3 (supported, searched)
+  x86-64-v2 (supported, searched)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;2-安装密钥环和镜像列表&#34;&gt;2. 安装密钥环和镜像列表&lt;/h3&gt;
+&lt;p&gt;从 &lt;strong&gt;AUR&lt;/strong&gt; 安装 &lt;a href=&#34;https://aur.archlinux.org/packages/alhp-keyring/&#34;&gt;alhp-keyring&lt;/a&gt; 和 &lt;a href=&#34;https://aur.archlinux.org/packages/alhp-mirrorlist/&#34;&gt;alhp-mirrorlist&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;yay&lt;/code&gt; 安装的示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yay -S alhp-keyring alhp-mirrorlist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;alhp-keyring&lt;/code&gt; 提供 ALHP 当前使用的签名密钥，&lt;code&gt;alhp-mirrorlist&lt;/code&gt; 提供一组镜像列表供选择。&lt;/p&gt;
+&lt;h3 id=&#34;3-选择上海交通大学软件源镜像&#34;&gt;3. 选择上海交通大学软件源镜像&lt;/h3&gt;
+&lt;p&gt;编辑 &lt;code&gt;/etc/pacman.d/alhp-mirrorlist&lt;/code&gt; 在&lt;strong&gt;顶部&lt;/strong&gt;添加上海交通大学软件源镜像并注释/取消注释您希望禁用/启用的镜像：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-editorconfig&#34; data-lang=&#34;editorconfig&#34;&gt;##
+## ALHP repository mirrorlist
+## Updated on YYYY-MM-DD
+## https://somegit.dev/ALHP/alhp-mirrorlist
+##
+## There is an IPFS mirror available.
+## Setup instructions in /etc/pacman.d/alhp-mirrorlist.ipfs.
+##
+
+Server = https://mirror.sjtu.edu.cn/alhp/$repo/os/$arch/
+
+## Worldwide (Cloudfare)
+# Server = https://alhp.krautflare.de/$repo/os/$arch/
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：仅 &lt;code&gt;alhp.dev&lt;/code&gt; 由 ALHP 直接托管。
+如果您使用某个镜像时发生问题，请在 &lt;a href=&#34;https://somegit.dev/ALHP/alhp-mirrorlist&#34;&gt;ALHP 镜像列表仓库&lt;/a&gt;中提交 issue。
+如果您使用上海交通大学软件源镜像时发生问题，请&lt;a href=&#34;https://github.com/sjtug/mirror-requests/issues/new/choose&#34;&gt;反馈 Bug&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;4-修改-etcpacmanconf&#34;&gt;4. 修改 /etc/pacman.conf&lt;/h3&gt;
+&lt;p&gt;在您的 Arch Linux 官方仓库&lt;strong&gt;之上&lt;/strong&gt;添加相应的 ALHP 仓库。&lt;/p&gt;
+&lt;p&gt;以 &lt;code&gt;x86-64-v3&lt;/code&gt; 为例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-editorconfig&#34; data-lang=&#34;editorconfig&#34;&gt;[core-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[extra-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+# 如果需要 [multilib] 支持
+[multilib-x86-64-v3]
+Include = /etc/pacman.d/alhp-mirrorlist
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将 &lt;code&gt;x86-64-v3&lt;/code&gt; 替换为您希望启用的 x86-64 特性级别。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ALHP 目前为 &lt;code&gt;x86-64-v2&lt;/code&gt;、&lt;code&gt;x86-64-v3&lt;/code&gt; 和 &lt;code&gt;x86-64-v4&lt;/code&gt; 构建。
+您可以在&lt;a href=&#34;https://mirror.sjtu.edu.cn/alhp/&#34;&gt;这里&lt;/a&gt;查看所有可用的仓库。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;5-更新软件包数据库并升级&#34;&gt;5. 更新软件包数据库并升级：&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pacman -Suy
+&lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：直接链接的内核模块可能无法正常工作，请使用 &lt;code&gt;dkms&lt;/code&gt; 变种，详见 &lt;a href=&#34;https://somegit.dev/ALHP/ALHP.GO/issues/68&#34;&gt;ALHP/ALHP.GO#68&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;移除方法&#34;&gt;移除方法&lt;/h2&gt;
+&lt;p&gt;要禁用 ALHP，删除 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 中所有 &lt;em&gt;x86-64-vX&lt;/em&gt; 条目，并删除 &lt;code&gt;alhp-keyring&lt;/code&gt; 和 &lt;code&gt;alhp-mirrorlist&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;之后，使用以下命令刷新 pacman 的数据库并降级所有软件包：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pacman -Suuy
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;在不同特性级别仓库之间切换&#34;&gt;在不同特性级别仓库之间切换&lt;/h2&gt;
+&lt;p&gt;如果您想在不同特性级别之间切换，例如从 &lt;code&gt;x86-64-v3&lt;/code&gt; 切换到 &lt;code&gt;x86-64-v4&lt;/code&gt;，您需要首先恢复为官方软件包，然后再次启用所需的仓库。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;注释或删除 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 中的 ALHP 存储库条目。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;pacman -Suuy&lt;/code&gt; 降级软件包。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;pacman -Scc&lt;/code&gt; 清除 pacman 的包缓存。&lt;/li&gt;
+&lt;li&gt;取消注释/添加所需的存储库到 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 并使用 &lt;code&gt;pacman -Suy&lt;/code&gt; 进行更新。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>anaconda</title>
+      <link>https://sjtug.org/post/mirror-help/anaconda/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/anaconda/</guid>
+      <description>&lt;p&gt;Anaconda 是一种 Python 语言的免费增值开源发行版，用于进行大规模数据处理, 预测分析, 和科学计算, 致力于简化包的管理和部署。Anaconda 使用软件包管理系统 conda 进行包管理。&lt;/p&gt;
+&lt;p&gt;SJTUG 源镜像了常用的 conda 库，以方便科学计算用户使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note: 如果您正在从其他镜像源切换到 SJTUG，请检查我们是否同步了你所需要的 repo，以及该 repo 是否支持您使用的平台 (e.g. linux-64)。如果没有，请删除相关配置，并提出新镜像请求。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;编辑 &lt;code&gt;~/.condarc&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;default_channels:
+  - https://mirror.sjtu.edu.cn/anaconda/pkgs/r
+  - https://mirror.sjtu.edu.cn/anaconda/pkgs/main
+custom_channels:
+  conda-forge: https://mirror.sjtu.edu.cn/anaconda/cloud/
+  pytorch: https://mirror.sjtu.edu.cn/anaconda/cloud/
+channels:
+  - defaults
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在 &lt;code&gt;custom_channels&lt;/code&gt; 中您可以添加下面所列的其他第三方源。我们建议您使用上面的方法配置，而非执行下面的指令。&lt;/p&gt;
+&lt;p&gt;您也可以使用&lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/{{你所需要的包名}}&lt;/code&gt;来将SJTUG源添加作为这个包的上游。目前镜像的包与安装命令包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;官方源&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pkgs/free&lt;/code&gt;: &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/free&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgs/main&lt;/code&gt;: &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/main&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgs/mro&lt;/code&gt;: &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/mro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgs/msys2&lt;/code&gt;: &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/msys2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgs/pro&lt;/code&gt;: (deprecated) &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/pro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pkgs/r&lt;/code&gt;: (empty) &lt;code&gt;conda config --add channels https://mirror.sjtu.edu.cn/anaconda/pkgs/r&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第三方源&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cloud/bioconda&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.bioconda https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/conda-forge&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.conda-forge https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/menpo&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.menpo https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/soumith&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.soumith https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/viscid-hub&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.viscid-hub https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/atztogo&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.atztogo https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/pytorch&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.pytorch https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cloud/pytorch-test&lt;/code&gt;: &lt;code&gt;conda config --set custom_channels.pytorch-test https://mirror.sjtu.edu.cn/anaconda/cloud/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，在 Conda 4.7 后，官方的 default 源组默认只包含 main 和 r (windows 会包含 msys2) channel，其他官方源仍支持手动添加。但官方建议不再使用 free channel，详见 &lt;a href=&#34;https://www.anaconda.com/why-we-removed-the-free-channel-in-conda-4-7/&#34;&gt;Why We Removed the “Free” Channel in Conda 4.7&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>anthon</title>
+      <link>https://sjtug.org/post/mirror-help/anthon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/anthon/</guid>
+      <description>&lt;p&gt;安同 OS 是一个由&lt;a href=&#34;https://aosc.io&#34;&gt;安同开源社区&lt;/a&gt;开发的半滚动 Linux 发行版，支持多种处理器架构。&lt;/p&gt;
+&lt;h3 id=&#34;工具修改&#34;&gt;工具修改&lt;/h3&gt;
+&lt;p&gt;请使用以下命令交互式开启/关闭镜像源，输入镜像源名称并使用空格启用/禁用镜像源（请注意：&lt;code&gt;oma mirror&lt;/code&gt; 允许指定多个镜像源，请注意禁用不需要使用的镜像源）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo oma mirror
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;关于 &lt;code&gt;oma mirror&lt;/code&gt; 的更多详细命令和用法，请参考 &lt;a href=&#34;https://github.com/AOSC-Dev/oma?tab=readme-ov-file#command-reference&#34;&gt;oma 的 GitHub 页面&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;如何启用-sjtug-镜像源&#34;&gt;如何启用 SJTUG 镜像源&lt;/h3&gt;
+&lt;p&gt;oma 支持使用 &lt;code&gt;oma mirror add&lt;/code&gt; 命令直接启用特定镜像源；如想要启用 SJTUG 镜像源，可以输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo oma mirror add sjtug
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinux</title>
+      <link>https://sjtug.org/post/mirror-help/archlinux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/archlinux/</guid>
+      <description>&lt;p&gt;Arch Linux 是通用 x86-64 GNU/Linux 发行版。Arch 采用滚动升级模式，尽全力提供最新的稳定版软件。初始安装的 Arch 只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统。&lt;/p&gt;
+&lt;p&gt;使用方法：编辑 &lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt; 文件，添加 &lt;code&gt;Server = https://mirror.sjtu.edu.cn/archlinux/$repo/os/$arch&lt;/code&gt; 这一行，同时注释掉其它所有镜像，然后运行 &lt;code&gt;sudo pacman -Syy&lt;/code&gt; 更新软件包缓存。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>archlinux-cn</title>
+      <link>https://sjtug.org/post/mirror-help/archlinux-cn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/archlinux-cn/</guid>
+      <description>&lt;p&gt;Arch Linux 中文社区仓库 是由 Arch Linux 中文社区驱动的非官方用户仓库。包含中文用户常用软件、工具、字体/美化包等。&lt;/p&gt;
+&lt;p&gt;完整的包信息列表（包名称/架构/维护者/状态）请 &lt;a href=&#34;https://github.com/archlinuxcn/repo&#34;&gt;点击这里&lt;/a&gt; 查看。&lt;/p&gt;
+&lt;p&gt;仓库主地址：http://repo.archlinuxcn.org/&lt;/p&gt;
+&lt;p&gt;使用方法：在 &lt;code&gt;/etc/pacman.conf&lt;/code&gt; 文件末尾添加以下两行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[archlinuxcn]
+Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后，请执行下面的命令安装 archlinuxcn-keyring 包导入 GPG key。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pacman -Sy archlinuxcn-keyring
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>archlinuxarm</title>
+      <link>https://sjtug.org/post/mirror-help/archlinuxarm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/archlinuxarm/</guid>
+      <description>&lt;p&gt;Arch Linux ARM 是在使用 ARM 架构处理器的计算机上运行的 Linux 发行版。它为许多主流的采用 ARM 处理器的硬件提供内核及应用程序支持，同时和 Arch Linux 一样具有提供最新的软件源、避免预安装多余软件包等特点。&lt;/p&gt;
+&lt;p&gt;本仓库包含 Arch Linux ARM 的系统镜像及软件源。&lt;/p&gt;
+&lt;p&gt;系统镜像使用方法：请访问 &lt;a href=&#34;https://archlinuxarm.org/platforms&#34;&gt;https://archlinuxarm.org/platforms&lt;/a&gt; ，阅读硬件平台对应的安装指引并下载对应的系统镜像。&lt;/p&gt;
+&lt;p&gt;软件源使用方法：在 &lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt; 的文件顶端（所有镜像源的最上面）加上：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Server = https://mirrors.sjtug.sjtu.edu.cn/archlinuxarm/$arch/$repo
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后，请执行下面的命令更新软件包缓存。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pacman -Syy
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>armbian</title>
+      <link>https://sjtug.org/post/mirror-help/armbian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/armbian/</guid>
+      <description>&lt;p&gt;Armbian 是为 ARM 单板机提供的基于 Debian 和 Ubuntu 的操作系统。Armbian 仓库包括专用的 u-boot、内核及各种支持文件。&lt;/p&gt;
+&lt;p&gt;可以使用以下方法更换软件源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行 &lt;code&gt;armbian-config&lt;/code&gt; -&amp;gt; Personal -&amp;gt; Mirrors -&amp;gt; 选择镜像站。&lt;/li&gt;
+&lt;li&gt;编辑 &lt;code&gt;/etc/apt/sources.list.d/armbian.list&lt;/code&gt;，将 &lt;code&gt;http://apt.armbian.com&lt;/code&gt; 替换为 &lt;code&gt;https://mirror.sjtu.edu.cn/armbian/&lt;/code&gt;，然后执行 &lt;code&gt;apt update&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>bioconductor</title>
+      <link>https://sjtug.org/post/mirror-help/bioconductor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/bioconductor/</guid>
+      <description>&lt;p&gt;Bioconductor 为高通量基因组数据的分析和可视化提供开源工具。Bioconductor多数软件包采用R统计编程语言开发。Bioconductor 每年释出两个版本，并有活跃的用户社区。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;Bioconductor 镜像源配置文件之一是 &lt;code&gt;~/.Rprofile&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;注：R 的 &lt;code&gt;~&lt;/code&gt; 在类 Unix 系统下为： &lt;code&gt;$HOME&lt;/code&gt; （即 &lt;code&gt;~&lt;/code&gt; ），在 Windows 下为： &lt;code&gt;%USERPROFILE%\Documents&lt;/code&gt; ，具体路径可以在 R 中执行 &lt;code&gt;path.expand(&amp;quot;~&amp;quot;)&lt;/code&gt; 查看。&lt;/p&gt;
+&lt;p&gt;在该文件末尾添加如下语句或在R/RStudio终端下键入:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;options(BioC_mirror=&amp;quot;https://mirror.sjtu.edu.cn/bioconductor&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即可使用该 Bioconductor 镜像源安装 Bioconductor 软件包。
+命令如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;if (!requireNamespace(&amp;quot;BiocManager&amp;quot;, quietly = TRUE))
+    install.packages(&amp;quot;BiocManager&amp;quot;)
+BiocManager::install(&amp;quot;$package_name&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;请访问&lt;a href=&#34;http://bioconductor.org/&#34;&gt;官方网站&lt;/a&gt;获取更多信息。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>blackarch</title>
+      <link>https://sjtug.org/post/mirror-help/blackarch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/blackarch/</guid>
+      <description>&lt;p&gt;BlackArch 是一款基于 ArchLinux 的为渗透测试及安全研究人员开发的发行版，相当于 Arch 版的 Kali。可以当做现有 Arch 系统的非官方用户存储库。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;在现有 Arch 系统中，编辑&lt;code&gt;/etc/pacman.conf&lt;/code&gt;，在末尾添加两行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[blackarch]
+Server = https://mirror.sjtu.edu.cn/blackarch/$repo/os/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;由于一些软件依赖32位的库，需要取消掉&lt;code&gt;/etc/pacman.conf&lt;/code&gt;中&lt;code&gt;multilib&lt;/code&gt;的注释，详见https://wiki.archlinux.org/index.php/Official_repositories#Enabling_multilib&lt;/p&gt;
+&lt;p&gt;之后，请执行下面的命令安装 blackarch-keyring 包导入 GPG key。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo pacman -Sy blackarch-keyring
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos</title>
+      <link>https://sjtug.org/post/mirror-help/centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/centos/</guid>
+      <description>&lt;p&gt;使用方法：运行下面的指令一键替换并备份。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/mirrorlist/#mirrorlist/g&amp;#39;&lt;/span&gt; -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|#baseurl=http://mirror.centos.org/|baseurl=http://mirror.sjtu.edu.cn/|g&amp;#39;&lt;/span&gt; -i.bak /etc/yum.repos.d/&amp;lt;需要替换的文件&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后运行 &lt;code&gt;dnf makecache&lt;/code&gt; 生成缓存&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>dart-pub</title>
+      <link>https://sjtug.org/post/mirror-help/dart-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/dart-packages/</guid>
+      <description>&lt;p&gt;dart-pub 镜像全量同步了 Dart 语言官方仓库 &lt;a href=&#34;https://pub.dartlang.org&#34;&gt;https://pub.dartlang.org&lt;/a&gt; ，可以加速 Dart 包的下载。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;设置环境变量 &lt;code&gt;export PUB_HOSTED_URL=https://mirror.sjtu.edu.cn/dart-pub&lt;/code&gt; 即可。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>https://sjtug.org/post/mirror-help/debian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/debian/</guid>
+      <description>&lt;p&gt;Debian 是完全由自由软件组成的类UNIX操作系统，其包含的多数软件使用GNU通用公共许可协议授权，并由Debian计划的参与者组成团队对其进行打包、开发与维护。Debian以其坚守Unix和自由软件的精神，以及其给予用户的众多选择而闻名。现时Debian提供了超过25,000个软件[9]，超过50,000个软件包[10]，并正式支持10个计算机系统结构。&lt;/p&gt;
+&lt;h3 id=&#34;使用方法&#34;&gt;使用方法：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;一键替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;sudo sed -i &amp;quot;s|http://deb.debian.org/debian|http://mirror.sjtu.edu.cn/debian|g&amp;quot; /etc/apt/sources.list
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;手动替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先安装 ca-certificates apt-transport-https 保证第三方https源可以使用。（执行 &lt;code&gt;sudo apt install -y ca-certificates apt-transport-https&lt;/code&gt;）&lt;/p&gt;
+&lt;p&gt;再打开&lt;code&gt; /etc/apt/sources.list&lt;/code&gt;，将类似于&lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt;的地址均替换为&lt;code&gt;https://mirror.sjtu.edu.cn/debian/&lt;/code&gt;即可。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>debian-cd</title>
+      <link>https://sjtug.org/post/mirror-help/debian-cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/debian-cd/</guid>
+      <description>&lt;p&gt;Debian 是完全由自由软件组成的类 UNIX 操作系统，其包含的多数软件使用 GNU 通用公共许可协议授权，并由 Debian 计划的参与者组成团队对其进行打包、开发与维护。 Debian 以其坚守 Unix 和自由软件的精神，以及其给予用户的众多选择而闻名。现时 Debian 提供了超过25,000个软件，超过50,000个软件包，并正式支持10个计算机系统结构。&lt;/p&gt;
+&lt;p&gt;本镜像仅提供 Debian 最新稳定版本。&lt;/p&gt;
+&lt;p&gt;一般来说只需在 &lt;code&gt;iso-cd&lt;/code&gt; 目录 &lt;a href=&#34;https://mirror.sjtu.edu.cn/debian-cd/current/amd64/iso-cd/&#34;&gt;https://mirror.sjtu.edu.cn/debian-cd/current/amd64/iso-cd/&lt;/a&gt; 寻找无后缀版本即可。当你使用不支持 UEFI 启动的系统时候，请安装 &lt;code&gt;mac&lt;/code&gt; 后缀版本。当你寻找教育版时候可以寻找 &lt;code&gt;edu&lt;/code&gt; 后缀版本。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>debian-ports</title>
+      <link>https://sjtug.org/post/mirror-help/debian-ports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/debian-ports/</guid>
+      <description>&lt;p&gt;本软件源仅适用于 Debian riscv64。&lt;/p&gt;
+&lt;p&gt;编辑&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，删除所有内容，添加以下内容并保存。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb [arch=riscv64] http://mirror.sjtu.edu.cn/debian-ports unstable main
+deb [arch=riscv64] http://mirror.sjtu.edu.cn/debian-ports unreleased main
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后，使用&lt;code&gt;sudo apt update&lt;/code&gt;更新软件包索引。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>docker-registry</title>
+      <link>https://sjtug.org/post/mirror-help/docker-registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/docker-registry/</guid>
+      <description>&lt;p&gt;docker-registry 源是 Docker Hub 的反向代理，可以加速&lt;code&gt;docker pull&lt;/code&gt;等需要下载镜像的命令。&lt;/p&gt;
+&lt;h2 id=&#34;docker-使用方法&#34;&gt;Docker 使用方法：&lt;/h2&gt;
+&lt;p&gt;编辑或新建&lt;code&gt;/etc/docker/daemon.json&lt;/code&gt;文件，向其中添加&lt;code&gt;registry-mirrors&lt;/code&gt;项，使最终配置类似：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;{
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;registry-mirrors&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://docker.mirrors.sjtug.sjtu.edu.cn&amp;#34;&lt;/span&gt;]
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;podman-使用方法&#34;&gt;Podman 使用方法：&lt;/h2&gt;
+&lt;p&gt;新建&lt;code&gt;/etc/containers/registries.conf.d/050-sjtug-docker-mirror.conf&lt;/code&gt;文件（或在&lt;code&gt;/etc/containers/registries.conf&lt;/code&gt;文件末尾），写入以下内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;unqualified&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;search&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;registries&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docker.io&amp;#34;&lt;/span&gt;]
+
+[[&lt;span style=&#34;color:#a6e22e&#34;&gt;registry&lt;/span&gt;]]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docker.io&amp;#34;&lt;/span&gt;
+
+[[&lt;span style=&#34;color:#a6e22e&#34;&gt;registry&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;mirror&lt;/span&gt;]]
+&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;docker.mirrors.sjtug.sjtu.edu.cn&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>dragonflybsd/dports</title>
+      <link>https://sjtug.org/post/mirror-help/dragonflybsd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/dragonflybsd/</guid>
+      <description>&lt;h2 id=&#34;项目简介&#34;&gt;项目简介&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dragonflybsd.org/&#34;&gt;DragonFly BSD&lt;/a&gt; 隶属于 &lt;a href=&#34;https://en.wikipedia.org/wiki/BSD&#34;&gt;BSD 系统家族&lt;/a&gt;，
+是其中相对小众、但富有特色的一个成员，与 &lt;a href=&#34;https://www.freebsd.org/&#34;&gt;FreeBSD&lt;/a&gt;、
+&lt;a href=&#34;https://www.openbsd.org/&#34;&gt;OpenBSD&lt;/a&gt;、&lt;a href=&#34;https://www.netbsd.org/&#34;&gt;NetBSD&lt;/a&gt;
+组成四大 BSD 操作系统。&lt;/p&gt;
+&lt;p&gt;自 2003 年从 FreeBSD 4.8 衍生而来，
+DragonFly BSD 对虚拟内存、虚拟文件系统、网络协议栈等关键内核子系统做了大幅修改，
+尽可能地消除了锁和竞争，实现了出色的 SMP 性能。
+项目创始人 Matthew Dillon 自行开发的 &lt;a href=&#34;https://en.wikipedia.org/wiki/HAMMER2&#34;&gt;HAMMER2&lt;/a&gt;
+文件系统是另一个主要特色，该文件系统拥有可媲美 ZFS 的功能和稳定性，但节省内存等资源。
+DragonFly BSD 的其他特色功能还有 vkernel、swapcache、LUKS、TrueCrypt、等等，
+详情可参考：&lt;a href=&#34;https://www.dragonflybsd.org/features/&#34;&gt;主要特性列表&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;DragonFly BSD 的内核简洁小巧，代码整洁，在线手册 (man pages) 清晰，适合学习和研究。
+驱动程序和用户空间工具主要继承自 FreeBSD，同时与 FreeBSD 使用相同的包管理工具
+&lt;a href=&#34;https://github.com/freebsd/pkg&#34;&gt;pkg(8)&lt;/a&gt;，可利用 FreeBSD 丰富全面的文档资源，
+用户体验良好。
+此外，DragonFly BSD 的社区虽小，但很友好。&lt;/p&gt;
+&lt;h2 id=&#34;镜像介绍&#34;&gt;镜像介绍&lt;/h2&gt;
+&lt;p&gt;SJTUG 镜像是 DragonFly BSD 在中国内地的首个镜像站点，
+依托于华东教育网骨干节点，提供稳定、快速的镜像服务。&lt;/p&gt;
+&lt;p&gt;我们的镜像服务目前提供了如下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://mirror.sjtu.edu.cn/dragonflybsd/iso-images/&#34;&gt;安装镜像 (ISO/IMG)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://mirror.sjtu.edu.cn/dragonflybsd/dports/&#34;&gt;预编译软件包&lt;/a&gt;
+(收录了 3 个版本：当前开发版本、当前发布版本、上一发布版本)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;p&gt;创建 pkg(8) 仓库配置文件 &lt;code&gt;/usr/local/etc/pkg/repos/sjtug.conf&lt;/code&gt;，添加以下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# China, Shanghai
+SJTUG: {
+    url:        https://mirror.sjtu.edu.cn/dragonflybsd/dports/${ABI}/LATEST,
+    priority:   10,
+    enabled:    yes
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后执行 &lt;code&gt;pkg update -f&lt;/code&gt; 更新索引即可开始使用了。&lt;/p&gt;
+&lt;p&gt;注：仓库的优先级 (&lt;code&gt;priority&lt;/code&gt;) 默认为 0，此处通过设置 &lt;code&gt;priority: 10&lt;/code&gt;
+提高优先级来优先使用 SJTUG 镜像服务。&lt;/p&gt;
+&lt;h2 id=&#34;相关链接&#34;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;官方主页: &lt;a href=&#34;https://www.dragonflybsd.org/&#34;&gt;https://www.dragonflybsd.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;镜像列表: &lt;a href=&#34;https://www.dragonflybsd.org/mirrors/&#34;&gt;https://www.dragonflybsd.org/mirrors/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;系统源码: &lt;a href=&#34;https://gitweb.dragonflybsd.org/dragonfly.git&#34;&gt;官方 Gitweb&lt;/a&gt;, &lt;a href=&#34;https://github.com/DragonFlyBSD/DragonFlyBSD&#34;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/DragonFlyBSD/DragonFlyBSD&#34;&gt;https://github.com/DragonFlyBSD&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>elan</title>
+      <link>https://sjtug.org/post/mirror-help/elan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/elan/</guid>
+      <description>&lt;h1 id=&#34;glean-lean-4-镜像适配工具&#34;&gt;&lt;code&gt;glean&lt;/code&gt;: Lean 4 镜像适配工具&lt;/h1&gt;
+&lt;p&gt;使用上海交通大学的 &lt;a href=&#34;https://mirror.sjtu.edu.cn&#34;&gt;https://mirror.sjtu.edu.cn&lt;/a&gt; 镜像服务，软件源镜像托管在 &lt;code&gt;elan&lt;/code&gt;
+和 &lt;code&gt;git/lean4-packages&lt;/code&gt; 下。&lt;/p&gt;
+&lt;p&gt;请自行修改命令中的版本号，可用版本参见：
+&lt;a href=&#34;http://mirror.sjtu.edu.cn/elan/?mirror_intel_list&#34;&gt;http://mirror.sjtu.edu.cn/elan/?mirror_intel_list&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;也可以通过这个链接下载 glean。&lt;/p&gt;
+&lt;h2 id=&#34;安装-elan&#34;&gt;安装 Elan&lt;/h2&gt;
+&lt;p&gt;Elan 是 Lean 的版本管理工具，在 Lake 调用时根据项目 &lt;code&gt;lean-toolchain&lt;/code&gt; 文件下载安装 Lean 并切换到对应的版本。&lt;/p&gt;
+&lt;p&gt;例如要阅读 Mathematics in Lean，可以运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git clone --depth &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; https://mirror.sjtu.edu.cn/git/lean4-packages/mathematics_in_lean/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后通过 &lt;code&gt;cat lean-toolchain&lt;/code&gt; 获取需要安装的版本。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;glean -install elan -version 3.1.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;安装-lean&#34;&gt;安装 Lean&lt;/h2&gt;
+&lt;p&gt;以下操作会安装 Lean 与 Lean 工具链，包含语言服务器、构建工具等。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;glean -install lean --version 4.5.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如需安装 nightly 版本，请以如下例子中的格式编辑命令。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;glean -install lean --version 4.4.0-nightly-2023-11-12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;nightly 可用版本参见 &lt;a href=&#34;http://mirror.sjtu.edu.cn/elan/leanprover/lean4_nightly/releases/download?mirror_intel_list&#34;&gt;lean4_nightly&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;在构建项目前下载依赖&#34;&gt;在构建项目前下载依赖&lt;/h2&gt;
+&lt;p&gt;每当下载完一个 Lean 项目后，在启动 VSCode 或命令行运行 &lt;code&gt;lake build&lt;/code&gt; 前，可以提前通过镜像下载依赖。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;glean -lake-manifest-path ~/EG/lake-manifest.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此处使用选项 &lt;code&gt;-lake-manifest-path ~/EG/lake-manifest.json&lt;/code&gt; 来手动指定了 &lt;code&gt;lake-manifest.json&lt;/code&gt; 文件的位置。
+也可以在进入一个 Lean4 Lake 项目后，直接运行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;glean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;命令。这样，glean 会自动找到当前项目中 &lt;code&gt;lake-manifest.json&lt;/code&gt; 文件的位置。&lt;/p&gt;
+&lt;h3 id=&#34;如何判断自己是否在在一个-lean4-lake-项目路径工作&#34;&gt;如何判断自己是否在在一个 Lean4 Lake 项目路径工作？&lt;/h3&gt;
+&lt;p&gt;运行 &lt;code&gt;ls&lt;/code&gt; 命令，如果能找到 &lt;code&gt;lakefile.lean&lt;/code&gt;，即代表正在 Lean4 Lake 项目路径工作。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;code .&lt;/code&gt; 启动 VSCode 来使用 Lean 时，也需要确保正在 Lean4 Lake 项目路径工作。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>fedora/linux</title>
+      <link>https://sjtug.org/post/mirror-help/fedora/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/fedora/</guid>
+      <description>&lt;p&gt;Fedora 项目是一个由红帽公司所赞助，以统筹 Fedora Linux 操作系统开发的社区。
+Fedora 项目在建设开源软件社区的同时构建了一个被称为&amp;quot;Fedora&amp;quot;的 GNU/Linux 发行版。&lt;/p&gt;
+&lt;p&gt;使用方法：运行下面的指令一键替换并备份。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/^metalink=/#metalink=/g&amp;#39;&lt;/span&gt; -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|^#baseurl=http://download.example/pub/|baseurl=https://mirror.sjtu.edu.cn/|g&amp;#39;&lt;/span&gt; -i.bak /etc/yum.repos.d/&amp;lt;需要替换的文件&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后运行 &lt;code&gt;dnf makecache&lt;/code&gt; 生成缓存&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>flutter_infra</title>
+      <link>https://sjtug.org/post/mirror-help/flutter_infra/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/flutter_infra/</guid>
+      <description>&lt;h2 id=&#34;欢迎使用-sjtug-镜像设置-flutter-开发环境&#34;&gt;欢迎使用 SJTUG 镜像设置 Flutter 开发环境&lt;/h2&gt;
+&lt;p&gt;作为国内最早提供 Flutter 的镜像站，我们在近期对镜像站的更新中提高了 Flutter
+镜像的稳定性，并解决了部分问题，欢迎大家使用！&lt;/p&gt;
+&lt;p&gt;Flutter 是 Google 开源的 UI 工具包，帮助开发者通过一套代码库高效构建多平台精美应用，
+支持移动、Web、桌面和嵌入式平台。&lt;/p&gt;
+&lt;p&gt;Flutter 由 Google 主导，全球的开发者共同协作开发。中国的开发者数量占全球的 20%
+以上，也有大量贡献者为 Flutter 的生态提供了很大的帮助和贡献。&lt;/p&gt;
+&lt;p&gt;为了更好帮助国内的开发者、设计师和研究者等使用 Flutter，我们为 Flutter 的使用
+提供了加速访问的服务。您需要将开发设备的如下两个环境变量设置指向 SJTUG 镜像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PUB_HOSTED_URL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FLUTTER_STORAGE_BASE_URL&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;linux-和-macos-系统设定-flutter-镜像&#34;&gt;Linux 和 macOS 系统设定 Flutter 镜像&lt;/h3&gt;
+&lt;p&gt;执行如下代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export PUB_HOSTED_URL=https://mirror.sjtu.edu.cn/dart-pub
+export FLUTTER_STORAGE_BASE_URL=https://mirror.sjtu.edu.cn
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;windows-系统设定-flutter-镜像&#34;&gt;Windows 系统设定 Flutter 镜像&lt;/h3&gt;
+&lt;p&gt;右键单击“我的电脑”，单击“属性” ——&amp;gt; “高级”选项卡 ——&amp;gt; “环境变量”&lt;/p&gt;
+&lt;p&gt;在 “用户变量” 或 “系统变量” 中：&lt;/p&gt;
+&lt;p&gt;单击“新建”添加新变量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;变量名: &lt;code&gt;PUB_HOSTED_URL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;值: &lt;code&gt;https://mirror.sjtu.edu.cn/dart-pub&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;变量名: &lt;code&gt;FLUTTER_STORAGE_BASE_URL&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;值: &lt;code&gt;https://mirror.sjtu.edu.cn&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;点击确定，保存生效。如果这两个变量名已经存在，点击编辑可修改变量值。&lt;/p&gt;
+&lt;h3 id=&#34;设置-flutter-sdk-仓库镜像&#34;&gt;设置 Flutter SDK 仓库镜像&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;flutter-sdk&lt;/code&gt; 仓库下，执行如下指令即可。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git remote set-url origin https://git.sjtu.edu.cn/sjtug/flutter-sdk.git
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;downloadflutterio-镜像&#34;&gt;download.flutter.io 镜像&lt;/h3&gt;
+&lt;p&gt;访问 &lt;a href=&#34;https://mirror.sjtu.edu.cn/download.flutter.io/&#34;&gt;https://mirror.sjtu.edu.cn/download.flutter.io/&lt;/a&gt; 即可。&lt;/p&gt;
+&lt;h2 id=&#34;更多资源&#34;&gt;更多资源&lt;/h2&gt;
+&lt;p&gt;感谢 flutter.cn 对 SJTUG 镜像测试的支持。
+更多 Flutter 资源和中文文档，
+请访问 Flutter 中文资源网站 (&lt;a href=&#34;https://flutter.cn&#34;&gt;flutter.cn&lt;/a&gt;)
+和 Dart 中文文档网站 (&lt;a href=&#34;https://dart.cn&#34;&gt;dart.cn&lt;/a&gt;)。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>git/brew.git</title>
+      <link>https://sjtug.org/post/mirror-help/brew-git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/brew-git/</guid>
+      <description>&lt;p&gt;本镜像是 Homebrew 自身的仓库，上游为&lt;code&gt;https://github.com/Homebrew/brew.git&lt;/code&gt;。在&lt;code&gt;git&lt;/code&gt;相关操作时使用&lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/git/brew.git&lt;/code&gt;替代上述地址即可。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;SJTUG镜像同时也提供了&lt;code&gt;homebrew-core&lt;/code&gt;, &lt;code&gt;homebrew-cask&lt;/code&gt;和&lt;code&gt;brew-bottles&lt;/code&gt;镜像，欢迎大家使用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_BREW_GIT_REMOTE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirrors.sjtug.sjtu.edu.cn/git/brew.git
+export HOMEBREW_CORE_GIT_REMOTE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirrors.sjtug.sjtu.edu.cn/git/homebrew-core.git
+export HOMEBREW_BOTTLE_DOMAIN&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirror.sjtu.edu.cn/homebrew-bottles/bottles
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;另外，现 homebrew 版本将默认使用 API 下载，本镜像源尚不支持这种方式，若使用本镜像请手动关闭该开关。&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_NO_INSTALL_FROM_API&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;随后正常使用官方脚本安装即可。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>git/homebrew-cask.git</title>
+      <link>https://sjtug.org/post/mirror-help/homebrew-cask/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/homebrew-cask/</guid>
+      <description>&lt;p&gt;homebrew-cask.git镜像了&lt;a href=&#34;https://github.com/Homebrew/homebrew-cask.git&#34;&gt;Homebrew Cask的描述文件，主要包括了较大的二进制文件与macOS应用&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;SJTUG镜像同时也提供了&lt;code&gt;homebrew-core&lt;/code&gt;和&lt;code&gt;brew-bottles&lt;/code&gt;镜像，欢迎大家使用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;若首次安装 homebrew, 请参阅 &lt;code&gt;brew.git&lt;/code&gt; 的说明。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;brew tap --custom-remote --force-auto-update homebrew/cask https://mirrors.sjtug.sjtu.edu.cn/git/homebrew-cask.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;另外，现 homebrew 版本将默认使用 API 下载，本镜像源尚不支持这种方式，若使用本镜像请手动关闭该开关。&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_NO_INSTALL_FROM_API&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>git/homebrew-core.git</title>
+      <link>https://sjtug.org/post/mirror-help/homebrew-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/homebrew-core/</guid>
+      <description>&lt;p&gt;homebrew-core.git镜像了&lt;a href=&#34;https://github.com/Homebrew/homebrew-core.git&#34;&gt;Homebrew官方的软件包描述文件&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;SJTUG镜像同时也提供了&lt;code&gt;homebrew-cask&lt;/code&gt;和&lt;code&gt;brew-bottles&lt;/code&gt;镜像，欢迎大家使用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;若首次安装 homebrew, 请参阅 &lt;code&gt;brew.git&lt;/code&gt; 的说明。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_CORE_GIT_REMOTE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirrors.sjtug.sjtu.edu.cn/git/homebrew-core.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后执行：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;brew tap --custom-remote --force-auto-update homebrew/core https://mirrors.sjtug.sjtu.edu.cn/git/homebrew-core.git
+brew update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;另外，现 homebrew 版本将默认使用 API 下载，本镜像源尚不支持这种方式，若使用本镜像请手动关闭该开关。&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_NO_INSTALL_FROM_API&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>git/ohmyzsh.git</title>
+      <link>https://sjtug.org/post/mirror-help/ohmyzsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ohmyzsh/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://ohmyz.sh/&#34;&gt;Oh My Zsh&lt;/a&gt; 是一个由社区驱动的开源框架，用于管理 &lt;a href=&#34;https://www.zsh.org/&#34;&gt;zsh&lt;/a&gt; 的配置。&lt;/p&gt;
+&lt;h2 id=&#34;首次安装-oh-my-zsh&#34;&gt;首次安装 Oh My Zsh&lt;/h2&gt;
+&lt;p&gt;首先，需要确保系统中安装了 zsh 和 git，然后在终端运行以下命令其中之一：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;方法&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;curl&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c &amp;quot;$(curl -fsSL https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;wget&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c &amp;quot;$(wget -O- https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;fetch&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c &amp;quot;$(fetch -o - https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;替换现有仓库上游&#34;&gt;替换现有仓库上游&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;git -C $ZSH remote set-url origin https://git.sjtu.edu.cn/sjtug/ohmyzsh.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>google-fonts</title>
+      <link>https://sjtug.org/post/mirror-help/google-fonts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/google-fonts/</guid>
+      <description>&lt;p&gt;本镜像提供了 Google Fonts 的反向代理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link href=&amp;quot;https://fonts.googleapis.com/css?family=Roboto&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;改为&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link href=&amp;quot;https://google-fonts.mirrors.sjtug.sjtu.edu.cn/css?family=Roboto&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>guix</title>
+      <link>https://sjtug.org/post/mirror-help/guix/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/guix/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://guix.gnu.org/&#34;&gt;GNU/Guix&lt;/a&gt;是隶属于GNU项目的自由软件发行版。Guix可以作为独立的操作系统发行版安装在计算机上，可以作为软件包管理器安装在别的Linux发行版上。
+它的核心是一个函数式软件包管理器，支持事务性的升级、回滚操作。用户可以通过
+&lt;a href=&#34;https://www.gnu.org/software/guile/&#34;&gt;Guile&lt;/a&gt;语言编写配置文件管理操作系统的服务或者管理用户安装的软件。&lt;/p&gt;
+&lt;h2 id=&#34;git-镜像&#34;&gt;Git 镜像&lt;/h2&gt;
+&lt;p&gt;Git 镜像的地址为 &lt;a href=&#34;https://mirror.sjtu.edu.cn/git/guix.git&#34;&gt;https://mirror.sjtu.edu.cn/git/guix.git&lt;/a&gt; 。修改 &lt;code&gt;~/.config/guix/channels.scm&lt;/code&gt; 文件即可在 &lt;code&gt;guix pull&lt;/code&gt; 时使用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(list (channel
+       (inherit (car %default-channels))
+       (url &amp;quot;https://mirror.sjtu.edu.cn/git/guix.git&amp;quot;)))
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;substitute-镜像&#34;&gt;Substitute 镜像&lt;/h2&gt;
+&lt;p&gt;镜像地址为 &lt;a href=&#34;https://mirror.sjtu.edu.cn/guix/&#34;&gt;https://mirror.sjtu.edu.cn/guix/&lt;/a&gt;。
+镜像实现方式为智能缓存，在镜像站用户首次访问某个 nar 或 narinfo 时，它会被永久缓存在镜像上；
+之后的访问将直接从镜像服务器返回数据。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;guix命令支持使用 &lt;code&gt;--substitute-urls&lt;/code&gt; 参数为单个命令的执行临时覆盖substitute服务器，例如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;guix package -i &amp;lt;package&amp;gt; --substitute-urls&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirror.sjtu.edu.cn/guix/&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;如果您使用 Guix 管理整个操作系统，请修改操作系统配置文件 ，替换
+&lt;code&gt;substitute-urls&lt;/code&gt; 参数。例如：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-scheme&#34; data-lang=&#34;scheme&#34;&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;operating-system&lt;/span&gt;
+  (&lt;span style=&#34;color:#a6e22e&#34;&gt;services&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;modify-services&lt;/span&gt; %desktop-services
+              (&lt;span style=&#34;color:#a6e22e&#34;&gt;guix-service-type&lt;/span&gt;
+               config &lt;span style=&#34;color:#66d9ef&#34;&gt;=&amp;gt; &lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;guix-configuration&lt;/span&gt;
+                          (&lt;span style=&#34;color:#a6e22e&#34;&gt;inherit&lt;/span&gt; config)
+                          (&lt;span style=&#34;color:#a6e22e&#34;&gt;substitute-urls&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirror.sjtu.edu.cn/guix/&amp;#34;&lt;/span&gt;
+                                             &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://ci.guix.gnu.org&amp;#34;&lt;/span&gt;))))))
+  &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+  )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;如果您在别的发行版上使用 Guix 包管理器，请修改 &lt;code&gt;guix-daemon&lt;/code&gt; 的
+&lt;code&gt;--substitute-urls&lt;/code&gt; 参数。比如修改 &lt;code&gt;guix-daemon.service&lt;/code&gt; 的 &lt;code&gt;ExecStart&lt;/code&gt; 为：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;ExecStart=/var/guix/profiles/per-user/root/current-guix/bin/guix-daemon --build-users-group=guixbuild --substitute-urls=&amp;quot;https://mirror.sjtu.edu.cn/guix/&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;本文档的编写参考了 &lt;a href=&#34;https://guixcn.org/wiki/mirror/&#34;&gt;https://guixcn.org/wiki/mirror/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>homebrew-bottles</title>
+      <link>https://sjtug.org/post/mirror-help/homebrew-bottles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/homebrew-bottles/</guid>
+      <description>&lt;p&gt;homebrew-bottles.git镜像了&lt;a href=&#34;https://homebrew.bintray.com/&#34;&gt;预编译的 Homebrew 软件包&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;SJTUG镜像同时也提供了&lt;code&gt;homebrew-core&lt;/code&gt;和&lt;code&gt;homebrew-cask&lt;/code&gt;镜像，欢迎大家使用。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;若首次安装 homebrew, 请参阅 &lt;code&gt;brew.git&lt;/code&gt; 的说明。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;执行以下语句或加入到&lt;code&gt;~/.bashrc&lt;/code&gt;中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export HOMEBREW_BOTTLE_DOMAIN&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirror.sjtu.edu.cn/homebrew-bottles/bottles
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SJTUG 镜像现已支持 ghcr.io 的 bottles 同步。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>immortalwrt</title>
+      <link>https://sjtug.org/post/mirror-help/immortalwrt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/immortalwrt/</guid>
+      <description>&lt;p&gt;ImmortalWrt 是 OpenWrt 的一个第三方分支，主要针对国人用户开发，提供更多的本地化软件包和设备支持。&lt;/p&gt;
+&lt;p&gt;使用方法：
+修改 &lt;code&gt;/etc/opkg/distfeeds.conf&lt;/code&gt; 文件，将源地址 &lt;code&gt;downloads.immortalwrt.org&lt;/code&gt; / &lt;code&gt;mirrors.vsean.net/openwrt&lt;/code&gt; 修改为
+&lt;code&gt;mirror.sjtu.edu.cn/immortalwrt&lt;/code&gt;，然后运行 &lt;code&gt;opkg update&lt;/code&gt; 刷新软件包列表。&lt;/p&gt;
+&lt;p&gt;您也可以登录 LuCI 后台，进入 &lt;code&gt;系统&lt;/code&gt; -&amp;gt; &lt;code&gt;软件包&lt;/code&gt; 页面，点击 &lt;code&gt;配置 opkg&lt;/code&gt; 并按上述说明完成对源地址的更改。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>kali</title>
+      <link>https://sjtug.org/post/mirror-help/kali/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/kali/</guid>
+      <description>&lt;p&gt;Kali Linux 是基于Debian的Linux发行版，设计用于数字鉴识和渗透测试。由 Offensive Security Ltd 维护和资助。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;编辑&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，在头部添加：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;deb https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main contrib non-free non-free-firmware
+deb-src https://mirrors.sjtug.sjtu.edu.cn/kali kali-rolling main contrib non-free non-free-firmware
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>leopardsh</title>
+      <link>https://sjtug.org/post/mirror-help/leopardsh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/leopardsh/</guid>
+      <description>&lt;p&gt;leopard.sh / tiger.sh 是一个 PPC Mac OS X 10.4-10.5 上的包管理器，提供了许多常用软件包，节省了 PowerPC Mac 漫长的编译时间&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mac OS X Tiger:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载 &lt;code&gt;tiger.sh&lt;/code&gt;，并运行安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -O http://leopard.sh/tigersh/tiger.sh
+chmod +x ./tiger.sh
+./tiger.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，脚本会自己移动到&lt;code&gt;/usr/local/bin/tiger.sh&lt;/code&gt;，对其进行编辑：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TIGERSH_MIRROR=${TIGERSH_MIRROR:-https://mirror.sjtu.edu.cn/leopardsh}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;并在文件开头添加:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export TIGERSH_MIRROR_NO_HTTP=1
+export TIGERSH_MIRROR_NO_HEAD=1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Mac OS X Leopard:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载 &lt;code&gt;leopard.sh&lt;/code&gt;，并运行安装&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -O http://leopard.sh/leopardsh/leopard.sh
+chmod +x ./leopard.sh
+./leopard.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，脚本会自己移动到&lt;code&gt;/usr/local/bin/leopard.sh&lt;/code&gt;，对其进行编辑：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;LEOPARDSH_MIRROR=${LEOPARDSH_MIRROR:-https://mirror.sjtu.edu.cn/leopardsh}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;并在文件开头添加:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export LEOPARDSH_MIRROR_NO_HTTP=1
+export LEOPARDSH_MIRROR_NO_HEAD=1
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>linuxliteos</title>
+      <link>https://sjtug.org/post/mirror-help/linuxliteos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/linuxliteos/</guid>
+      <description>&lt;p&gt;Linux Lite 是一个基于 Ubuntu 长期支持版本（LTS）的 Linux 发行版，搭载 Xfce 桌面环境。Linux Lite 的目的是将 Windows 用户引入 Linux，对新手比较友好。其旨在提供一套完整的应用程序来帮助用户满足用户日常的计算需求，这包括完整的办公套件、媒体播放器和其他基本的日常软件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方式：&lt;/strong&gt; 在终端输入&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;，删除原有内容，用以下内容代替。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirrors.sjtug.sjtu.edu.cn/linuxliteos/ emerald main
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt update&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>maven-central</title>
+      <link>https://sjtug.org/post/mirror-help/maven-central/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/maven-central/</guid>
+      <description>&lt;p&gt;Apache Maven仓库存放了可用于Maven的大量软件包（特别是Java软件）。目前本镜像为 &lt;a href=&#34;http://repo.maven.apache.org/maven2/&#34;&gt;http://repo.maven.apache.org/maven2/&lt;/a&gt; 的反向代理，能够加速安装。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;修改Maven根目录下的&lt;code&gt;conf/setting.xml&lt;/code&gt;，增加一节&lt;code&gt;&amp;lt;mirror /&amp;gt;&lt;/code&gt;，具体如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mirrors&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Other mirrors... --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mirror&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;sjtugmaven&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;sjtug maven&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;url&amp;gt;&lt;/span&gt;https://mirrors.sjtug.sjtu.edu.cn/maven-central/&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/url&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mirrorOf&amp;gt;&lt;/span&gt;central&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mirrorOf&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mirror&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mirrors&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>msys2</title>
+      <link>https://sjtug.org/post/mirror-help/msys2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/msys2/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;收录架构&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MINGW: i686, x86_64&lt;/li&gt;
+&lt;li&gt;MSYS: i686, x86_64&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;获取基本组件包&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;请访问该镜像目录下的&lt;code&gt;distrib/&lt;/code&gt;目录（&lt;a href=&#34;http://mirrors.sjtug.sjtu.edu.cn/msys2/distrib/x86_64/&#34;&gt;x86_64&lt;/a&gt;、&lt;a href=&#34;http://mirrors.sjtug.sjtu.edu.cn/msys2/distrib/i686/&#34;&gt;i686&lt;/a&gt;），找到名为&lt;code&gt;msys2-&amp;lt;架构&amp;gt;-&amp;lt;日期&amp;gt;.exe&lt;/code&gt;的文件（如&lt;code&gt;msys2-x86_64-20141113.exe&lt;/code&gt;），下载安装即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;pacman的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;编辑&lt;code&gt;/etc/pacman.d/mirrorlist.mingw32&lt;/code&gt;，在文件开头添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Server = http://mirrors.sjtug.sjtu.edu.cn/msys2/mingw/i686
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编辑&lt;code&gt;/etc/pacman.d/mirrorlist.mingw64&lt;/code&gt;，在文件开头添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Server = http://mirrors.sjtug.sjtu.edu.cn/msys2/mingw/x86_64
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编辑&lt;code&gt;/etc/pacman.d/mirrorlist.msys&lt;/code&gt;，在文件开头添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Server = http://mirrors.sjtug.sjtu.edu.cn/msys2/msys/$arch
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;然后执行&lt;code&gt;pacman -Sy&lt;/code&gt;刷新软件包数据即可。&lt;/p&gt;
+&lt;p&gt;注：本Help参考自&lt;a href=&#34;https://lug.ustc.edu.cn/wiki/mirrors/help/msys2&#34;&gt;UTSC镜像&lt;/a&gt;和&lt;a href=&#34;https://mirrors.tuna.tsinghua.edu.cn/help/msys2/&#34;&gt;清华镜像&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mx-isos</title>
+      <link>https://sjtug.org/post/mirror-help/mx-isos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/mx-isos/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://mxlinux.org/&#34;&gt;MX Linux&lt;/a&gt; 是一个基于Debian 稳定分支的面向桌面的Linux发行，它是antiX 及早先的MEPIS 社区合作的产物。它采用Xfce 作为缺省桌面，是一个轻量级操作系统。&lt;/p&gt;
+&lt;p&gt;本Repo镜像了MX Linux和AntiX的安装镜像。具体信息可以参见 &lt;a href=&#34;https://mxlinux.org/wiki/system/iso-download-mirrors&#34;&gt;https://mxlinux.org/wiki/system/iso-download-mirrors&lt;/a&gt; 。&lt;/p&gt;
+&lt;p&gt;本站另有&lt;code&gt;mx-packages&lt;/code&gt;镜像，包括了MX Linux与AntiX的软件包，欢迎大家使用。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mx-packages</title>
+      <link>https://sjtug.org/post/mirror-help/mx-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/mx-packages/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://mxlinux.org/&#34;&gt;MX Linux&lt;/a&gt; 是一个基于Debian 稳定分支的面向桌面的Linux发行，它是antiX 及早先的MEPIS 社区合作的产物。它采用Xfce 作为缺省桌面，是一个轻量级操作系统。&lt;/p&gt;
+&lt;p&gt;本Repo镜像了MX Linux和AntiX的软件包。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;（推荐）打开MX Repo Manager，选择SJTUG mirror&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（手动）：
+打开&lt;code&gt; /etc/apt/sources.list&lt;/code&gt;，将&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;deb http://mxrepo.com/mx/repo/ stretch non-free main
+deb http://mxrepo.com/mx/testrepo/ mx7 test
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;替换成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb http://mirrors.sjtug.sjtu.edu.cn/mx-packages/mx/repo stretch main non-free
+deb http://mirrors.sjtug.sjtu.edu.cn/mx-packages/mx/testrepo test
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>nix-channels/store</title>
+      <link>https://sjtug.org/post/mirror-help/nix-channels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/nix-channels/</guid>
+      <description>&lt;p&gt;Nix 是一个支持 Linux 和 macOS 的函数式包管理器，具有原子更新、依赖隔离、构建尽可能可复现等特点。&lt;/p&gt;
+&lt;p&gt;Nixpkgs 是 Nix 包管理器对应的软件发行版，使用 Nix 函数式语言编写，除软件包外提供用于软件定制、构建、开发环境配置的工具。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;单独安装的 Nix：编辑配置文件（系统配置位于 &lt;code&gt;/etc/nix/nix.conf&lt;/code&gt;，用户配置位于 &lt;code&gt;~/.config/nix/nix.conf&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;substituters = https://mirror.sjtu.edu.cn/nix-channels/store https://cache.nixos.org
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;单独安装的 Nix 在更改完配置文件之后需要重启 nix-daemon 才能应用配置。&lt;/p&gt;
+&lt;p&gt;NixOS 与 nix-darwin：编辑配置文件（一般来说，NixOS 配置位于 &lt;code&gt;/etc/nixos/configuration.nix&lt;/code&gt;，nix-darwin 配置位于 &lt;code&gt;$HOME/.nixpkgs/darwin-configuration.nix&lt;/code&gt;，如果你手动指定了 &lt;code&gt;NIX_PATH&lt;/code&gt; 或是使用 Flakes 管理系统，请根据具体情况编辑对应的文件）：&lt;/p&gt;
+&lt;p&gt;对于 NixOS 21.11（及之前的版本）与 nix-darwin：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;{ config&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; lib&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; pkgs&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt; }:
+{
+  nix&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;binaryCaches &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [ &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirror.sjtu.edu.cn/nix-channels/store&amp;#34;&lt;/span&gt; ];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;对于 NixOS 22.05（及之后的版本）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;{ config&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; lib&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; pkgs&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt; }:
+{
+  nix&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;settings&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;substituters &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [ &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://mirror.sjtu.edu.cn/nix-channels/store&amp;#34;&lt;/span&gt; ];
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;NixOS 与 nix-darwin 在更改完配置之后需要 switch 到新配置后生效。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>nodejs-release</title>
+      <link>https://sjtug.org/post/mirror-help/nodejs-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/nodejs-release/</guid>
+      <description>&lt;p&gt;本链接反代了 &lt;a href=&#34;https://nodejs.org/dist/&#34;&gt;https://nodejs.org/dist/&lt;/a&gt; 。可以在此手动下载Nodejs的安装包，也可以配合Nodejs环境使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;：&lt;code&gt;export NODE_MIRROR=https://mirrors.sjtug.sjtu.edu.cn/nodejs-release/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nvm&lt;/code&gt;：&lt;code&gt;export NVM_NODEJS_ORG_MIRROR=https://mirrors.sjtug.sjtu.edu.cn/nodejs-release&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>npm-registry</title>
+      <link>https://sjtug.org/post/mirror-help/npm-registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/npm-registry/</guid>
+      <description>&lt;p&gt;npm-registry 源是 NodeJS 的官方包管理 npm 的仓库的反向代理，可以加速&lt;code&gt;npm install&lt;/code&gt;等需要下载的命令。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;短期使用&lt;/strong&gt;: 在&lt;code&gt;npm&lt;/code&gt;命令后加上&lt;code&gt;--registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry&lt;/code&gt;的参数，即可使用SJTUG源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;长期使用&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Xnix&lt;/strong&gt;: 打开&lt;code&gt;$HOME/.npmrc&lt;/code&gt;，添加以下内容：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;registry=https://mirrors.sjtug.sjtu.edu.cn/npm-registry
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即可大幅提升下载速度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: 编辑&lt;code&gt;%USERPROFILE%\.npmrc&lt;/code&gt;，同样加入以上内容即可使用SJTUG镜像源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>openEuler</title>
+      <link>https://sjtug.org/post/mirror-help/openeuler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/openeuler/</guid>
+      <description>&lt;p&gt;openEuler 是一个开源、免费的 Linux 发行版，将通过开放的社区形式与全球的开发者共同构建一个开放、
+多元和架构包容的软件生态体系。&lt;/p&gt;
+&lt;p&gt;同时，openEuler 也是一个创新的平台，鼓励任何人在该平台上提出新想法、开拓新思路、实践新方案。&lt;/p&gt;
+&lt;h2 id=&#34;配置方法&#34;&gt;配置方法&lt;/h2&gt;
+&lt;p&gt;openEuler 源包含多个版本，假定您需要使用 openEuler-20.09 版本，在 yum 源目录(&lt;code&gt;/etc/yum.repos.d/&lt;/code&gt;)下新增 openEuler.repo 文件，
+注意文件中的 &lt;code&gt;openEuler-20.09&lt;/code&gt; 路径:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[OS]
+name=OS
+baseurl=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/OS/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/OS/$basearch/RPM-GPG-KEY-openEuler
+[everything]
+name=everything
+baseurl=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/everything/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/everything/$basearch/RPM-GPG-KEY-openEuler
+[EPOL]
+name=EPOL
+baseurl=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/EPOL/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/EPOL/$basearch/RPM-GPG-KEY-openEuler
+[debuginfo]
+name=debuginfo
+baseurl=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/debuginfo/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/debuginfo/$basearch/RPM-GPG-KEY-openEuler
+[source]
+name=source
+baseurl=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/source/
+enabled=1
+gpgcheck=1 
+gpgkey=https://mirror.sjtu.edu.cn/openeuler/openEuler-20.09/source/RPM-GPG-KEY-openEuler
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;正常执行 &lt;code&gt;yum update&lt;/code&gt; 和 &lt;code&gt;yum install&lt;/code&gt; 即可。如果您在使用的过程中遇到任何问题，可以直接联系 openEuler
+社区 &lt;a href=&#34;mailto:admin@openeuler.io&#34;&gt;admin@openeuler.io&lt;/a&gt;，也可以通过 GitHub 向 SJTUG 反馈 bug。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>packagist</title>
+      <link>https://sjtug.org/post/mirror-help/packagist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/packagist/</guid>
+      <description>&lt;p&gt;Packagist 是 PHP 包管理软件 Composer 的源。本镜像仅包含所有包的 metadata，并非全量同步镜像。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全局设置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer config -g repo.packagist composer https://packagist.mirrors.sjtug.sjtu.edu.cn
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;或者仅对一个项目设置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer config repo.packagist composer https://packagist.mirrors.sjtug.sjtu.edu.cn
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>parrot</title>
+      <link>https://sjtug.org/post/mirror-help/parrot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/parrot/</guid>
+      <description>&lt;p&gt;Parrot Security OS是一个基于Debian的Linux发行版，专注于计算机安全。它专为渗透测试，漏洞评估和缓解，计算机取证和匿名Web浏览而设计。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;修改&lt;code&gt;etc/apt/sources.list.d/parrot.list&lt;/code&gt;的以下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#stable repository
+deb https://mirrors.sjtug.sjtu.edu.cn/parrot/ parrot main contrib non-free
+#deb-src https://mirrors.sjtug.sjtu.edu.cn/parrot/ parrot main contrib non-free
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>putty</title>
+      <link>https://sjtug.org/post/mirror-help/putty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/putty/</guid>
+      <description>&lt;p&gt;PuTTY是一个支持Telnet、SSH、rlogin、纯TCP以及串行端口连接软件。&lt;/p&gt;
+&lt;p&gt;使用方法：直接打开点击Download&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>pypi-packages</title>
+      <link>https://sjtug.org/post/mirror-help/pypi-packages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/pypi-packages/</guid>
+      <description>&lt;p&gt;&lt;del&gt;2019年10月10日起，由于 PyPI 占用过多空间，我们将 PyPI 改为了反代。PyPI 源的服务质量可能有所下降。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2020年12月7日起，我们通过智能缓存全量同步了 PyPI。欢迎继续使用。&lt;/p&gt;
+&lt;p&gt;PyPI 是 Python 官方的包仓库，可以通过 &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;easy_install&lt;/code&gt; 等方式从 PyPI 安装 &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;tensorflow&lt;/code&gt; 等常用包。&lt;/p&gt;
+&lt;p&gt;执行指令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip config set global.index-url https://mirror.sjtu.edu.cn/pypi/web/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者创建或编辑 &lt;code&gt;~/.config/pip/pip.conf&lt;/code&gt; 文件，加入或修改 &lt;code&gt;index-url&lt;/code&gt; 相关段落为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[global]
+index-url = https://mirror.sjtu.edu.cn/pypi/web/simple
+format = columns
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;临时使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip install -i https://mirror.sjtu.edu.cn/pypi/web/simple numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>pypi/web/simple</title>
+      <link>https://sjtug.org/post/mirror-help/pypi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/pypi/</guid>
+      <description>&lt;p&gt;&lt;del&gt;2019年10月10日起，由于 PyPI 占用过多空间，我们将 PyPI 改为了反代。PyPI 源的服务质量可能有所下降。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2020年12月7日起，我们通过智能缓存全量同步了 PyPI。欢迎继续使用。&lt;/p&gt;
+&lt;p&gt;PyPI 是 Python 官方的包仓库，可以通过 &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;easy_install&lt;/code&gt; 等方式从 PyPI 安装 &lt;code&gt;numpy&lt;/code&gt;, &lt;code&gt;tensorflow&lt;/code&gt; 等常用包。&lt;/p&gt;
+&lt;p&gt;执行指令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip config set global.index-url https://mirror.sjtu.edu.cn/pypi/web/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者创建或编辑 &lt;code&gt;~/.config/pip/pip.conf&lt;/code&gt; 文件，加入或修改 &lt;code&gt;index-url&lt;/code&gt; 相关段落为：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;[global]
+index-url = https://mirror.sjtu.edu.cn/pypi/web/simple
+format = columns
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;临时使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip install -i https://mirror.sjtu.edu.cn/pypi/web/simple numpy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>pytorch-wheels</title>
+      <link>https://sjtug.org/post/mirror-help/pytorch-wheels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/pytorch-wheels/</guid>
+      <description>&lt;p&gt;pytorch-wheels 是 PyTorch pip 源的镜像。直接将 &lt;a href=&#34;https://pytorch.org/get-started/locally/&#34;&gt;PyTorch 安装指引&lt;/a&gt;
+中的 &lt;code&gt;https://download.pytorch.org/whl&lt;/code&gt; 替换为 &lt;code&gt;https://mirror.sjtu.edu.cn/pytorch-wheels&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip install torch&lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;1.7.1 torchvision&lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;0.8.2 torchaudio&lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;0.7.2 -f https://mirror.sjtu.edu.cn/pytorch-wheels/torch_stable.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>raspberry-pi-os-images</title>
+      <link>https://sjtug.org/post/mirror-help/raspberry-pi-os-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/raspberry-pi-os-images/</guid>
+      <description>&lt;p&gt;主仓库地址： &lt;a href=&#34;http://downloads.raspberrypi.org/&#34;&gt;http://downloads.raspberrypi.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;根据需要的版本进入以下包含 Raspberry Pi OS 系统镜像的目录，选择&lt;code&gt;.zip&lt;/code&gt;文件下载即可。推荐使用 &lt;a href=&#34;https://www.balena.io/etcher/&#34;&gt;balenaEtcher&lt;/a&gt; 将镜像写入 SD 卡&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Raspberry Pi OS 版本&lt;/th&gt;
+&lt;th&gt;存储目录&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;精简版 Raspberry Pi OS 系统&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_lite_armhf/images/&#34;&gt;raspios_lite_armhf&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;常规版 Raspberry Pi OS 系统&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_armhf/images/&#34;&gt;raspios_armhf&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;完整版 Raspberry Pi OS 系统&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_full_armhf/images/&#34;&gt;raspios_full_armhf&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;精简版 Raspberry Pi OS 64位系统&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_lite_arm64/images/&#34;&gt;raspios_lite_arm64&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;常规版 Raspberry Pi OS 64位系统&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspios_arm64/images/&#34;&gt;raspios_arm64&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;暂无 Raspberry Pi OS 64位完整版系统&lt;/li&gt;
+&lt;li&gt;Raspberry Pi OS 是 Raspbian 的后继者，二者名称不同，但功能和界面相同。首个 Raspberry Pi OS 系统发行于 2020年5月27日&lt;/li&gt;
+&lt;li&gt;2012年7月15日-2020年2月14日期间发行的旧版 Raspbian 系统镜像与 Raspberry Pi OS 位于不同目录，各版本分别位于：&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian_lite/images/&#34;&gt;raspbian_lite&lt;/a&gt;、&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian/images/&#34;&gt;raspbian&lt;/a&gt;、&lt;a href=&#34;https://mirrors.sjtug.sjtu.edu.cn/raspberry-pi-os-images/raspbian_full/images/&#34;&gt;raspbian_full&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Raspberry Pi OS 常用设置&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;无头初始化设置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;启用 SSH：在 SD 卡 boot 分区中创建名为 &lt;code&gt;ssh&lt;/code&gt; （不应包括任何扩展名或其他字符）的空白文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;预设 WiFi 信息：在 SD 卡 boot 分区中创建名为 &lt;code&gt;wpa_supplicant.conf&lt;/code&gt; 的文本文件，按如下格式填写 &lt;code&gt;YOUR_WiFi_NAME&lt;/code&gt; 和 &lt;code&gt;YOUR_WiFi_PASSWORD&lt;/code&gt; ，推荐设置为本机 WiFi 热点或拥有管理员权限的无线路由器 WiFi ，以便查找树莓派的 IP 地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=CN
+
+network={
+	ssid=&amp;quot;YOUR_WiFi_NAME&amp;quot;
+	psk=&amp;quot;YOUR_WiFi_PASSWORD&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;远程连接：插卡启动树莓派，在 WiFi 热点中查询 IP 分配情况，确认树莓派的 IP 地址，使用 SSH 进行远程连接。树莓派的默认 SSH 端口为 22，用户名为 &lt;code&gt;pi&lt;/code&gt; ，默认密码为 &lt;code&gt;raspberry&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命令行下的设置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在终端输入 &lt;code&gt;sudo raspi-config&lt;/code&gt; 命令进行基本设置。可将时区设置为 &lt;code&gt;Asia/Shanghai&lt;/code&gt; ，将默认区域更改为 &lt;code&gt;en_US.UTF-8&lt;/code&gt; （英文）或 &lt;code&gt;zh_CN.UTF-8&lt;/code&gt; （中文）；连接USB键盘时，可将键盘布局修改为美式键盘（Generic 104-key PC -&amp;gt; Other -&amp;gt; English (US) -&amp;gt; English (US)）；同时还可启用 VNC 以进行远程桌面连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图形界面下的设置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首次进入桌面时，根据提示进行鼠标操作设置即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;apt 软件源修改&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Raspberry Pi OS 系统镜像内预置的 apt 软件源在国内访问缓慢，可将 apt 软件源更改为 SJTUG 镜像源&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将 &lt;code&gt;/etc/apt/sources.list&lt;/code&gt; 文件中的 raspbian 存储库由 &lt;code&gt;http://raspbian.raspberrypi.org/raspbian/&lt;/code&gt; 更改为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/raspbian/raspbian/&lt;/code&gt; ，对于64位 Raspberry Pi OS ，将 &lt;code&gt;http://deb.debian.org/debian/&lt;/code&gt; 更改为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/debian/&lt;/code&gt; ，将 &lt;code&gt;http://deb.debian.org/debian-security/&lt;/code&gt; 更改为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/debian-security/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;将 &lt;code&gt;/etc/apt/sources.list.d/raspi.list&lt;/code&gt; 文件中的 raspberrypi 存储库由 &lt;code&gt;http://archive.raspberrypi.org/debian/&lt;/code&gt; 更改为 &lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/raspberrypi/debian/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可输入以下命令完成 apt 软件源设置（截至 2021-05-28 版仍然适用）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cp /etc/apt/sources.list.d/raspi.list /etc/apt/sources.list.d/raspi.list.bak
+sudo sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s|http://raspbian.raspberrypi.org/raspbian/|https://mirrors.sjtug.sjtu.edu.cn/raspbian/raspbian/|g&amp;#34;&lt;/span&gt; /etc/apt/sources.list
+sudo sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s|http://deb.debian.org/debian|https://mirrors.sjtug.sjtu.edu.cn/debian|g&amp;#34;&lt;/span&gt; /etc/apt/sources.list
+sudo sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s|http://archive.raspberrypi.org/debian/|https://mirrors.sjtug.sjtu.edu.cn/raspberrypi/debian/|g&amp;#34;&lt;/span&gt; /etc/apt/sources.list.d/raspi.list
+sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;添加 Raspbian 非官方软件源 Raspbian Addons（可选）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;wget -qO- https://mirror.sjtu.edu.cn/raspbian-addons/KEY.gpg | sudo apt-key add -
+echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://mirror.sjtu.edu.cn/raspbian-addons/debian precise main&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/raspbian-addons.list
+sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;软件包更新&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;sudo apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt upgrade -y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt autoremove -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>raspberrypi</title>
+      <link>https://sjtug.org/post/mirror-help/raspberrypi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/raspberrypi/</guid>
+      <description>&lt;p&gt;raspberrypi是树莓派基金会提供的软件源，包括 ui 相关程序及部分由树莓派基金会为树莓派编写的软件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;将&lt;code&gt;/etc/apt/sources.list.d/raspi.list&lt;/code&gt;中的&lt;code&gt;http://archive.raspberrypi.org/debian/&lt;/code&gt;更换成&lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/raspberrypi/debian/&lt;/code&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>raspbian</title>
+      <link>https://sjtug.org/post/mirror-help/raspbian/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/raspbian/</guid>
+      <description>&lt;p&gt;Raspberry Pi OS 是为树莓派设计，基于 Debian 的操作系统。本镜像提供了 Raspberry Pi OS 的官方软件源。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更换软件源：&lt;/p&gt;
+&lt;p&gt;编辑&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;，将所有的&lt;code&gt;deb&lt;/code&gt;与&lt;code&gt;deb-src&lt;/code&gt;之后的网址替换成&lt;code&gt;https://mirrors.sjtug.sjtu.edu.cn/raspbian/raspbian/&lt;/code&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>raspbian-addons</title>
+      <link>https://sjtug.org/post/mirror-help/raspbian-addons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/raspbian-addons/</guid>
+      <description>&lt;p&gt;Raspbian Addons 是 Raspbian 非官方软件源，含有许多来自 GitHub 的开源软件，可作为对 Raspbian（Debian） 官方仓库的一个补充。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;项目主页：https://raspbian-addons.org&lt;/li&gt;
+&lt;li&gt;官方文档：https://docs.raspbian-addons.org&lt;/li&gt;
+&lt;li&gt;GitHub 主页：https://github.com/raspbian-addons&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;支持架构：armhf、arm64&lt;/p&gt;
+&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;p&gt;信任仓库的 GPG 公钥&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget -qO- https://mirror.sjtu.edu.cn/raspbian-addons/KEY.gpg | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;添加该仓库&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deb https://mirror.sjtu.edu.cn/raspbian-addons/debian precise main&amp;#34;&lt;/span&gt; | sudo tee /etc/apt/sources.list.d/raspbian-addons.list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;更新软件包缓存&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>rocky</title>
+      <link>https://sjtug.org/post/mirror-help/rocky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/rocky/</guid>
+      <description>&lt;p&gt;使用方法：运行下面的指令一键替换并备份。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|^mirrorlist=|#mirrorlist=|g&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.sjtug.sjtu.edu.cn/rocky|g&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    -i.bak &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    /etc/yum.repos.d/Rocky-*.repo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最后运行 &lt;code&gt;dnf makecache&lt;/code&gt; 生成缓存&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ros</title>
+      <link>https://sjtug.org/post/mirror-help/ros/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ros/</guid>
+      <description>&lt;p&gt;使用方式：&lt;/p&gt;
+&lt;p&gt;可使用&lt;code&gt;gedit&lt;/code&gt;等文本编辑器修改&lt;code&gt;/etc/apt/sources.list.d/ros-latest.list&lt;/code&gt;。修改后使用&lt;code&gt;sudo apt update&lt;/code&gt;更新软件源。&lt;/p&gt;
+&lt;p&gt;Ubuntu 18.04 (ROS Melodic)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirrors.sjtug.sjtu.edu.cn/ros/ubuntu bionic main
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 20.04 (ROS Noetic)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirrors.sjtug.sjtu.edu.cn/ros/ubuntu focal main
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>rust-static</title>
+      <link>https://sjtug.org/post/mirror-help/rust-static/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/rust-static/</guid>
+      <description>&lt;p&gt;rust-static储存了rust的工具链及&lt;code&gt;rustup&lt;/code&gt;本身的镜像。&lt;/p&gt;
+&lt;p&gt;使用方法：安装&lt;code&gt;rustup&lt;/code&gt;，将以下环境变量加入&lt;code&gt;~/.bashrc&lt;/code&gt;或类似文件中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;export RUSTUP_DIST_SERVER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirror.sjtu.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;https://mirror.sjtu.edu.cn/rust-static/rustup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://sjtug.org/post/mirror-help/ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ubuntu/</guid>
+      <description>&lt;p&gt;Ubuntu是一个基于Debian的Linux发行版，包含了常用的大量软件包。Ubuntu的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。Ubuntu目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+&lt;p&gt;SJTUG镜像源可以加速软件包的安装。&lt;/p&gt;
+&lt;p&gt;本镜像仅包含 32/64 位 x86 架构处理器的软件包，在 ARM(arm64, armhf)、PowerPC(ppc64el)、RISC-V(riscv64) 和 S390x 等架构的设备上（对应官方源为 ports.ubuntu.com）请使用 ubuntu-ports 镜像。&lt;/p&gt;
+&lt;p&gt;使用方式：&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;sudo nano /etc/apt/sources.list&lt;/code&gt;打开镜像源列表文件。将类似于&lt;code&gt;http://archive.ubuntu.com/ubuntu&lt;/code&gt;或&lt;code&gt;http://cn.archive.ubuntu.com/ubuntu&lt;/code&gt;的地址改成&lt;code&gt;https://mirror.sjtu.edu.cn/ubuntu&lt;/code&gt;，之后按&lt;code&gt;Ctrl-O 回车&lt;/code&gt;保存，按&lt;code&gt;Ctrl-X&lt;/code&gt;退出。最后执行&lt;code&gt;sudo apt update&lt;/code&gt;即可。&lt;/p&gt;
+&lt;p&gt;镜像站一天同步一次 Ubuntu 镜像。为了取得最新的安全更新，我们不建议您将 &lt;code&gt;security.ubuntu.com&lt;/code&gt; 换成镜像源。&lt;/p&gt;
+&lt;p&gt;您也可使用&lt;code&gt;sudo sed -i &#39;s/http:\/\/archive.ubuntu.com/https:\/\/mirror.sjtu.edu.cn/g&#39; /etc/apt/sources.list&lt;/code&gt;或&lt;code&gt;sudo sed -i &#39;s/http:\/\/cn.archive.ubuntu.com/https:\/\/mirror.sjtu.edu.cn/g&#39; /etc/apt/sources.list&lt;/code&gt;指令直接批量修改。&lt;/p&gt;
+&lt;p&gt;以下为修改后的镜像源列表文件的示例。可使用&lt;code&gt;gedit&lt;/code&gt;等文本编辑器修改&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;。修改后使用&lt;code&gt;sudo apt update&lt;/code&gt;更新软件源。&lt;/p&gt;
+&lt;p&gt;从 Ubuntu 24.04 起，Ubuntu 的软件源配置文件变更为 DEB822 格式，在此格式下使用镜像源时，须注意替换&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;对应路径为&lt;code&gt;/etc/apt/sources.list.d/ubuntu.sources&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Ubuntu 18.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu/ bionic main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 20.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 22.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 24.04 (DEB822 格式) &lt;code&gt;/etc/apt/sources.list.d/ubuntu.sources&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Types: deb
+URIs: https://mirror.sjtu.edu.cn/ubuntu/
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble noble-updates noble-backports
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+Types: deb
+URIs: https://mirror.sjtu.edu.cn/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-security
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-proposed
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-proposed
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 24.04 (旧格式，不推荐使用) &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu/ noble main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu/ noble-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中&lt;code&gt;deb-src&lt;/code&gt;为源码镜像，默认注释以提高速度。可将原镜像列表备份后替换为上述内容。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ubuntu-cdimage</title>
+      <link>https://sjtug.org/post/mirror-help/ubuntu-cdimage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ubuntu-cdimage/</guid>
+      <description>&lt;p&gt;Ubuntu 是一个基于 Debian 的 Linux 发行版。 Ubuntu 的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。 Ubuntu 目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+&lt;p&gt;本镜像提供现在维护版本的每日构建版本、 Ubuntu 原版的 server 版本和 Ubuntu 衍生版本，提供这些版本的多个架构支持。&lt;/p&gt;
+&lt;p&gt;Ubuntu 衍生版现在包括 Kubuntu(KDE) 、 Xubuntu(Xfce) 、 Ubuntu Budgie 、 Ubuntu Studio 、 Lubuntu(LXDE) 、 Ubuntu Kylin （优麒麟）、Ubuntu MATE 、Ubuntu Budgie(Budgie)，可以进入相关目录下载衍生版的镜像。&lt;/p&gt;
+&lt;p&gt;你可以查看 &lt;a href=&#34;https://wiki.ubuntu.com/UbuntuFlavors&#34;&gt;https://wiki.ubuntu.com/UbuntuFlavors&lt;/a&gt; 现在所支持的 Ubuntu 衍生版本和已经不受到支持的 Ubuntu 衍生版本。&lt;/p&gt;
+&lt;p&gt;如果你正在寻找原版的桌面版本,你可以在 &lt;a href=&#34;https://mirror.sjtu.edu.cn/ubuntu-cd/&#34;&gt;https://mirror.sjtu.edu.cn/ubuntu-cd/&lt;/a&gt; 获取，
+也可以在这查看使用帮助 &lt;a href=&#34;https://mirror.sjtu.edu.cn/docs/ubuntu-cd&#34;&gt;https://mirror.sjtu.edu.cn/docs/ubuntu-cd&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ubuntu-cloud-images</title>
+      <link>https://sjtug.org/post/mirror-help/ubuntu-cloud-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ubuntu-cloud-images/</guid>
+      <description>&lt;p&gt;本镜像为 OpenStack, LXD 等公有云使用的 Ubuntu 镜像，收录官方的云 Ubuntu 镜像，由 Canonical 定制，提供 Ubuntu 认证镜像，可在 OpenStack, LXD 等公有云上运行。&lt;/p&gt;
+&lt;p&gt;本镜像包含 KVM, Hyper-V, Xen 等虚拟结构的官方定制镜像。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用方法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以使用 &lt;a href=&#34;https://mirror.sjtu.edu.cn/ubuntu-cloud-images/locator&#34;&gt;https://mirror.sjtu.edu.cn/ubuntu-cloud-images/locator/&lt;/a&gt; 查找公有云使用的镜像。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ubuntu-ports</title>
+      <link>https://sjtug.org/post/mirror-help/ubuntu-ports/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ubuntu-ports/</guid>
+      <description>&lt;p&gt;使用方式：&lt;/p&gt;
+&lt;p&gt;可使用&lt;code&gt;gedit&lt;/code&gt;等文本编辑器修改&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;。修改后使用&lt;code&gt;sudo apt update&lt;/code&gt;更新软件源。&lt;/p&gt;
+&lt;p&gt;从 Ubuntu 24.04 起，Ubuntu 的软件源配置文件变更为 DEB822 格式，在此格式下使用镜像源时，须注意替换&lt;code&gt;/etc/apt/sources.list&lt;/code&gt;对应路径为&lt;code&gt;/etc/apt/sources.list.d/ubuntu.sources&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Ubuntu 18.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ bionic-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 20.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu-ports/ focal main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ focal main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ focal-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 22.04&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu-ports/ jammy-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 24.04 (DEB822 格式) &lt;code&gt;/etc/apt/sources.list.d/ubuntu.sources&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Types: deb
+URIs: https://mirror.sjtu.edu.cn/ubuntu/
+Suites: noble noble-updates noble-backports
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble noble-updates noble-backports
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+Types: deb
+URIs: https://mirror.sjtu.edu.cn/ubuntu/
+Suites: noble-security
+Components: main restricted universe multiverse
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-security
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-proposed
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+# Types: deb-src
+# URIs: https://mirror.sjtu.edu.cn/ubuntu/
+# Suites: noble-proposed
+# Components: main restricted universe multiverse
+# Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ubuntu 24.04 (旧格式，不推荐使用) &lt;code&gt;/etc/apt/sources.list&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deb https://mirror.sjtu.edu.cn/ubuntu/ noble main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+deb https://mirror.sjtu.edu.cn/ubuntu/ noble-security main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-security main restricted universe multiverse
+
+# deb https://mirror.sjtu.edu.cn/ubuntu/ noble-proposed main restricted universe multiverse
+# deb-src https://mirror.sjtu.edu.cn/ubuntu/ noble-proposed main restricted universe multiverse
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中&lt;code&gt;deb-src&lt;/code&gt;为源码镜像，默认注释以提高速度。可将原镜像列表备份后替换为上述内容。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ubuntu-releases</title>
+      <link>https://sjtug.org/post/mirror-help/ubuntu-releases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/ubuntu-releases/</guid>
+      <description>&lt;p&gt;Ubuntu 是一个基于 Debian 的 Linux 发行版。 Ubuntu 的目标在于为一般用户提供一个最新同时又相当稳定，主要以自由软件建构而成的作业系统。 Ubuntu 目前具有庞大的社群力量支持，用户可以方便地从社群获得帮助。&lt;/p&gt;
+&lt;p&gt;本镜像主要收录还在生命周期内 x86 和 arm 架构的镜像，包括开发版，不包括超过 End of Standard Support 后进入 ESM 的镜像。&lt;/p&gt;
+&lt;p&gt;您可以通过 &lt;a href=&#34;https://wiki.ubuntu.com/Releases&#34;&gt;https://wiki.ubuntu.com/Releases&lt;/a&gt; 查看现在还在生命周期内的镜像。&lt;/p&gt;
+&lt;p&gt;更多衍生发行版和其他架构非桌面版本请至 &lt;a href=&#34;https://mirror.sjtu.edu.cn/ubuntu-cdimage/&#34;&gt;https://mirror.sjtu.edu.cn/ubuntu-cdimage/&lt;/a&gt; 查看，或者在 &lt;a href=&#34;https://mirror.sjtu.edu.cn/docs/ubuntu-cdimage&#34;&gt;https://mirror.sjtu.edu.cn/docs/ubuntu-cdimage&lt;/a&gt; 获取该镜像使用帮助。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>voidlinux</title>
+      <link>https://sjtug.org/post/mirror-help/voidlinux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sjtug.org/post/mirror-help/voidlinux/</guid>
+      <description>&lt;p&gt;Void linux 是基于 Linux 内核独立开发的通用操作系统。其特色在于一份二进制/源代码混合式包管理系统，这使得用户能快速安装、更新、移除软件，或者是借助 XBPS 源代码集合从源码直接生成软件。该发行的其他特性包括对 Raspberry Pi 单板计算机（armv6 和 armv7）的支持，每日更新的滚动式开发模式，可以选择 glibc 和 musl 作为 C 库，以及名为 runit 的原生 BSD 风格 init 系统。&lt;/p&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;mkdir -p /etc/xbps.d
+cp /usr/share/xbps.d/*-repository-*.conf /etc/xbps.d/
+sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s|https://alpha.de.repo.voidlinux.org|https://mirror.sjtu.edu.cn/voidlinux|g&amp;#39;&lt;/span&gt; /etc/xbps.d/*-repository-*.conf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;之后可用 &lt;code&gt;xbps-query -L&lt;/code&gt; 检查是否正确替换。&lt;/p&gt;
+&lt;p&gt;运行 &lt;code&gt;xbps-install -Su&lt;/code&gt; 刷新镜像并更新系统。&lt;/p&gt;
+&lt;p&gt;请前往&lt;a href=&#34;https://docs.voidlinux.org/xbps/repositories/mirrors/changing.html&#34;&gt;官方教程&lt;/a&gt;获取更多信息。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
